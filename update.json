@@ -1,0 +1,10 @@
+{
+  "homepage": "https://github.com/SamTheGamer39/Railroad_Blocks",
+  "1.16.5": {
+    "0.0.1": "Initial Mod"
+  },
+  "promos": {
+    "1.16.5-latest": "0.0.1",
+    "1.16.5-recommended": "0.0.1"
+  }
+}

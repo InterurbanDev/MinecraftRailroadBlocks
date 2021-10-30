@@ -1,0 +1,41 @@
+# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+modLoader="javafml" #mandatory
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+issueTrackerURL="https://github.com/SamTheGamer39/Railroad_Blocks/issues" #optional
+
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]] #mandatory
+modId="railroadblocksaddon" #mandatory
+# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
+version="0.0.1" #mandatory
+displayName="Railroad Blocks" #mandatory
+# A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
+updateJSONURL="https://raw.githubusercontent.com/SamTheGamer39/Railroad_Blocks/master/update.json?token=ARJZAVIALU36N2EP7XW4B5TBN4RFE" #optional
+displayURL="https://github.com/SamTheGamer39/Railroad_Blocks" #optional
+# A file name (in the root of the mod JAR) containing a logo for display
+#logoFile="" #optional
+credits="Models made in Blockbench." #optional
+authors="SamTheGamer39" #optional
+#mandatory
+description='''
+Adds railroad-related blocks into Minecraft!
+'''
+
+[[dependencies.railroadblocksaddon]]
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[36,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+
+[[dependencies.railroadblocksaddon]]
+    modId="minecraft"
+    mandatory=true
+    # This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"

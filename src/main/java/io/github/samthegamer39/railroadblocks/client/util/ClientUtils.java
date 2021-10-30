@@ -1,0 +1,9 @@
+package io.github.samthegamer39.railroadblocks.client.util;
+
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+@OnlyIn(Dist.CLIENT)
+public class ClientUtils {
+
+}
