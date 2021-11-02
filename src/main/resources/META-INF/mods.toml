@@ -9,7 +9,7 @@ issueTrackerURL="https://github.com/SamTheGamer39/MinecraftRailroadBlocks/issues
 [[mods]] #mandatory
 modId="railroadblocksaddon" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="0.0.1" #mandatory
+version="0.2.0" #mandatory
 displayName="Railroad Blocks" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
 updateJSONURL="https://raw.githubusercontent.com/SamTheGamer39/MinecraftRailroadBlocks/master/update.json?token=ARJZAVIJ37G6GU3UBG43CMLBPV3ZO" #optional
@@ -36,6 +36,6 @@ Adds railroad-related blocks into Minecraft!
     modId="minecraft"
     mandatory=true
     # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.16,1.17)"
     ordering="NONE"
     side="BOTH"

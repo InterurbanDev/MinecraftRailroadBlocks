@@ -14,8 +14,15 @@ public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RailroadBlocks.MOD_ID);
 
     public static final RegistryObject<BlockItem> WOODEN_CROSSBUCK = ITEMS.register("wooden_crossbuck",
-            () -> new BlockItem(BlockInit.WOODEN_CROSSBUCK.get(), new Item.Properties().tab(ItemGroup.TAB_TRANSPORTATION))); //Item.Properties().tab() should be the mojmap version of Item.Properties.group(), but idk.
+            () -> new BlockItem(BlockInit.WOODEN_CROSSBUCK.get(), new Item.Properties().tab(ItemGroup.TAB_TRANSPORTATION)));
+
+    public static final RegistryObject<BlockItem> IRON_CROSSBUCK = ITEMS.register("iron_crossbuck",
+            () -> new BlockItem(BlockInit.IRON_CROSSBUCK.get(), new Item.Properties().tab(ItemGroup.TAB_TRANSPORTATION)));
 
     public static final RegistryObject<BlockItem> WOODEN_POLE = ITEMS.register("wooden_pole",
             () -> new BlockItem(BlockInit.WOODEN_POLE.get(), new Item.Properties().tab(ItemGroup.TAB_TRANSPORTATION)));
+
+    public static final RegistryObject<BlockItem> IRON_POLE = ITEMS.register("iron_pole",
+            () -> new BlockItem(BlockInit.IRON_POLE.get(), new Item.Properties().tab(ItemGroup.TAB_TRANSPORTATION)));
+
 }
