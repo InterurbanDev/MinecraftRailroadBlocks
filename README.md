@@ -5,4 +5,4 @@ Current blocks include:
 - Wooden Crossbuck
 - Wooden Pole
 
-This mod is licensed under the [MIT License](https://raw.githubusercontent.com/SamTheGamer39/MinecraftRailroadBlocks/dev-branch/LICENSE.txt?token=ARJZAVOACPV2ENRBSKWZKOTBPWJSA).
+This mod is licensed under the [MIT License](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/blob/dev-branch/LICENSE.txt).
