@@ -7,12 +7,12 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 
-public class CrossbuckBlock extends BaseHorizontalBlock {
+public class SignBlock extends BaseHorizontalBlock {
 
     //Controls the shape of the collision/render block.
-    private static final VoxelShape SHAPE = Block.box(2, 0, 6, 14, 14, 9);
+    private static final VoxelShape SHAPE = Block.box(1, 0, 6, 15, 15, 9);
 
-    public CrossbuckBlock(Properties properties) {
+    public SignBlock(Properties properties) {
         super(properties); //What is super()?
         runCalculation(SHAPE);
     }
