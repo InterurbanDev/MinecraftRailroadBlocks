@@ -41,7 +41,7 @@ public class BaseHorizontalBlock extends Block {
 
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
-        return this.defaultBlockState().setValue(HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState().setValue(HORIZONTAL_FACING, context.getHorizontalDirection()); //.getOpposite() can be added to flip the model.
     }
 
     @Override
