@@ -3,38 +3,43 @@
   "1.16.5": {
     "0.1.0": "Added Wooden Crossbucks",
     "0.2.0": "Added Iron Crossbucks",
-    "0.2.1": "Added RXR Advance Warning Sign"
+    "0.3.0": "Added RXR Advance Warning Sign",
+    "0.3.1": "Fixed Item Icons"
   },
   "1.16.4": {
     "0.1.0": "Added Wooden Crossbucks",
     "0.2.0": "Added Iron Crossbucks",
-    "0.2.1": "Added RXR Advance Warning Sign"
+    "0.3.0": "Added RXR Advance Warning Sign",
+    "0.3.1": "Fixed Item Icons"
   },
   "1.16.3": {
     "0.1.0": "Added Wooden Crossbucks",
     "0.2.0": "Added Iron Crossbucks",
-    "0.2.1": "Added RXR Advance Warning Sign"
+    "0.3.0": "Added RXR Advance Warning Sign",
+    "0.3.1": "Fixed Item Icons"
   },
   "1.16.2": {
     "0.1.0": "Added Wooden Crossbucks",
     "0.2.0": "Added Iron Crossbucks",
-    "0.2.1": "Added RXR Advance Warning Sign"
+    "0.3.0": "Added RXR Advance Warning Sign",
+    "0.3.1": "Fixed Item Icons"
   },
   "1.16.1": {
     "0.1.0": "Added Wooden Crossbucks",
     "0.2.0": "Added Iron Crossbucks",
-    "0.2.1": "Added RXR Advance Warning Sign"
+    "0.3.0": "Added RXR Advance Warning Sign",
+    "0.3.1": "Fixed Item Icons"
   },
   "promos": {
-    "1.16.5-latest": "0.2.1",
-    "1.16.5-recommended": "0.2.1",
-    "1.16.4-latest": "0.2.1",
-    "1.16.4-recommended": "0.2.1",
-    "1.16.3-latest": "0.2.1",
-    "1.16.3-recommended": "0.2.1",
-    "1.16.2-latest": "0.2.1",
-    "1.16.2-recommended": "0.2.1",
-    "1.16.1-latest": "0.2.1",
-    "1.16.1-recommended": "0.2.1"
+    "1.16.5-latest": "0.3.1",
+    "1.16.5-recommended": "0.3.1",
+    "1.16.4-latest": "0.3.1",
+    "1.16.4-recommended": "0.3.1",
+    "1.16.3-latest": "0.3.1",
+    "1.16.3-recommended": "0.3.1",
+    "1.16.2-latest": "0.3.1",
+    "1.16.2-recommended": "0.3.1",
+    "1.16.1-latest": "0.3.1",
+    "1.16.1-recommended": "0.3.1"
   }
 }
