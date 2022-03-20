@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "railroadblocksaddon:wooden_crossbuck",
+    "railroadblocksaddon:iron_crossbuck",
+    "railroadblocksaddon:wooden_pole",
+    "railroadblocksaddon:iron_pole",
+    "railroadblocksaddon:rxr_advance_sign"
+  ]
+}

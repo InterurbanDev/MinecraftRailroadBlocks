@@ -7,7 +7,7 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 
-public class PoleBlock extends BaseHorizontalBlock {
+public class PoleBlock extends BaseHorizontalWaterloggableBlock {
 
     //Controls the shape of the collision/render block.
     private static final VoxelShape SHAPE = Block.box(7, 0, 7, 9, 16, 9);
