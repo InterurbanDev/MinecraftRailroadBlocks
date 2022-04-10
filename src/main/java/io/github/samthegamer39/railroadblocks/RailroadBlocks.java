@@ -2,6 +2,8 @@ package io.github.samthegamer39.railroadblocks;
 
 import io.github.samthegamer39.railroadblocks.core.init.BlockInit;
 import io.github.samthegamer39.railroadblocks.core.init.ItemInit;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,6 +18,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class RailroadBlocks {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "railroadblocksaddon";
+    public static final ItemGroup RAILROAD_BLOCKS_TAB = new RailroadBlocksGroup("railroadblockstab");
 
     public RailroadBlocks() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -29,6 +32,19 @@ public class RailroadBlocks {
 
     private void setup(final FMLCommonSetupEvent event)
     {
+
+    }
+
+    public static class RailroadBlocksGroup extends ItemGroup {
+
+        public RailroadBlocksGroup(String label) {
+            super(label);
+        }
+
+        @Override
+        public ItemStack makeIcon() {
+            return ItemInit.WOODEN_CROSSBUCK.get().getDefaultInstance();
+        }
 
     }
 }

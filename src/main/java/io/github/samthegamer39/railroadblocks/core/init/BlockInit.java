@@ -17,7 +17,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class BlockInit {
 
     public static final SignBlock WOODEN_CROSSBUCK_BLOCK = new SignBlock(AbstractBlock.Properties.of(Material.WOOD, MaterialColor.WOOD) //AbstractBlock.Properties.of() is the mojmap version of .create()
-            .strength(0f)
+            .strength(1f)
             .harvestTool(ToolType.AXE)
             .harvestLevel(1)
             .sound(SoundType.WOOD)
@@ -25,21 +25,21 @@ public class BlockInit {
     );
 
     public static final SignBlock IRON_CROSSBUCK_BLOCK = new SignBlock(AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL) //AbstractBlock.Properties.of() is the mojmap version of .create()
-            .strength(0f)
+            .strength(2f)
             .harvestLevel(1)
             .sound(SoundType.METAL)
             .noOcclusion()
     );
 
     public static final SignBlock RXR_ADVANCE_BLOCK = new SignBlock(AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL) //AbstractBlock.Properties.of() is the mojmap version of .create()
-            .strength(0f)
+            .strength(2f)
             .harvestLevel(1)
             .sound(SoundType.METAL)
             .noOcclusion()
     );
 
     public static final PoleBlock WOODEN_POLE_BLOCK = new PoleBlock(AbstractBlock.Properties.of(Material.WOOD, MaterialColor.WOOD) //AbstractBlock.Properties.of() is the mojmap version of .create()
-            .strength(0f)
+            .strength(1f)
             .harvestTool(ToolType.AXE)
             .harvestLevel(1)
             .sound(SoundType.WOOD)
@@ -47,7 +47,7 @@ public class BlockInit {
     );
 
     public static final PoleBlock IRON_POLE_BLOCK = new PoleBlock(AbstractBlock.Properties.of(Material.METAL, MaterialColor.METAL) //AbstractBlock.Properties.of() is the mojmap version of .create()
-            .strength(0f)
+            .strength(2f)
             .harvestLevel(1)
             .sound(SoundType.METAL)
             .noOcclusion()

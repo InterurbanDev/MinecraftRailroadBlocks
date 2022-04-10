@@ -6,6 +6,3 @@
 /run/
 /src/test/
 /src/generated/
-/build.gradle
-/gradlew
-/gradlew.bat

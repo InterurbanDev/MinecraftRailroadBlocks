@@ -1,50 +1,40 @@
 {
   "homepage": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks",
   "1.16.5": {
-    "0.1.0": "Added Wooden Crossbucks",
-    "0.1.1": "Added Iron Crossbucks",
-    "0.1.2": "Added RXR Advance Warning Sign",
-    "0.1.3": "Fixed Item Icons",
-    "0.2.0": "Made blocks waterloggable."
+    "0.1.0": "Initial Mod",
+    "0.1.1": "Made blocks waterloggable.",
+    "0.1.2": "Added custom block tab."
   },
   "1.16.4": {
-    "0.1.0": "Added Wooden Crossbucks",
-    "0.1.1": "Added Iron Crossbucks",
-    "0.1.2": "Added RXR Advance Warning Sign",
-    "0.1.3": "Fixed Item Icons",
-    "0.2.0": "Made blocks waterloggable."
+    "0.1.0": "Initial Mod",
+    "0.1.1": "Made blocks waterloggable.",
+    "0.1.2": "Added custom block tab."
   },
   "1.16.3": {
-    "0.1.0": "Added Wooden Crossbucks",
-    "0.1.1": "Added Iron Crossbucks",
-    "0.1.2": "Added RXR Advance Warning Sign",
-    "0.1.3": "Fixed Item Icons",
-    "0.2.0": "Made blocks waterloggable."
+    "0.1.0": "Initial Mod",
+    "0.1.1": "Made blocks waterloggable.",
+    "0.1.2": "Added custom block tab."
   },
   "1.16.2": {
-    "0.1.0": "Added Wooden Crossbucks",
-    "0.1.1": "Added Iron Crossbucks",
-    "0.1.2": "Added RXR Advance Warning Sign",
-    "0.1.3": "Fixed Item Icons",
-    "0.2.0": "Made blocks waterloggable."
+    "0.1.0": "Initial Mod",
+    "0.1.1": "Made blocks waterloggable.",
+    "0.1.2": "Added custom block tab."
   },
   "1.16.1": {
-    "0.1.0": "Added Wooden Crossbucks",
-    "0.1.1": "Added Iron Crossbucks",
-    "0.1.2": "Added RXR Advance Warning Sign",
-    "0.1.3": "Fixed Item Icons",
-    "0.2.0": "Made blocks waterloggable."
+    "0.1.0": "Initial Mod",
+    "0.1.1": "Made blocks waterloggable.",
+    "0.1.2": "Added custom block tab."
   },
   "promos": {
-    "1.16.5-latest": "0.2.0",
-    "1.16.5-recommended": "0.2.0",
-    "1.16.4-latest": "0.2.0",
-    "1.16.4-recommended": "0.2.0",
-    "1.16.3-latest": "0.2.0",
-    "1.16.3-recommended": "0.2.0",
-    "1.16.2-latest": "0.2.0",
-    "1.16.2-recommended": "0.2.0",
-    "1.16.1-latest": "0.2.0",
-    "1.16.1-recommended": "0.2.0"
+    "1.16.5-latest": "0.1.2",
+    "1.16.5-recommended": "0.1.2",
+    "1.16.4-latest": "0.1.2",
+    "1.16.4-recommended": "0.1.2",
+    "1.16.3-latest": "0.1.2",
+    "1.16.3-recommended": "0.1.2",
+    "1.16.2-latest": "0.1.2",
+    "1.16.2-recommended": "0.1.2",
+    "1.16.1-latest": "0.1.2",
+    "1.16.1-recommended": "0.1.2"
   }
 }

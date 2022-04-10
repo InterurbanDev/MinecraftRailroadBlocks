@@ -2,7 +2,6 @@ package io.github.samthegamer39.railroadblocks.common.blocks;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -21,9 +20,17 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
 
 //WARNING: I have no idea what half of this code does.
+
+/*
+Do not attempt to make replace BaseHorizontalWaterloggableBlock with HorizontalBlock or HorizontalFacingBlock.
+It will only end in you reverting back to this crappy code, because Forge is inferior to Fabric. (Also I have no idea what I'm doing)
+If you do attempt to do this, please update the counter when you realize your failure.
+
+Attempts to Optimize Code Failures: 2
+*/
+
 public class BaseHorizontalWaterloggableBlock extends Block implements IWaterLoggable {
 
     protected static final Map<Block, Map<Direction, VoxelShape>> SHAPES = new HashMap<>();
