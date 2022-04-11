@@ -28,7 +28,7 @@ If applicable, add screenshots to help explain your problem.
 **Additional Information (please complete the following information):**
  - Minecraft Version: [e.g. 1.16.5]
  - Mod Version: [e.g. 0.1.2]
- - Fabric Version: [e.g. 0.13.3]
+ - Forge Version: [e.g. 36.2.20]
 
 **Additional context**
 Add any other context about the problem here.
