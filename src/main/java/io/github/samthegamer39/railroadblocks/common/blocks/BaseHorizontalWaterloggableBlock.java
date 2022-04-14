@@ -21,14 +21,13 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IWorld;
 
-//WARNING: I have no idea what half of this code does.
-
 /*
 Do not attempt to make replace BaseHorizontalWaterloggableBlock with HorizontalBlock or HorizontalFacingBlock.
 It will only end in you reverting back to this crappy code, because Forge is inferior to Fabric. (Also I have no idea what I'm doing)
+(This now includes any attempts to replace the calculateShapes function.)
 If you do attempt to do this, please update the counter when you realize your failure.
 
-Attempts to Optimize Code Failures: 2
+Attempts to Optimize/Fix Code that Ended in Failure: 4
 */
 
 public class BaseHorizontalWaterloggableBlock extends Block implements IWaterLoggable {
@@ -68,13 +67,14 @@ public class BaseHorizontalWaterloggableBlock extends Block implements IWaterLog
         builder.add(HORIZONTAL_FACING, WATERLOGGED);
     }
 
+    //Do not replace this. You will fail to fix and spend the rest of the day crying in a corner.
     protected static VoxelShape calculateShapes(Direction to, VoxelShape shape) {
         VoxelShape[] buffer = new VoxelShape[] { shape, VoxelShapes.empty() };
 
         int times = (to.getStepX() - Direction.NORTH.getStepX() + 4) % 4;
         for (int i = 0; i < times; i++) {
             buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) -> buffer[1] = VoxelShapes.or(buffer[1],
-                    VoxelShapes.box(1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
+                    VoxelShapes.box(minZ, minY, 1 - minX, maxZ, maxY, 1 - maxX)));
             buffer[0] = buffer[1];
             buffer[1] = VoxelShapes.empty();
         }
