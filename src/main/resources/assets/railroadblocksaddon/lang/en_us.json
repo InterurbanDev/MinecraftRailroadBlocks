@@ -1,15 +1,17 @@
 {
-  "item.railroadblocksaddon.wooden_pole": "Wooden Post",
-  "item.railroadblocksaddon.wooden_crossbuck": "Wooden Crossbuck",
-  "item.railroadblocksaddon.iron_pole": "Iron Post",
   "item.railroadblocksaddon.iron_crossbuck": "Iron Crossbuck",
+  "item.railroadblocksaddon.iron_pole": "Iron Post",
   "item.railroadblocksaddon.rxr_advance_sign": "Railroad Crossing Advance Warning Sign",
+  "item.railroadblocksaddon.whistle_sign": "Whistle Sign",
+  "item.railroadblocksaddon.wooden_crossbuck": "Wooden Crossbuck",
+  "item.railroadblocksaddon.wooden_pole": "Wooden Post",
 
-  "block.railroadblocksaddon.wooden_pole": "Wooden Post",
-  "block.railroadblocksaddon.wooden_crossbuck": "Wooden Crossbuck",
-  "block.railroadblocksaddon.iron_pole": "Iron Post",
   "block.railroadblocksaddon.iron_crossbuck": "Iron Crossbuck",
+  "block.railroadblocksaddon.iron_pole": "Iron Post",
   "block.railroadblocksaddon.rxr_advance_sign": "Railroad Crossing Advance Warning Sign",
+  "block.railroadblocksaddon.whistle_sign": "Whistle Sign",
+  "block.railroadblocksaddon.wooden_crossbuck": "Wooden Crossbuck",
+  "block.railroadblocksaddon.wooden_pole": "Wooden Post",
 
-  "itemGroup.railroadblockstab": "Railroad Blocks"
+  "itemGroup.railroadblocksaddon.general": "Railway Blocks"
 }
