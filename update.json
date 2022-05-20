@@ -5,46 +5,51 @@
     "0.1.1": "Made blocks waterloggable.",
     "0.1.2": "Added custom block tab.",
     "0.2.0": "Added whistle sign.",
-    "0.2.0-beta-1": "Partially fixed rotation issue."
+    "0.2.0-beta-1": "Partially fixed rotation issue.",
+    "0.3.0-beta": "Added Signaling Flags"
   },
   "1.16.4": {
     "0.1.0": "Initial Mod",
     "0.1.1": "Made blocks waterloggable.",
     "0.1.2": "Added custom block tab.",
     "0.2.0": "Added whistle sign.",
-    "0.2.0-beta-1": "Partially fixed rotation issue."
+    "0.2.0-beta-1": "Partially fixed rotation issue.",
+    "0.3.0-beta": "Added Signaling Flags"
   },
   "1.16.3": {
     "0.1.0": "Initial Mod",
     "0.1.1": "Made blocks waterloggable.",
     "0.1.2": "Added custom block tab.",
     "0.2.0": "Added whistle sign.",
-    "0.2.0-beta-1": "Partially fixed rotation issue."
+    "0.2.0-beta-1": "Partially fixed rotation issue.",
+    "0.3.0-beta": "Added Signaling Flags"
   },
   "1.16.2": {
     "0.1.0": "Initial Mod",
     "0.1.1": "Made blocks waterloggable.",
     "0.1.2": "Added custom block tab.",
     "0.2.0": "Added whistle sign.",
-    "0.2.0-beta-1": "Partially fixed rotation issue."
+    "0.2.0-beta-1": "Partially fixed rotation issue.",
+    "0.3.0-beta": "Added Signaling Flags"
   },
   "1.16.1": {
     "0.1.0": "Initial Mod",
     "0.1.1": "Made blocks waterloggable.",
     "0.1.2": "Added custom block tab.",
     "0.2.0": "Added whistle sign.",
-    "0.2.0-beta-1": "Partially fixed rotation issue."
+    "0.2.0-beta-1": "Partially fixed rotation issue.",
+    "0.3.0-beta": "Added Signaling Flags"
   },
   "promos": {
-    "1.16.5-latest": "0.2.0-beta-1",
+    "1.16.5-latest": "0.3.0-beta",
     "1.16.5-recommended": "0.2.0-beta-1",
-    "1.16.4-latest": "0.2.0-beta-1",
+    "1.16.4-latest": "0.3.0-beta",
     "1.16.4-recommended": "0.2.0-beta-1",
-    "1.16.3-latest": "0.2.0-beta-1",
+    "1.16.3-latest": "0.3.0-beta",
     "1.16.3-recommended": "0.2.0-beta-1",
-    "1.16.2-latest": "0.2.0-beta-1",
+    "1.16.2-latest": "0.3.0-beta",
     "1.16.2-recommended": "0.2.0-beta-1",
-    "1.16.1-latest": "0.2.0-beta-1",
+    "1.16.1-latest": "0.3.0-beta",
     "1.16.1-recommended": "0.2.0-beta-1"
   }
 }

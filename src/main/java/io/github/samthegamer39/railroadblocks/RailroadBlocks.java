@@ -1,7 +1,7 @@
 package io.github.samthegamer39.railroadblocks;
 
-import io.github.samthegamer39.railroadblocks.core.init.BlockInit;
-import io.github.samthegamer39.railroadblocks.core.init.ItemInit;
+import io.github.samthegamer39.railroadblocks.init.BlockInit;
+import io.github.samthegamer39.railroadblocks.init.ItemInit;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;

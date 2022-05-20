@@ -1,4 +1,4 @@
-package io.github.samthegamer39.railroadblocks.core.init;
+package io.github.samthegamer39.railroadblocks.init;
 
 import io.github.samthegamer39.railroadblocks.RailroadBlocks;
 import io.github.samthegamer39.railroadblocks.common.blocks.SignBlock;
