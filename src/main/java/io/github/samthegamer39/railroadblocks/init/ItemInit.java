@@ -1,7 +1,8 @@
-package io.github.samthegamer39.railroadblocks.core.init;
+package io.github.samthegamer39.railroadblocks.init;
 
 import io.github.samthegamer39.railroadblocks.RailroadBlocks;
 
+import net.minecraft.client.renderer.debug.RaidDebugRenderer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -11,6 +12,18 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ItemInit {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RailroadBlocks.MOD_ID);
+
+    public static final RegistryObject<Item> FLAG_GREEN = ITEMS.register("flag_green",
+            () -> new Item(new Item.Properties()
+                    .tab(RailroadBlocks.RAILROAD_BLOCKS_TAB)));
+
+    public static final RegistryObject<Item> FLAG_RED = ITEMS.register("flag_red",
+            () -> new Item(new Item.Properties()
+                    .tab(RailroadBlocks.RAILROAD_BLOCKS_TAB)));
+
+    public static final RegistryObject<Item> FLAG_YELLOW = ITEMS.register("flag_yellow",
+            () -> new Item(new Item.Properties()
+                    .tab(RailroadBlocks.RAILROAD_BLOCKS_TAB)));
 
     public static final RegistryObject<BlockItem> IRON_CROSSBUCK = ITEMS.register("iron_crossbuck",
             () -> new BlockItem(BlockInit.IRON_CROSSBUCK.get(), new Item.Properties()
