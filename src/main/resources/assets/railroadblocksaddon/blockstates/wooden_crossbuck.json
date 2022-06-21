@@ -1,8 +1,8 @@
 {
   "variants": {
-    "facing=north": { "model": "railroadblocksaddon:block/wooden_crossbuck" },
-    "facing=south": { "model": "railroadblocksaddon:block/wooden_crossbuck", "y": 180 },
-    "facing=west":  { "model": "railroadblocksaddon:block/wooden_crossbuck", "y": 270 },
-    "facing=east":  { "model": "railroadblocksaddon:block/wooden_crossbuck", "y": 90 }
+    "facing=north": { "model": "railroadblocksaddon:block/wooden_crossbuck", "y": 180 },
+    "facing=south": { "model": "railroadblocksaddon:block/wooden_crossbuck" },
+    "facing=west":  { "model": "railroadblocksaddon:block/wooden_crossbuck", "y": 90 },
+    "facing=east":  { "model": "railroadblocksaddon:block/wooden_crossbuck", "y": 270 }
   }
 }

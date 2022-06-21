@@ -17,7 +17,7 @@ nd the following items:
 * Yellow Flag
 * Red Flag
 
-Please note this is a beta version of this mod. Not all features/blocks have been added yet.
+Please note this is a early version of this mod. Not all features/blocks have been added yet.
 
 ## License
 
