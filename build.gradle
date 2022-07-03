@@ -12,8 +12,8 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.3.0'
-group = 'com.samthegamer39.railroadblocks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+version = '0.3.1'
+group = 'io.github.samthegamer39.railroadblocks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'railroadblocks'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.

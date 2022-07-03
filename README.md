@@ -16,6 +16,7 @@ nd the following items:
 * Green Flag
 * Yellow Flag
 * Red Flag
+* Blue Flag
 
 Please note this is a early version of this mod. Not all features/blocks have been added yet.
 

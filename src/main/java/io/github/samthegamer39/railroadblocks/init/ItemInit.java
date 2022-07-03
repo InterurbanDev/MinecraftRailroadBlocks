@@ -13,6 +13,10 @@ public class ItemInit {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RailroadBlocks.MOD_ID);
 
+    public static final RegistryObject<Item> FLAG_BLUE = ITEMS.register("flag_blue",
+            () -> new Item(new Item.Properties()
+                    .tab(RailroadBlocks.RAILROAD_BLOCKS_TAB)));
+
     public static final RegistryObject<Item> FLAG_GREEN = ITEMS.register("flag_green",
             () -> new Item(new Item.Properties()
                     .tab(RailroadBlocks.RAILROAD_BLOCKS_TAB)));
