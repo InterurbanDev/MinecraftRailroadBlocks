@@ -18,7 +18,7 @@ nd the following items:
 * Red Flag
 * Blue Flag
 
-Please note this is a early version of this mod. Not all features/blocks have been added yet.
+Please note this is an early version of this mod. Not all features/blocks have been added yet.
 
 ## License
 
