@@ -12,7 +12,7 @@ modId="railroadblocksaddon" #mandatory
 version="${file.jarVersion}" #mandatory
 displayName="Railroad Blocks" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
-updateJSONURL="https://raw.githubusercontent.com/SamTheGamer39/MinecraftRailroadBlocks/main/update.json" #optional
+updateJSONURL="https://raw.githubusercontent.com/SamTheGamer39/MinecraftRailroadBlocks/1.18.x/update.json" #optional
 displayURL="https://github.com/SamTheGamer39/MinecraftRailroadBlocks" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile="" #optional
