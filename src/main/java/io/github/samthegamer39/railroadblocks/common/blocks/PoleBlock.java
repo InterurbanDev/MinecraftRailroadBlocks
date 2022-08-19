@@ -1,4 +1,4 @@
-package io.github.samthegamer39.railroadblocksaddon.common.blocks;
+package io.github.samthegamer39.railroadblocks.common.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

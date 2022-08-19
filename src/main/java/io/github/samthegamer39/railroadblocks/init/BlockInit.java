@@ -1,10 +1,10 @@
-package io.github.samthegamer39.railroadblocksaddon.init;
+package io.github.samthegamer39.railroadblocks.init;
 
-import io.github.samthegamer39.railroadblocksaddon.RailroadBlocksAddon;
-import io.github.samthegamer39.railroadblocksaddon.common.blocks.SignBlock;
-import io.github.samthegamer39.railroadblocksaddon.common.blocks.PoleBlock;
+import io.github.samthegamer39.railroadblocks.RailroadBlocks;
+import io.github.samthegamer39.railroadblocks.common.blocks.SignBlock;
+import io.github.samthegamer39.railroadblocks.common.blocks.PoleBlock;
 
-import io.github.samthegamer39.railroadblocksaddon.common.blocks.SmallSignBlock;
+import io.github.samthegamer39.railroadblocks.common.blocks.SmallSignBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -16,7 +16,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class BlockInit {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, RailroadBlocksAddon.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, RailroadBlocks.MOD_ID);
 
     public static final RegistryObject<SignBlock> IRON_CROSSBUCK = BLOCKS.register("iron_crossbuck",
             () -> new SignBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)

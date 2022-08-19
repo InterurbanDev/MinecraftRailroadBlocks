@@ -1,7 +1,7 @@
-package io.github.samthegamer39.railroadblocksaddon;
+package io.github.samthegamer39.railroadblocks;
 
-import io.github.samthegamer39.railroadblocksaddon.init.BlockInit;
-import io.github.samthegamer39.railroadblocksaddon.init.ItemInit;
+import io.github.samthegamer39.railroadblocks.init.BlockInit;
+import io.github.samthegamer39.railroadblocks.init.ItemInit;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import com.mojang.logging.LogUtils;
@@ -12,14 +12,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-@Mod(RailroadBlocksAddon.MOD_ID)
+@Mod(RailroadBlocks.MOD_ID)
 
-public class RailroadBlocksAddon {
+public class RailroadBlocks {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final String MOD_ID = "railroadblocksaddon";
     public static final CreativeModeTab RAILROAD_BLOCKS_TAB = new RailroadBlocksGroup("railroadblockstab");
 
-    public RailroadBlocksAddon() {
+    public RailroadBlocks() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener((this::setup));
 
