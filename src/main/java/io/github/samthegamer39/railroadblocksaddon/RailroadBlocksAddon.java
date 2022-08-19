@@ -20,24 +20,18 @@ public class RailroadBlocksAddon {
     public static final CreativeModeTab RAILROAD_BLOCKS_TAB = new RailroadBlocksGroup("railroadblockstab");
 
     public RailroadBlocksAddon() {
-        LOGGER.debug("Starting Registry");
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        LOGGER.debug("Bus Identified");
         bus.addListener((this::setup));
-        LOGGER.debug("Listener Added");
 
         ItemInit.ITEMS.register(bus);
-        LOGGER.debug("Items added to bus!");
         BlockInit.BLOCKS.register(bus);
-        LOGGER.debug("Blocks added to bus!");
 
         MinecraftForge.EVENT_BUS.register(this);
-        LOGGER.debug("Registry Finished");
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        LOGGER.debug("Startup Running");
+
     }
 
     public static class RailroadBlocksGroup extends CreativeModeTab {
