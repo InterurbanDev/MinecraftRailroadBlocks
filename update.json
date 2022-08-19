@@ -1,13 +1,14 @@
 {
   "homepage": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks",
   "1.18.2": {
-    "0.3.1": "Added Blue Flag"
+    "0.3.1": "Added Blue Flag",
+    "0.3.2": "Updated Forge Version Support"
   },
   "1.18.1": {
-    "0.3.1": "Added Blue Flag"
+    "0.3.2": "Updated Forge Version Support"
   },
   "1.18": {
-    "0.3.1": "Added Blue Flag"
+    "0.3.2": "Updated Forge Version Support"
   },
   "1.16.5": {
     "0.1.0": "Initial Mod",
@@ -15,7 +16,8 @@
     "0.1.2": "Added custom block tab.",
     "0.2.0": "Added whistle sign.",
     "0.3.0": "Added Signaling Flags, Fixed rotation issue",
-    "0.3.1": "Added Blue Flag"
+    "0.3.1": "Added Blue Flag",
+    "0.3.2": "Updated Forge Version Support"
   },
   "1.16.4": {
     "0.1.0": "Initial Mod",
@@ -23,7 +25,8 @@
     "0.1.2": "Added custom block tab.",
     "0.2.0": "Added whistle sign.",
     "0.3.0": "Added Signaling Flags, Fixed rotation issue",
-    "0.3.1": "Added Blue Flag"
+    "0.3.1": "Added Blue Flag",
+    "0.3.2": "Updated Forge Version Support"
   },
   "1.16.3": {
     "0.1.0": "Initial Mod",
@@ -58,12 +61,12 @@
       "0.3.1": "Added Blue Flag"
   },
   "promos": {
-    "1.18.2-latest": "0.3.1",
-    "1.18.2-recommended": "0.3.1",
-    "1.18.1-latest": "0.3.1",
-    "1.18.1-recommended": "0.3.1",
-    "1.18-latest": "0.3.1",
-    "1.18-recommended": "0.3.1",
+    "1.18.2-latest": "0.3.2",
+    "1.18.2-recommended": "0.3.2",
+    "1.18.1-latest": "0.3.2",
+    "1.18.1-recommended": "0.3.2",
+    "1.18-latest": "0.3.2",
+    "1.18-recommended": "0.3.2",
     "1.16.5-latest": "0.3.1",
     "1.16.5-recommended": "0.3.0",
     "1.16.4-latest": "0.3.1",
