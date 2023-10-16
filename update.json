@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks",
   "1.20.1": {
-    "0.3.3": "Updated to 1.20.x"
+    "0.3.4": "Added support for 1.20.x, improved recipes, added support for NeoForged, and added JavaDoc."
   },
   "promos": {
     "1.20.2-latest": "0.3.4",
