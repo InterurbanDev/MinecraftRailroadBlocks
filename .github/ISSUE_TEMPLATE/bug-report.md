@@ -28,7 +28,7 @@ If applicable, add screenshots to help explain your problem.
 **Additional Information (please complete the following information):**
  - Minecraft Version: [e.g. 1.20.1]
  - Mod Version: [e.g. 0.3.4]
- - Forge/NeoForged Version: [e.g. 47.1.65]
+ - Forge/NeoForge Version: [e.g. 47.1.65]
 
 **Additional context**
 Add any other context about the problem here.
