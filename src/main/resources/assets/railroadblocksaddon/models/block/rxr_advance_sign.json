@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "railroadblocksaddon:blocks/iron_plate",
-		"1": "railroadblocksaddon:blocks/iron_pole",
-		"2": "railroadblocksaddon:blocks/rxr_sign",
-		"particle": "railroadblocksaddon:blocks/iron_plate"
+		"0": "railroadblocksaddon:block/iron_plate",
+		"1": "railroadblocksaddon:block/iron_pole",
+		"2": "railroadblocksaddon:block/rxr_sign",
+		"particle": "railroadblocksaddon:block/iron_plate"
 	},
 	"elements": [
 		{

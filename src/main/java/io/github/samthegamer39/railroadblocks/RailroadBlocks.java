@@ -1,49 +1,34 @@
 package io.github.samthegamer39.railroadblocks;
 
 import io.github.samthegamer39.railroadblocks.init.BlockInit;
+import io.github.samthegamer39.railroadblocks.init.CreativeTabInit;
 import io.github.samthegamer39.railroadblocks.init.ItemInit;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
 import com.mojang.logging.LogUtils;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+/**
+ * Main class for the RailroadBlocks mod. Initializes the mod and adds all associated blocks and items to Minecraft.
+ */
 @Mod(RailroadBlocks.MOD_ID)
-
 public class RailroadBlocks {
+
+    // Global Variables
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final String MOD_ID = "railroadblocksaddon";
-    public static final CreativeModeTab RAILROAD_BLOCKS_TAB = new RailroadBlocksGroup("railroadblockstab");
 
+    /**
+     * This function initializes the mod and registers all blocks and items to the game.
+     */
     public RailroadBlocks() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener((this::setup));
 
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
+        CreativeTabInit.TABS.register(bus);
 
-        MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void setup(final FMLCommonSetupEvent event)
-    {
-
-    }
-
-    public static class RailroadBlocksGroup extends CreativeModeTab {
-
-        public RailroadBlocksGroup(String label) {
-            super(label);
-        }
-
-        @Override
-        public ItemStack makeIcon() {
-            return ItemInit.WOODEN_CROSSBUCK.get().getDefaultInstance();
-        }
-
+        //MinecraftForge.EVENT_BUS.register(this);
     }
 }

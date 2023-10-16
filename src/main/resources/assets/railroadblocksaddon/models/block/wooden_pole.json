@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "railroadblocksaddon:blocks/wood_pole",
-		"particle": "railroadblocksaddon:blocks/wood_pole"
+		"0": "railroadblocksaddon:block/wood_pole",
+		"particle": "railroadblocksaddon:block/wood_pole"
 	},
 	"elements": [
 		{

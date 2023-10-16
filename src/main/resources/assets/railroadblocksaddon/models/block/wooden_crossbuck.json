@@ -2,10 +2,10 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "railroadblocksaddon:blocks/crossbuck2",
-		"1": "railroadblocksaddon:blocks/crossbuck1",
-		"2": "railroadblocksaddon:blocks/wood_pole",
-		"particle": "railroadblocksaddon:blocks/wood_pole"
+		"0": "railroadblocksaddon:block/crossbuck2",
+		"1": "railroadblocksaddon:block/crossbuck1",
+		"2": "railroadblocksaddon:block/wood_pole",
+		"particle": "railroadblocksaddon:block/wood_pole"
 	},
 	"elements": [
 		{

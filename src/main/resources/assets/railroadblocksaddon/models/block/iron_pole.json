@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "railroadblocksaddon:blocks/iron_pole",
-		"particle": "railroadblocksaddon:blocks/iron_pole"
+		"1": "railroadblocksaddon:block/iron_pole",
+		"particle": "railroadblocksaddon:block/iron_pole"
 	},
 	"elements": [
 		{

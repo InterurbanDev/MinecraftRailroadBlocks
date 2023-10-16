@@ -2,40 +2,33 @@ package io.github.samthegamer39.railroadblocks.common.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class SmallSignBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+/**
+ * This class is designed to be a smaller variant of the SignBlock class.
+ */
+public class SmallSignBlock extends SignBlock {
 
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final DirectionProperty HORIZONTAL_FACING = BlockStateProperties.HORIZONTAL_FACING;
-
+    /**
+     * Constructor for blocks using the SmallSignBlock class. These blocks have two properties, HORIZONTAL_FACING and WATERLOGGED.
+     * @param properties Properties
+     */
     public SmallSignBlock(Properties properties) {
-        super(properties); //What is super()?
-        this.registerDefaultState(this.defaultBlockState()
-                .setValue(HORIZONTAL_FACING, Direction.NORTH)
-                .setValue(WATERLOGGED, false));
+        super(properties);
     }
 
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(HORIZONTAL_FACING, WATERLOGGED);
-    }
-
+    /**
+     * Controls the outline of blocks using this class.
+     * @param state Current block's state
+     * @param worldIn BlockGetter
+     * @param pos Current position
+     * @param context CollisionContext
+     * @return Block outline shape
+     */
     @SuppressWarnings("deprecation")
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
@@ -51,28 +44,5 @@ public class SmallSignBlock extends HorizontalDirectionalBlock implements Simple
         } else {
             return Shapes.block();
         }
-    }
-
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState()
-                .setValue(HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite())
-                .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER);
-    }
-
-    @SuppressWarnings("deprecation") //Why is getFluidState() deprecated? Is there a better alternative?
-    @Override
-    public FluidState getFluidState(BlockState state) {
-        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state); //Displays water when waterlogged.
-    }
-
-    @SuppressWarnings("deprecation") //Why is updateShape deprecated? Is there a better alternative?
-    @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos position, BlockPos neighborPos){
-        if (state.getValue(WATERLOGGED)) {
-            world.scheduleTick(position, Fluids.WATER, Fluids.WATER.getTickDelay(world));
-        }
-
-        return super.updateShape(state, direction, neighborState, world, position, neighborPos);
     }
 }

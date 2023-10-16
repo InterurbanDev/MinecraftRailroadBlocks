@@ -1,20 +1,14 @@
 {
   "homepage": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks",
-  "1.19.2": {
-    "0.3.3": "Fixed minor translation issue."
-  },
-  "1.19.1": {
-    "0.3.3": "Fixed minor translation issue."
-  },
-  "1.19": {
-    "0.3.3": "Fixed minor translation issue."
+  "1.20.1": {
+    "0.3.3": "Updated to 1.20.x"
   },
   "promos": {
-    "1.19.2-latest": "0.3.3",
-    "1.19.2-recommended": "0.3.3",
-    "1.19.1-latest": "0.3.3",
-    "1.19.1-recommended": "0.3.3",
-    "1.19-latest": "0.3.3",
-    "1.19-recommended": "0.3.3"
+    "1.20.2-latest": "0.3.4",
+    "1.20.2-recommended": "0.3.4",
+    "1.20.1-latest": "0.3.4",
+    "1.20.1-recommended": "0.3.4",
+    "1.20-latest": "0.3.4",
+    "1.20-recommended": "0.3.4"
   }
 }

@@ -19,23 +19,43 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+/**
+ * This class is designed for use with blocks which have a sign facing in one direction.
+ */
 public class SignBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
 
+    // Global Variables
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty HORIZONTAL_FACING = BlockStateProperties.HORIZONTAL_FACING;
 
+    /**
+     * Constructor for blocks using the SignBlock class. These blocks have two properties, HORIZONTAL_FACING and WATERLOGGED.
+     * @param properties Properties
+     */
     public SignBlock(Properties properties) {
-        super(properties); //What is super()? Why does this break EVERYTHING?
+        super(properties);
         this.registerDefaultState(this.defaultBlockState()
                 .setValue(HORIZONTAL_FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false));
     }
 
+    /**
+     * Adds the block's properties.
+     * @param builder StateDefinition.Builder
+     */
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING, WATERLOGGED);
     }
 
+    /**
+     * Controls the outline of blocks using this class.
+     * @param state Current block's state
+     * @param worldIn BlockGetter
+     * @param pos Current position
+     * @param context CollisionContext
+     * @return Block outline shape
+     */
     @SuppressWarnings("deprecation")
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
@@ -53,6 +73,11 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
         }
     }
 
+    /**
+     * Controls the state of the block when placed.
+     * @param context ItemPlacementContext
+     * @return Returns the state of the block as it should be when placed.
+     */
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState()
@@ -60,12 +85,27 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
                 .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER);
     }
 
+    /**
+     * Gets the current WATERLOGGED state, presumably.
+     * @param state Current block's state
+     * @return Returns the current WATERLOGGED state, presumably.
+     */
     @SuppressWarnings("deprecation") //Why is getFluidState() deprecated? Is there a better alternative?
     @Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state); //Displays water when waterlogged.
     }
 
+    /**
+     * I don't know what this does exactly. It's probably important.
+     * @param state Current block's state
+     * @param direction Direction
+     * @param neighborState Neighboring block's state
+     * @param world WorldAccess
+     * @param position Current position
+     * @param neighborPos Neighboring block's position
+     * @return
+     */
     @SuppressWarnings("deprecation") //Why is updateShape deprecated? Is there a better alternative?
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos position, BlockPos neighborPos){
