@@ -26,9 +26,9 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Additional Information (please complete the following information):**
- - Minecraft Version: [e.g. 1.16.5]
- - Mod Version: [e.g. 0.3.1]
- - Forge Version: [e.g. 36.2.24]
+ - Minecraft Version: [e.g. 1.20.1]
+ - Mod Version: [e.g. 0.3.4]
+ - Forge/NeoForged Version: [e.g. 47.1.65]
 
 **Additional context**
 Add any other context about the problem here.
