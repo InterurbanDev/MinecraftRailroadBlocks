@@ -1,0 +1,21 @@
+{
+  "item.railroadblocksaddon.flag_blue": "蓝色旗帜",
+  "item.railroadblocksaddon.flag_green": "绿色旗帜",
+  "item.railroadblocksaddon.flag_red": "红色旗帜",
+  "item.railroadblocksaddon.flag_yellow": "黄色旗帜",
+  "item.railroadblocksaddon.iron_crossbuck": "铁制交叉标志",
+  "item.railroadblocksaddon.iron_pole": "铁制柱子",
+  "item.railroadblocksaddon.rxr_advance_sign": "铁路道口预警标志",
+  "item.railroadblocksaddon.whistle_sign": "鸣笛标志",
+  "item.railroadblocksaddon.wooden_crossbuck": "木制交叉标志",
+  "item.railroadblocksaddon.wooden_pole": "木制柱子",
+
+  "block.railroadblocksaddon.iron_crossbuck": "铁制交叉标志",
+  "block.railroadblocksaddon.iron_pole": "铁制柱子",
+  "block.railroadblocksaddon.rxr_advance_sign": "铁路道口预警标志",
+  "block.railroadblocksaddon.whistle_sign": "鸣笛标志",
+  "block.railroadblocksaddon.wooden_crossbuck": "木制交叉标志",
+  "block.railroadblocksaddon.wooden_pole": "木制柱子",
+
+  "itemGroup.railroad_blocks_tab": "铁路方块"
+}
