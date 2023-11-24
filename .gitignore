@@ -1,8 +1,16 @@
-# Project exclude paths
-/.gradle/
-/.idea/
-/gradle/
-/build/
-/run/
-/src/test/
-/src/generated/
+# gradle
+
+gradle/
+.gradle/
+build/
+
+# idea
+.idea/
+
+# Minecraft
+run/
+
+# other
+generated/
+remappedSrc/
+test/

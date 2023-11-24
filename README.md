@@ -1,9 +1,9 @@
-# Railroad Blocks (Forge)
+# Railroad Blocks
 
 ## Description
 
 This mod adds various railroad-themed blocks to Minecraft.
-The current version includes the following blocks.
+The current version includes the following blocks:
 
 * Iron Crossbuck
 * Iron Pole
@@ -11,7 +11,7 @@ The current version includes the following blocks.
 * Wooden Crossbuck
 * Wooden Pole
 
-nd the following items:
+And the following items:
 
 * Green Flag
 * Yellow Flag
@@ -20,6 +20,12 @@ nd the following items:
 
 Please note this is an early version of this mod. Not all features/blocks have been added yet.
 
+## Mod Loaders
+Railroad Blocks supports the following Mod Loaders:
+- Fabric
+- Forge
+- NeoForge (only for 1.20.1)
+
 ## License
 
-This mod is licensed under the [MIT License](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/blob/main/LICENSE.txt). All models were made in Blockbench.
+This mod is licensed under the [MIT License](https://github.com/SamTheGamer39/MinecraftRailroadBlocksFabric/blob/master/LICENSE). All models were made in BlockBench. Simplified Chinese translation by [lonelyicer](https://github.com/lonelyicer).

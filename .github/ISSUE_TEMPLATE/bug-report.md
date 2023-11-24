@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-***BEFORE POSTING: If you are using the Fabric version of this mod, you MUST post your issue [here](https://github.com/SamTheGamer39/MinecraftRailroadBlocksFabric/issues).***
-
 **Describe the bug**
 A clear and concise description of what the bug is.
 
@@ -26,9 +24,10 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Additional Information (please complete the following information):**
- - Minecraft Version: [e.g. 1.20.1]
- - Mod Version: [e.g. 0.3.4]
- - Forge/NeoForge Version: [e.g. 47.1.65]
+- Minecraft Version: [e.g. 1.20.1]
+- Mod Version: [e.g. 0.4.0]
+- Mod Loader: [e.g. Fabric, Forge, NeoForge]
+- Mod Loader Version: [e.g. 1.0.0]
 
 **Additional context**
 Add any other context about the problem here.
