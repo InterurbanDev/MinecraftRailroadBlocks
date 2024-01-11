@@ -2,8 +2,8 @@ package io.github.samthegamer39.railroadblocks;
 
 import com.mojang.logging.LogUtils;
 import io.github.samthegamer39.railroadblocks.registers.BlockRegister;
-import io.github.samthegamer39.railroadblocks.registers.CreativeTabRegister;
 import io.github.samthegamer39.railroadblocks.registers.ItemRegister;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -28,9 +28,7 @@ public class RailroadBlocks {
 
         BlockRegister.BLOCKS.register(bus);
         ItemRegister.ITEMS.register(bus);
-        CreativeTabRegister.TABS.register(bus);
-        LOGGER.atInfo().log("Registered Tabs");
 
-        //MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(this);
     }
 }
