@@ -6,8 +6,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static io.github.samthegamer39.railroadblocks.common.init.ItemInit.*;
 import static io.github.samthegamer39.railroadblocks.RailroadBlocks.MOD_ID;
+import static io.github.samthegamer39.railroadblocks.common.init.ItemInit.*;
 
 public class ItemRegister {
 

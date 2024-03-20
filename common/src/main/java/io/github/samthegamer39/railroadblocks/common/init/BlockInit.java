@@ -3,13 +3,8 @@ package io.github.samthegamer39.railroadblocks.common.init;
 import io.github.samthegamer39.railroadblocks.common.blocks.PoleBlock;
 import io.github.samthegamer39.railroadblocks.common.blocks.SignBlock;
 import io.github.samthegamer39.railroadblocks.common.blocks.SmallSignBlock;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-
-import static io.github.samthegamer39.railroadblocks.common.Constants.MOD_ID;
 
 /**
  * A list of all mod blocks and stores them for registry with Minecraft.

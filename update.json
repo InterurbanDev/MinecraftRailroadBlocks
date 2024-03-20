@@ -1,5 +1,13 @@
 {
   "homepage": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks",
+  "1.20.4": {
+    "0.4.0": "Reworked project files, added simplified chinese language, updated iron pole recipe, etc.",
+    "0.3.4": "Added support for 1.20.x, improved recipes, added support for NeoForged, and added JavaDoc."
+  },
+  "1.20.3": {
+    "0.4.0": "Reworked project files, added simplified chinese language, updated iron pole recipe, etc.",
+    "0.3.4": "Added support for 1.20.x, improved recipes, added support for NeoForged, and added JavaDoc."
+  },
   "1.20.2": {
     "0.4.0": "Reworked project files, added simplified chinese language, updated iron pole recipe, etc.",
     "0.3.4": "Added support for 1.20.x, improved recipes, added support for NeoForged, and added JavaDoc."
@@ -12,12 +20,34 @@
     "0.4.0": "Reworked project files, added simplified chinese language, updated iron pole recipe, etc.",
     "0.3.4": "Added support for 1.20.x, improved recipes, added support for NeoForged, and added JavaDoc."
   },
+  "1.19.2": {
+    "0.4.0": "Reworked project files, added simplified chinese language, updated iron pole recipe, etc.",
+    "0.3.3": "Fixed minor translation issue."
+  },
+  "1.19.1": {
+    "0.4.0": "Reworked project files, added simplified chinese language, updated iron pole recipe, etc.",
+    "0.3.3": "Fixed minor translation issue."
+  },
+  "1.19": {
+    "0.4.0": "Reworked project files, added simplified chinese language, updated iron pole recipe, etc.",
+    "0.3.3": "Fixed minor translation issue."
+  },
   "promos": {
+    "1.20.4-latest": "0.4.0",
+    "1.20.4-recommended": "0.4.0",
+    "1.20.3-latest": "0.4.0",
+    "1.20.3-recommended": "0.4.0",
     "1.20.2-latest": "0.4.0",
     "1.20.2-recommended": "0.4.0",
     "1.20.1-latest": "0.4.0",
     "1.20.1-recommended": "0.4.0",
     "1.20-latest": "0.4.0",
-    "1.20-recommended": "0.4.0"
+    "1.20-recommended": "0.4.0",
+    "1.19.2-latest": "0.4.0",
+    "1.19.2-recommended": "0.4.0",
+    "1.19.1-latest": "0.4.0",
+    "1.19.1-recommended": "0.4.0",
+    "1.19-latest": "0.4.0",
+    "1.19-recommended": "0.4.0"
   }
 }

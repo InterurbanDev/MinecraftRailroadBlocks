@@ -4,8 +4,8 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 
-import static io.github.samthegamer39.railroadblocks.common.init.BlockInit.*;
 import static io.github.samthegamer39.railroadblocks.RailroadBlocks.MOD_ID;
+import static io.github.samthegamer39.railroadblocks.common.init.BlockInit.*;
 
 public class BlockRegister {
 

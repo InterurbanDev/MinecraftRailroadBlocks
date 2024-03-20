@@ -12,5 +12,6 @@ run/
 
 # other
 generated/
+Merged/
 remappedSrc/
 test/

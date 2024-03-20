@@ -1,7 +1,15 @@
 pluginManagement {
+    // Repositories where dependencies can be found and downloaded from.
     repositories {
         gradlePluginPortal()
         mavenCentral()
+        mavenLocal()
+
+        // Locations where dependencies can be found and downloaded from.
+        maven {
+            name = 'Architectury'
+            url "https://maven.architectury.dev/"
+        }
         maven {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
@@ -11,14 +19,10 @@ pluginManagement {
             url = 'https://maven.minecraftforge.net/'
         }
         maven {
-            name = 'Sponge Snapshots'
-            url = 'https://repo.spongepowered.org/repository/maven-public/'
+            name = 'NeoForge'
+            url = 'https://maven.neoforged.net/releases'
         }
     }
 }
 
-plugins {
-    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
-}
-
-include("common", "fabric", "forge")
+include('common', 'fabric', 'forge', 'neoforge')
