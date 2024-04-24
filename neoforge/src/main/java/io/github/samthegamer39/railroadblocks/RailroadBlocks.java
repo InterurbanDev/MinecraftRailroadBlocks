@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 /**
  * Main class for the RailroadBlocks mod. Initializes the mod and adds all associated blocks and items to Minecraft.
  */
-@Mod(RailroadBlocks.MOD_ID) // The value here should match an entry in the META-INF/mods.toml file
+@Mod(RailroadBlocks.MOD_ID) // The value here should match an entry in the META-INF/neoforge.mods.toml file
 public class RailroadBlocks {
 
     // Global Variables

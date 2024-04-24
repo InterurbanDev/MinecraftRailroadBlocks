@@ -1,6 +1,6 @@
 plugins {
 	id "architectury-plugin" version "3.4-SNAPSHOT"
-	id "dev.architectury.loom" version "1.5-SNAPSHOT" apply false
+	id "dev.architectury.loom" version "1.6-SNAPSHOT" apply false
 	id "io.github.pacifistmc.forgix" version "1.2.6"
 }
 
@@ -10,7 +10,26 @@ architectury {
 
 forgix {
 	group = maven_group
-	mergedJarName = mod_id
+	mergedJarName = mod_id + "-merged"
+	outputDir = "build/libs"
+
+	fabric {
+		projectName = "fabric"
+		jarLocation = "build/libs/${mod_id}-${mod_version}.jar"
+	}
+
+	forge {
+		projectName = "forge"
+		jarLocation = "build/libs/${mod_id}-${mod_version}.jar"
+	}
+
+	/*
+	// Adds NeoForge to Forgix (currently broken)
+	custom {
+		projectName = "neoforge" // (Required Value)
+		jarLocation = "build/libs/${mod_id}-${mod_version}.jar"
+	}
+	 */
 }
 
 subprojects {
@@ -73,7 +92,15 @@ allprojects {
 
 	tasks.withType(JavaCompile) {
 		options.encoding = "UTF-8"
-		options.release = 17
+		options.release = 21
+	}
+
+	// IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.
+	idea {
+		module {
+			downloadSources = true
+			downloadJavadoc = true
+		}
 	}
 
 	java {

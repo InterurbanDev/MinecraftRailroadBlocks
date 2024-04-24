@@ -25,4 +25,6 @@ pluginManagement {
     }
 }
 
-include('common', 'fabric', 'forge', 'neoforge')
+// List of all active parts of the project
+// 'forge' is currently disabled since Forge has not updated.
+include('common', 'fabric', 'neoforge')

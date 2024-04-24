@@ -1,5 +1,6 @@
 package io.github.samthegamer39.railroadblocks.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -37,6 +38,11 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
         this.registerDefaultState(this.defaultBlockState()
                 .setValue(HORIZONTAL_FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+        return null;
     }
 
     /**
