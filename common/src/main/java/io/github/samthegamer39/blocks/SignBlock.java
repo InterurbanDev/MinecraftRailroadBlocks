@@ -1,4 +1,4 @@
-package io.github.samthegamer39.railroadblocks.common.blocks;
+package io.github.samthegamer39.blocks;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

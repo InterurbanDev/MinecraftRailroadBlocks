@@ -1,11 +1,10 @@
 pluginManagement {
-    // Repositories where dependencies can be found and downloaded from.
     repositories {
+        // Locations where dependencies can be found and downloaded from.
         gradlePluginPortal()
         mavenCentral()
         mavenLocal()
 
-        // Locations where dependencies can be found and downloaded from.
         maven {
             name = 'Architectury'
             url "https://maven.architectury.dev/"
@@ -22,9 +21,14 @@ pluginManagement {
             name = 'NeoForge'
             url = 'https://maven.neoforged.net/releases'
         }
+        maven {
+            name = 'Quilt'
+            url = 'https://maven.quiltmc.org/repository/release/'
+        }
     }
 }
 
+rootProject.name = 'railroadblocksaddon'
+
 // List of all active parts of the project
-// 'forge' is currently disabled since Forge has not updated.
 include('common', 'fabric', 'neoforge')
