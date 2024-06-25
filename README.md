@@ -37,6 +37,12 @@ Railroad Blocks currently supports the following Mod Loaders:
 - Forge (Currently unavailable on 1.21)
 - NeoForge
 
+## Dependencies
+The [Architectury API](https://github.com/architectury/architectury-api) is the only required dependency, unless you're using the Fabric mod loader.
+
+### Fabric Only
+The [Fabric API](https://github.com/FabricMC/fabric) is a required dependency when running this mod with Fabric.
+
 ## License
 This mod is licensed under the [MIT License](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/blob/master/LICENSE). All models were made in BlockBench. Simplified Chinese translation by
 [lonelyicer](https://github.com/lonelyicer).
