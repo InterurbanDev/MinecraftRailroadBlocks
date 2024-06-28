@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "homepage": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks",
+    "sources": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks"
+  },
+
+  "license": "${mod_license}",
+  "icon": "assets/railroadblocksaddon/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.samthegamer39.fabric.RailroadBlocksFabric"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": "${fabric_version_range}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version_range}",
+    "java": ">=21",
+    "architectury": ">=10.0.0"
+  }
+}

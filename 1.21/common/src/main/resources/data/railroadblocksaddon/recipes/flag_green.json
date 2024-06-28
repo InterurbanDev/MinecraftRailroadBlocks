@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    " SG",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "G": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "result": {
+    "id": "railroadblocksaddon:flag_green",
+    "count": 1
+  }
+}
