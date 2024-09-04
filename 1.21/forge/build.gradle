@@ -2,6 +2,7 @@ plugins {
     id 'com.github.johnrengelman.shadow'
 }
 
+/*
 loom {
    //accessWidenerPath = project(":common").loom.accessWidenerPath
 
@@ -13,6 +14,7 @@ loom {
         //mixinConfig "railroadblocksaddon.mixins.json"
     }
 }
+ */
 
 architectury {
     platformSetupLoomIde()

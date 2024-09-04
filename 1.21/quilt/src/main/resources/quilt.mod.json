@@ -8,7 +8,7 @@
       "name": "${mod_name}",
       "description": "${mod_description}",
       "contributors": {
-        "SamTheGamer39": "Author",
+        "Interurban Dev": "Author",
         "lonelyicer": "Translator"
       },
       "icon": "assets/railroadblocksaddon/icon.png"
@@ -16,7 +16,7 @@
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {
       "init": [
-        "io.github.samthegamer39.quilt.RailroadBlocksQuilt"
+        "dev.interurban.quilt.RailroadBlocksQuilt"
       ]
     },
     "depends": [

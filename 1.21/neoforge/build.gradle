@@ -7,20 +7,6 @@ architectury {
     neoForge()
 }
 
-/*
-loom {
-    accessWidenerPath = project(':common').loom.accessWidenerPath
-
-    neoForge {
-        // convertAccessWideners = true
-        // extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
-
-        // mixinConfig "railroadblocksaddon-common.mixins.json"
-        // mixinConfig "railroadblocksaddon.mixins.json"
-    }
-}
- */
-
 configurations {
     common {
         canBeResolved = true
@@ -48,7 +34,8 @@ repositories {
 
 dependencies {
     neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
-    // Remove the next line if you don't want to depend on the API
+
+    // Architectury API. This is optional, and you can comment it out if you don't need it.
     modApi "dev.architectury:architectury-neoforge:${rootProject.architectury_api_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
