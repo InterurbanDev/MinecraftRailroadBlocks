@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " S ",
-    " S ",
-    " S "
+    "S",
+    "S",
+    "S"
   ],
   "key": {
     "S": {
@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "id": "railroadblocksaddon:wooden_pole",
+    "item": "railroadblocksaddon:wooden_pole",
     "count": 1
   }
 }

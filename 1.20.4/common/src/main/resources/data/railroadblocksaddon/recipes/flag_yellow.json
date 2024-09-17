@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
-    " SY",
-    " S "
+    "SY",
+    "S "
   ],
   "key": {
     "S": {
@@ -14,7 +13,8 @@
     }
   },
   "result": {
-    "id": "railroadblocksaddon:flag_yellow",
-    "count": 1
-  }
+    "item": "railroadblocksaddon:flag_yellow",
+    "count": 3
+  },
+  "group": "flags"
 }

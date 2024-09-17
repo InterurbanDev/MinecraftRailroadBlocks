@@ -9,8 +9,8 @@
     "${mod_authors}"
   ],
   "contact": {
-    "homepage": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks",
-    "sources": "https://github.com/SamTheGamer39/MinecraftRailroadBlocks"
+    "homepage": "${mod_homepage}",
+    "sources": "${mod_sources}"
   },
 
   "license": "${mod_license}",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.samthegamer39.fabric.RailroadBlocksFabric"
+      "dev.interurban.fabric.RailroadBlocksFabric"
     ]
   },
 
@@ -27,7 +27,7 @@
     "fabricloader": "${fabric_version_range}",
     "fabric-api": "*",
     "minecraft": "${minecraft_version_range}",
-    "java": ">=21",
-    "architectury": ">=10.0.0"
+    "java": ">=${java}",
+    "architectury": "${architectury_version_range}"
   }
 }
