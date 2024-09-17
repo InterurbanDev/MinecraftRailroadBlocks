@@ -56,7 +56,7 @@ processResources {
                 minecraft_version_range: minecraft_version_ranged,
                 forge_version: forge_version,
                 forge_version_range: forge_version_range,
-                architectury_api_version_range: architectury_api_version_range,
+                architectury_version_range: architectury_api_version_range,
                 mod_id: mod_id,
                 mod_name: mod_name,
                 mod_license: license,

@@ -7,20 +7,6 @@ architectury {
     neoForge()
 }
 
-/*
-loom {
-    accessWidenerPath = project(':common').loom.accessWidenerPath
-
-    neoForge {
-        // convertAccessWideners = true
-        // extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
-
-        // mixinConfig "railroadblocksaddon-common.mixins.json"
-        // mixinConfig "railroadblocksaddon.mixins.json"
-    }
-}
- */
-
 configurations {
     common {
         canBeResolved = true
@@ -56,7 +42,7 @@ dependencies {
 }
 
 processResources {
-    filesMatching('META-INF/neoforge.mods.toml') {
+    filesMatching('META-INF/mods.toml') {
         expand  minecraft_version: minecraft_version,
                 minecraft_version_range: minecraft_version_range,
                 neoforge_version: neoforge_version,
@@ -83,5 +69,4 @@ shadowJar {
 
 remapJar {
     input.set shadowJar.archiveFile
-    //dependsOn shadowJar
 }

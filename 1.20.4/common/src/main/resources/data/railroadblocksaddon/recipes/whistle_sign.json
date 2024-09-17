@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
-    " W ",
-    " I "
+    "W",
+    "I"
   ],
   "key": {
     "I": {
@@ -14,7 +13,7 @@
     }
   },
   "result": {
-    "id": "railroadblocksaddon:whistle_sign",
+    "item": "railroadblocksaddon:whistle_sign",
     "count": 3
   }
 }

@@ -16,7 +16,7 @@
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {
       "init": [
-        "io.github.samthegamer39.quilt.RailroadBlocksQuilt"
+        "dev.interurban.quilt.RailroadBlocksQuilt"
       ]
     },
     "depends": [

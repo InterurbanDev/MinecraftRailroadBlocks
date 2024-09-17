@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "Railroad Blocks",
-    "pack_format": 34
+    "description": "${mod_name}",
+    "pack_format": 22
   }
 }

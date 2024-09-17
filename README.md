@@ -8,6 +8,7 @@ This mod adds various railroad-themed blocks to Minecraft.
 The current version includes the following blocks:
 * Iron Crossbuck
 * Iron Pole
+* Old Whistle Sign
 * Railroad Crossing Advance Warning Sign
 * Whistle Sign
 * Wooden Crossbuck
@@ -20,9 +21,9 @@ And the following items:
 * Blue Flag
 
 # Version Information
-This is version 0.5.0 of Railroad Blocks for Minecraft 1.21.
+This is version 0.5.1 of Railroad Blocks for Minecraft 1.21.
 
-Forge modloader support is currently unavailable for v0.5.0.
+Forge modloader support is currently unavailable for v0.5.0+.
 
 ## Download Locations
 You can download this version of Railroad Blocks at any of the following locations:
@@ -34,7 +35,7 @@ You can download this version of Railroad Blocks at any of the following locatio
 ## Mod Loaders
 Railroad Blocks currently supports the following Mod Loaders:
 - Fabric
-- Forge (Currently unavailable on 1.21)
+- Forge (Currently unavailable on 1.21.x)
 - NeoForge
 
 ## License
