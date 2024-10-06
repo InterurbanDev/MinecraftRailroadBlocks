@@ -24,8 +24,8 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Additional Information (please complete the following information):**
-- Minecraft Version: [e.g. 1.20.1]
-- Mod Version: [e.g. 0.4.0]
+- Minecraft Version: [e.g. 1.21.1]
+- Mod Version: [e.g. 0.5.0]
 - Mod Loader: [e.g. Fabric, Forge, NeoForge]
 - Mod Loader Version: [e.g. 1.0.0]
 
