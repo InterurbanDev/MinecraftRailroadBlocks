@@ -58,19 +58,26 @@ is illegal and a violation of these guidelines.
 > *All contributions will be licensed under the [MIT License](/LICENSE) and must be compatible with it.*
 
 ## Coding Style
-Code contributions should meet the following standards:
+Thank you for considering contributing to the code of this project.
+
+Code contributions should generally comply with the following standards:
 - Smaller is better! Avoid making large pull requests. Ideally, a pull request should only add one feature or fix one
   bug.
 - No personal information is in your code (except for your name or username for attribution).
-- Please maintain a consistent style throughout your code.
-- JavaDoc and Comments are used to explain how your code functions and are used where appropriate.
+- Please try to maintain a consistent style throughout your code, when reasonable.
+- JavaDoc and Comments are used to explain how your code functions and are used when appropriate.
 - [Resolve any merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github).
+
+Please keep in mind the following:
+> "A foolish consistency is the hobgoblin of little minds, adored by little statesmen and philosophers and divines."
+
+> "Simplicity is the ultimate sophistication."
 
 ## Commit Messages
 - The first line of a commit is the subject and should be short.
 - Leave the second line blank
 - The rest of the commit message is for you to explain what changes were made and why.
-- If the commit resolves any issues, list the id in the commit
+- If the commit resolves any issues, please list the id in the commit
 - Avoid making multiple unrelated changes in one commit
 
 ## Translations
