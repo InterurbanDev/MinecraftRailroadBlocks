@@ -66,17 +66,13 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
         Direction direction = state.getValue(FACING);
-        if (direction == Direction.NORTH) {
-            return Shapes.box(0.0625, 0.0, 0.375, 0.9375, 0.9375, 0.5625); //1, 0, 6, 15, 15, 9
-        } else if (direction == Direction.SOUTH) {
-            return Shapes.box(0.0625, 0.0, 0.4375, 0.9375, 0.9375, 0.625); //1, 0, 7, 15, 15, 10
-        } else if (direction == Direction.EAST) {
-            return Shapes.box(0.4375, 0.0, 0.0625, 0.625, 0.9375, 0.9375); //7, 0, 1, 10, 15, 15
-        } else if (direction == Direction.WEST) {
-            return Shapes.box(0.375, 0.0, 0.0625, 0.5625, 0.9375, 0.9375); //6, 0, 1, 9, 15, 15
-        } else {
-            return Shapes.block();
-        }
+		return switch (direction) {
+			case NORTH -> Shapes.box(0.0625, 0.0, 0.375, 0.9375, 1, 0.5625); //1, 0, 6, 15, 16, 9
+			case SOUTH -> Shapes.box(0.0625, 0.0, 0.4375, 0.9375, 1, 0.625); //1, 0, 7, 15, 16, 10
+			case EAST -> Shapes.box(0.4375, 0.0, 0.0625, 0.625, 1, 0.9375); //7, 0, 1, 10, 16, 15
+			case WEST -> Shapes.box(0.375, 0.0, 0.0625, 0.5625, 1, 0.9375); //6, 0, 1, 9, 16, 15
+			default -> Shapes.block();
+		};
     }
 
     /**

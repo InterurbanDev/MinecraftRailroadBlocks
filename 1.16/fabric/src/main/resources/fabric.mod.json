@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "homepage": "${mod_homepage}",
+    "sources": "${mod_sources}"
+  },
+
+  "license": "${mod_license}",
+  "icon": "assets/railroadblocksaddon/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.interurban.fabric.RailroadBlocksFabric"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": "${fabric_version_range}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version_range}",
+    "java": ">=${java}",
+    "architectury": "${architectury_version_range}"
+  }
+}
