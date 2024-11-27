@@ -18,6 +18,7 @@ Total Downloads per platform:
 
 ## Blocks
 The current version includes the following blocks:
+* Railroad Crossing Lights (Decorative)
 * Iron Crossbuck
 * Iron Pole
 * Old Whistle Sign
@@ -34,7 +35,7 @@ The current version includes the following items:
 * Blue Flag
 
 ## Version Information
-This is version 0.5.2 of Railroad Blocks for Minecraft 1.21.
+This is version 0.6.0 of Railroad Blocks.
 
 ### Credits
 All models were made in BlockBench.
