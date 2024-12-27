@@ -1,0 +1,25 @@
+{
+  "item.railroadblocksaddon.crossing_light_dual": "Demir Yolu Geçidi Işıkları",
+  "item.railroadblocksaddon.flag_blue": "Mavi Bayrak",
+  "item.railroadblocksaddon.flag_green": "Yeşil Bayrak",
+  "item.railroadblocksaddon.flag_red": "Kırmızı Bayrak",
+  "item.railroadblocksaddon.flag_yellow": "Sarı Bayrak",
+  "item.railroadblocksaddon.iron_crossbuck": "Demir Yolu Geçidi Levhası",
+  "item.railroadblocksaddon.iron_pole": "Demir Direk",
+  "item.railroadblocksaddon.rxr_advance_sign": "Demir Yolu Geçidi Ön Uyarı Levhası",
+  "item.railroadblocksaddon.whistle_sign": "Düdük Levhası",
+  "item.railroadblocksaddon.old_whistle_sign": "Eski Düdük Levhası",
+  "item.railroadblocksaddon.wooden_crossbuck": "Tahta Demir Yolu Geçidi Levhası",
+  "item.railroadblocksaddon.wooden_pole": "Tahta Direk",
+
+  "block.railroadblocksaddon.crossing_light_dual": "Demir Yolu Geçidi Işıkları",
+  "block.railroadblocksaddon.iron_crossbuck": "Demir Yolu Geçidi Levhası",
+  "block.railroadblocksaddon.iron_pole": "Demir Direk",
+  "block.railroadblocksaddon.rxr_advance_sign": "Demir Yolu Geçidi Ön Uyarı Levhası",
+  "block.railroadblocksaddon.whistle_sign": "Düdük Levhası",
+  "block.railroadblocksaddon.old_whistle_sign": "Eski Düdük Levhası",
+  "block.railroadblocksaddon.wooden_crossbuck": "Tahta Demir Yolu Geçidi Levhası",
+  "block.railroadblocksaddon.wooden_pole": "Tahta Direk",
+
+  "itemGroup.railroadblocksaddon.general": "Demir Yolu Blokları"
+}
