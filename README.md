@@ -1,5 +1,5 @@
-# Railroad Blocks
-![A screenshot of Minecraft with a Railroad Crossing sign, a street, and some trees in the background. The text"Railroad Blocks" is displayed across the image.](https://wsrv.nl/?url=https%3A%2F%2Fuser-images.githubusercontent.com%2F72585301%2F162553408-f6b9f69a-90e4-493c-a72f-1f7e793d3c7b.png&n=-1)
+![Railroad Blocks](https://private-user-images.githubusercontent.com/72585301/399005151-8848ca24-cffd-4c2a-a2d8-08f4aa6b572c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzUzMzY1NzUsIm5iZiI6MTczNTMzNjI3NSwicGF0aCI6Ii83MjU4NTMwMS8zOTkwMDUxNTEtODg0OGNhMjQtY2ZmZC00YzJhLWEyZDgtMDhmNGFhNmI1NzJjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjI3VDIxNTExNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRkMDVkZTE2ODJjNGUzZDQzN2Y3MWZmZjQ2N2IwNmI3ZWQ4NjUwNTZlOTkzODE4NDY1OTlkYjhjZDdjNzRlOGYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.CDvZV-XYmx300INBb58i-tt6s7fd1nhX6gb2Q3ysvl0)
+
 ![Available for Fabric](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg)
 ![Available for Forge](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/forge_vector.svg)
 ![Available for NeoForge](https://interurban.dev/resources/neoforge_vector.svg)
@@ -16,7 +16,7 @@ Total Downloads per platform:
 ![](https://cf.way2muchnoise.eu/606729.svg)
 ![](https://cf.way2muchnoise.eu/684961.svg)
 
-## Blocks
+## :green_square: Blocks
 The current version includes the following blocks:
 * Railroad Crossing Lights (Decorative)
 * Iron Crossbuck
@@ -27,19 +27,26 @@ The current version includes the following blocks:
 * Wooden Crossbuck
 * Wooden Pole
 
-## Items
+## :hammer: Items
 The current version includes the following items:
 * Green Flag
 * Yellow Flag
 * Red Flag
 * Blue Flag
 
+## :globe_with_meridians: Supported Languages
+* :us: American English
+* :gb: British English
+* :cn: Simplified Chinese (81%)
+* :tr: Turkish
+
 ## Version Information
-This is version 0.6.0 of Railroad Blocks.
+This is version 0.6.1 of Railroad Blocks.
 
 ### Credits
 All models were made in BlockBench.
-Simplified Chinese translation by [lonelyicer](https://github.com/lonelyicer).
+Simplified Chinese translation by [lonelyicer](https://github.com/lonelyicer),
+Turkish translation by [hhhhh-ckr](https://github.com/hhhhh-ckr).
 
-### License
+## :copyright: License
 This mod is licensed under the [MIT License](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/blob/master/LICENSE).
