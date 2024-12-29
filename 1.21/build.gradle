@@ -2,7 +2,7 @@ plugins {
 	id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
 	id 'architectury-plugin' version '3.4-SNAPSHOT'
 	id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
-	id 'io.github.pacifistmc.forgix' version '1.2.9'
+	//id 'io.github.pacifistmc.forgix' version '1.2.9'
 }
 
 architectury {
@@ -14,6 +14,7 @@ allprojects {
 	version = rootProject.mod_version
 }
 
+/*
 forgix {
 	group = maven_group
 	mergedJarName = mod_id + "-merged"
@@ -39,6 +40,7 @@ forgix {
 		jarLocation = "build/libs/${mod_id}-${mod_version}.jar"
 	}
 }
+ */
 
 subprojects {
 	apply plugin: 'dev.architectury.loom'
@@ -50,16 +52,16 @@ subprojects {
 		archivesName = "$rootProject.mod_id-$project.name"
 	}
 
-	loom {
-		silentMojangMappingsLicense()
-	}
-
 	repositories {
 		// Add repositories to retrieve artifacts from in here.
 		// You should only use this when depending on other mods because
 		// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 		// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 		// for more information about repositories.
+	}
+
+	loom {
+		silentMojangMappingsLicense()
 	}
 
 	dependencies {
