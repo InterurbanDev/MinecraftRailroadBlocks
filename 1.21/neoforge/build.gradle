@@ -12,7 +12,6 @@ configurations {
         canBeResolved = true
         canBeConsumed = false
     }
-    //shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentNeoForge.extendsFrom common
@@ -69,6 +68,5 @@ shadowJar {
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
-    //dependsOn shadowJar
+    inputFile.set shadowJar.archiveFile
 }
