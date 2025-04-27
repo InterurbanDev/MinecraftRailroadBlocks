@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "railroadblocksaddon:whistle_sign", "y": 180 },
+    "facing=south": { "model": "railroadblocksaddon:whistle_sign" },
+    "facing=west":  { "model": "railroadblocksaddon:whistle_sign", "y": 90 },
+    "facing=east":  { "model": "railroadblocksaddon:whistle_sign", "y": 270 }
+  }
+}

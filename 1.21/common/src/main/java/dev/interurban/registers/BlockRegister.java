@@ -11,13 +11,13 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import static dev.interurban.RailroadBlocks.MOD_ID;
 
 /**
- * A list of all mod blocks and stores them for registry with Minecraft.
+ * Defines all mod blocks and stores them for registry with Minecraft.
  */
 public class BlockRegister {
-
+    // Creates a deferred register which each block will be stored into until it is time to register the blocks.
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(MOD_ID, Registries.BLOCK);
 
-    // Block List
+    // Blocks
     public static final RegistrySupplier<CrossingLightBlock> CROSSING_LIGHT_DUAL = BLOCKS.register("crossing_light_dual", () ->
             new CrossingLightBlock(BlockBehaviour.Properties.of()
                     .sound(SoundType.METAL)

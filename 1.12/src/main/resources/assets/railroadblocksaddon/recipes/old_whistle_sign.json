@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dye",
+      "data": 0
+    },
+    {
+      "item": "minecraft:concrete_powder",
+      "data": 8
+    }
+  ],
+  "result": {
+    "item": "railroadblocksaddon:old_whistle_sign",
+    "count": 1
+  }
+}

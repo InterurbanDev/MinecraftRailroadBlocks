@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "railroadblocksaddon:crossing_light_dual", "y": 180 },
+    "facing=south": { "model": "railroadblocksaddon:crossing_light_dual" },
+    "facing=west":  { "model": "railroadblocksaddon:crossing_light_dual", "y": 90 },
+    "facing=east":  { "model": "railroadblocksaddon:crossing_light_dual", "y": 270 }
+  }
+}

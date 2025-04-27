@@ -1,0 +1,26 @@
+//Items
+item.crossing_light_dual.name=Demir Yolu Geçidi Işıkları
+item.flag_blue.name=Mavi Bayrak
+item.flag_green.name=Yeşil Bayrak
+item.flag_red.name=Kırmızı Bayrak
+item.flag_yellow.name=Sarı Bayrak
+item..iron_crossbuck.name=Demir Yolu Geçidi Levhası
+item.iron_pole.name=Demir Direk
+item.rxr_advance_sign.name=Demir Yolu Geçidi Ön Uyarı Levhası
+item.whistle_sign.name=Düdük Levhası
+item.old_whistle_sign.name=Eski Düdük Levhası
+item.wooden_crossbuck.name=Tahta Demir Yolu Geçidi Levhası
+item.wooden_pole.name=Tahta Direk
+
+//Blocks
+tile.crossing_light_dual.name=Demir Yolu Geçidi Işıkları
+tile.iron_crossbuck.name=Demir Yolu Geçidi Levhası
+tile.iron_pole.name=Demir Direk
+tile.rxr_advance_sign.name=Demir Yolu Geçidi Ön Uyarı Levhası
+tile.whistle_sign.name=Düdük Levhası
+tile.old_whistle_sign.name=Eski Düdük Levhası
+tile.wooden_crossbuck.name=Tahta Demir Yolu Geçidi Levhası
+tile.wooden_pole.name=Tahta Direk
+
+//Tabs
+itemGroup.railroadblockstab=Demir Yolu Blokları

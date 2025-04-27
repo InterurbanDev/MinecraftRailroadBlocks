@@ -10,12 +10,13 @@ import static dev.interurban.RailroadBlocks.MOD_ID;
 import static dev.interurban.registers.CreativeTabRegister.RAILROAD_BLOCKS_TAB;
 
 /**
- * A list of all mod items and stores them for registry with Minecraft.
+ * Defines all mod items and stores them for registry with Minecraft.
  */
 public class ItemRegister {
-
+    // Creates a deferred register which each item will be stored into until it is time to register the items.
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(MOD_ID, Registries.ITEM);
 
+    // Items
     public static RegistrySupplier<BlockItem> CROSSING_LIGHT_DUAL = ITEMS.register("crossing_light_dual", () ->
             new BlockItem(BlockRegister.CROSSING_LIGHT_DUAL.get(), new Item.Properties()
                     .arch$tab(RAILROAD_BLOCKS_TAB)

@@ -42,7 +42,7 @@ The current version includes the following items:
 * :tr: Turkish
 
 ## Version Information
-This is version 0.6.2 of Railroad Blocks.
+This is version 0.6.3 of Railroad Blocks.
 
 ### Credits
 All models were made in BlockBench.

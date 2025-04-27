@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "IYI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Y": {
+      "item": "minecraft:dye",
+      "data": 11
+    }
+  },
+  "result": {
+    "item": "railroadblocksaddon:rxr_advance_sign",
+    "count": 3
+  }
+}
