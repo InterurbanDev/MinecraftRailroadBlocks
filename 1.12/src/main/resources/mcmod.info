@@ -1,0 +1,16 @@
+[
+{
+  "modid": "${mod_id}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "version": "${version}",
+  "mcversion": "${minecraft_version}",
+  "url": "${homepage}",
+  "updateUrl": "${update}",
+  "authorList": ["${authors}"],
+  "credits": "${credits}",
+  "logoFile": "${icon}",
+  "screenshots": [],
+  "dependencies": []
+}
+]

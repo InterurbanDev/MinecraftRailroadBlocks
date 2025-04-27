@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "railroadblocksaddon:wooden_crossbuck", "y": 180 },
+    "facing=south": { "model": "railroadblocksaddon:wooden_crossbuck" },
+    "facing=west":  { "model": "railroadblocksaddon:wooden_crossbuck", "y": 90 },
+    "facing=east":  { "model": "railroadblocksaddon:wooden_crossbuck", "y": 270 }
+  }
+}

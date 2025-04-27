@@ -1,6 +1,5 @@
 pluginManagement {
     repositories {
-        // Locations where dependencies can be found and downloaded from.
         gradlePluginPortal()
         mavenCentral()
         mavenLocal()
@@ -16,10 +15,6 @@ pluginManagement {
         maven {
             name = 'Forge'
             url = 'https://maven.minecraftforge.net/'
-        }
-        maven {
-            name = 'NeoForge'
-            url = 'https://maven.neoforged.net/releases'
         }
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SB",
+    "S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "minecraft:wool",
+      "data": 11
+    }
+  },
+  "result": {
+    "item": "railroadblocksaddon:flag_blue",
+    "count": 3
+  },
+  "group": "flags"
+}

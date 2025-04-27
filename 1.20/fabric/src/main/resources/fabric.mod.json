@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
   "id": "${mod_id}",
-  "version": "${mod_version}",
+  "version": "${version}",
 
   "name": "${mod_name}",
-  "description": "${mod_description}",
+  "description": "${description}",
   "authors": [
-    "${mod_authors}"
+    "${authors}"
   ],
   "contact": {
-    "homepage": "${mod_homepage}",
-    "sources": "${mod_sources}"
+    "homepage": "${homepage}",
+    "issues": "${issues}",
+    "sources": "${sources}"
   },
 
-  "license": "${mod_license}",
-  "icon": "assets/railroadblocksaddon/icon.png",
+  "license": "${license}",
+  "icon": "${icon}",
 
   "environment": "*",
   "entrypoints": {

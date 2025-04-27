@@ -1,0 +1,54 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "railroadblocksaddon:blocks/crossbuck2",
+		"1": "railroadblocksaddon:blocks/crossbuck1",
+		"2": "railroadblocksaddon:blocks/wood_pole",
+		"particle": "railroadblocksaddon:blocks/wood_pole"
+	},
+	"elements": [
+		{
+			"name": "Post",
+			"from": [7, 0, 7],
+			"to": [9, 13, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, 0, 13]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 14], "texture": "#2"},
+				"east": {"uv": [0, 0, 2, 14], "texture": "#2"},
+				"south": {"uv": [0, 0, 2, 14], "texture": "#2"},
+				"west": {"uv": [0, 0, 2, 14], "texture": "#2"},
+				"up": {"uv": [0, 0, 2, 2], "rotation": 180, "texture": "#2"},
+				"down": {"uv": [2, 2, 0, 0], "rotation": 180, "texture": "#2"}
+			}
+		},
+		{
+			"name": "Rail Road",
+			"from": [7, 0, 9],
+			"to": [9, 15, 10],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, 7.5, 6.5]},
+			"faces": {
+				"north": {"uv": [1.75, 0, 3.5, 9.75], "texture": "#0"},
+				"east": {"uv": [4.25, 0, 5, 9.75], "texture": "#0"},
+				"south": {"uv": [0, 0, 1.75, 9.75], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 4.25, 9.75], "texture": "#0"},
+				"up": {"uv": [5, 0, 6.75, 0.75], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [5, 0.75, 6.75, 1.5], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "Crossing",
+			"from": [0.5, 6.5, 9.1],
+			"to": [15.5, 8.5, 10.1],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, 7.5, 6.5]},
+			"faces": {
+				"north": {"uv": [1.75, 0, 3.5, 9], "rotation": 90, "texture": "#1"},
+				"east": {"uv": [5, 0, 6.75, 0.75], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [0, 0, 1.75, 9], "rotation": 270, "texture": "#1"},
+				"west": {"uv": [5, 0.75, 6.75, 1.5], "rotation": 90, "texture": "#1"},
+				"up": {"uv": [4.25, 0, 5, 9], "rotation": 270, "texture": "#1"},
+				"down": {"uv": [3.5, 0, 4.25, 9], "rotation": 270, "texture": "#1"}
+			}
+		}
+	]
+}

@@ -40,20 +40,22 @@ dependencies {
 
 processResources {
     filesMatching('fabric.mod.json') {
-        expand  minecraft_version_range: minecraft_version_ranged,
+        expand  architectury_version_range: architectury_api_version_range_json,
                 fabric_version_range: fabric_loader_version_range,
                 fabric_api_version: fabric_api_version,
-                architectury_version_range: architectury_api_version_ranged,
                 java: java_version,
+                minecraft_version_range: minecraft_version_range_json,
                 mod_id: mod_id,
                 mod_name: mod_name,
-                mod_license: license,
-                mod_version: mod_version,
-                mod_authors: mod_authors,
-                mod_credits: mod_credits,
-                mod_description: mod_description,
-                mod_homepage: mod_homepage,
-                mod_sources: mod_sources
+                authors: mod_authors,
+                credits: mod_credits,
+                description: mod_description,
+                icon: icon,
+                license: license,
+                version: mod_version,
+                homepage: homepage,
+                issues: issues,
+                sources: sources
     }
 }
 
