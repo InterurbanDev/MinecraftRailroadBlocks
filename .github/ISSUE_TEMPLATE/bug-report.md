@@ -25,8 +25,8 @@ If applicable, add screenshots to help explain your problem.
 
 **Additional Information (please complete the following information):**
 - Minecraft Version: [e.g. 1.21.1]
-- Mod Version: [e.g. 0.5.0]
-- Mod Loader: [e.g. Fabric, Forge, NeoForge]
+- Mod Version: [e.g. 0.6.0]
+- Mod Loader: [e.g. Fabric, Forge, NeoForge, Quilt]
 - Mod Loader Version: [e.g. 1.0.0]
 
 **Additional context**
