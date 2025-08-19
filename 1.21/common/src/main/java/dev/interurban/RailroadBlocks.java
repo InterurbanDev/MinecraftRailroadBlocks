@@ -1,10 +1,11 @@
 package dev.interurban;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import dev.interurban.registers.BlockRegister;
 import dev.interurban.registers.CreativeTabRegister;
 import dev.interurban.registers.ItemRegister;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Registers the mod's blocks, items, and other additions for each mod loader.

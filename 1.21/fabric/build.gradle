@@ -1,5 +1,5 @@
 plugins {
-    id "com.github.johnrengelman.shadow"
+	id 'com.gradleup.shadow'
 }
 
 architectury {
@@ -12,7 +12,7 @@ configurations {
         canBeResolved = true
         canBeConsumed = false
     }
-    //shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
+
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentFabric.extendsFrom common
@@ -60,10 +60,10 @@ processResources {
 }
 
 shadowJar {
-    configurations = [project.configurations.shadowBundle]
-    archiveClassifier = 'dev-shadow'
+	configurations = [project.configurations.shadowBundle]
+	archiveClassifier = 'dev-shadow'
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
+	inputFile.set shadowJar.archiveFile
 }

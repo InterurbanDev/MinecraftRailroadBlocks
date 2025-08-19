@@ -1,10 +1,10 @@
 package dev.interurban;
 
-import dev.interurban.registers.BlockRegister;
-import dev.interurban.registers.CreativeTabRegister;
-import dev.interurban.registers.ItemRegister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import dev.interurban.registers.BlockRegister;
+import dev.interurban.registers.ItemRegister;
 
 public class RailroadBlocks {
 	public static final String MOD_ID = "railroadblocksaddon";
