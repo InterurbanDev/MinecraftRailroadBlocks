@@ -7,27 +7,31 @@ assignees: ''
 
 ---
 
-**Describe the bug**
+# Describe the bug
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+## To Reproduce
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
+## Expected behavior
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
+## Additional Information
+### Screenshots
 If applicable, add screenshots to help explain your problem.
 
-**Additional Information (please complete the following information):**
+### Logs
+If applicable, lease attach or copy the log file from your game to help identify the problem.
+
+### Version Information
 - Minecraft Version: [e.g. 1.21.1]
 - Mod Version: [e.g. 0.6.0]
 - Mod Loader: [e.g. Fabric, Forge, NeoForge, Quilt]
 - Mod Loader Version: [e.g. 1.0.0]
 
-**Additional context**
+### Additional context
 Add any other context about the problem here.

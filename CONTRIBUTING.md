@@ -11,14 +11,10 @@ however there are a few guidelines for making changes to this mod. This file out
   - [Translations](#translations)
 - [Certificate of Origin](#certificate-of-origin)
 
-> *These guidelines are subject to change at any time. It is your responsibility to ensure your contributions are in
-compliance with these guidelines. Non-compliant contributions may be rejected or removed.*
-
 # Opening an Issue
-Before [creating an issue](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/issues/new/choose), please ensure
-you are on the latest version of this mod, as the issue may already be resolved or the feature added. Additionally, make
-sure to avoid making duplicate issues. You should always check to see if anybody else has created the same issue or
-feature request.
+Before [creating an issue](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/issues/new/choose), please ensure you are on the latest version of this mod, as the issue may already be
+resolved or the feature added. Additionally, make sure to avoid making duplicate issues. You should always check to see
+if anybody else has created the same issue or feature request.
 
 ## Bug Reports
 If you encounter an issue and believe it was caused by this mod, it's highly encouraged that you file a bug report so
@@ -27,7 +23,8 @@ the [Q&A](https://github.com/InterurbanDev/MinecraftRailroadBlocks/discussions/c
 - Please review the [wiki](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/wiki) before opening an issue to
   see if you're running an outdated version of the mod.
 - Avoid duplicate issues when possible. Make sure to search for your problem before posting. If you do find an issue for
-  your problem, you can use a reaction to indicate that you also have this problem or provide additional information.
+  your problem, you can use a reaction to indicate that you also have this problem or comment to provide additional
+  information.
 - Make sure to list the mod version, mod loader, and loader version information in any issue, otherwise we may not be
   able to help.
 - Make sure to list the steps required to reproduce the issue if you know how to reproduce it.
@@ -67,11 +64,6 @@ Code contributions should generally comply with the following standards:
 - Please try to maintain a consistent style throughout your code, when reasonable.
 - JavaDoc and Comments are used to explain how your code functions and are used when appropriate.
 - [Resolve any merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github).
-
-Please keep in mind the following:
-> "A foolish consistency is the hobgoblin of little minds, adored by little statesmen and philosophers and divines."
-
-> "Simplicity is the ultimate sophistication."
 
 ## Commit Messages
 - The first line of a commit is the subject and should be short.
