@@ -1,5 +1,5 @@
 plugins {
-	id 'dev.architectury.loom' version '1.10-SNAPSHOT' apply false
+	id 'dev.architectury.loom' version '1.11-SNAPSHOT' apply false
 	id 'architectury-plugin' version '3.4-SNAPSHOT'
 	id 'com.gradleup.shadow' version '8.3.6' apply false
 	id "io.github.pacifistmc.forgix" version "2.0.0-SNAPSHOT.5.1"
@@ -23,6 +23,12 @@ subprojects {
 		// Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
 		archivesName = "$rootProject.mod_id-$project.name"
 	}
+
+    forgix {
+        // NeoForge is excluded, as NeoForge and Forge seem to conflict when both are included in Forgix.
+        fabric()
+        forge()
+    }
 
 	repositories {
 		// Add repositories to retrieve artifacts from in here.

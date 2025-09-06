@@ -26,5 +26,12 @@
     "minecraft": "${minecraft_version_range}",
     "java": ">=${java}",
     "architectury": "${architectury_version_range}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/KpZUWpvzn6"
+      }
+    }
   }
 }
