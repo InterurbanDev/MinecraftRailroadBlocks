@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.johnrengelman.shadow'
+	id 'com.gradleup.shadow'
 }
 
 loom {
@@ -18,7 +18,6 @@ configurations {
         canBeResolved = true
         canBeConsumed = false
     }
-
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentForge.extendsFrom common
@@ -38,16 +37,13 @@ dependencies {
     // Architectury API. This is optional, and you can comment it out if you don't need it.
     modImplementation "dev.architectury:architectury-forge:$rootProject.architectury_api_version"
 
-    // Hack fix for now, force jopt-simple to be exactly 5.0.4 because Mojang ships that version, but some transitive dependencies request 6.0+
-    //implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
-
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
 }
 
 processResources {
     filesMatching('META-INF/mods.toml') {
-        expand architectury_version_range: architectury_api_version_range_toml,
+        expand  architectury_version_range: architectury_api_version_range_toml,
                 java: java_version,
                 minecraft_version: minecraft_version,
                 minecraft_version_range: minecraft_version_range_toml,
@@ -73,5 +69,5 @@ shadowJar {
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
+    inputFile.set shadowJar.archiveFile
 }

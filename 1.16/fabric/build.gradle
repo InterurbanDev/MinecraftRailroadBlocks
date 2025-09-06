@@ -1,5 +1,5 @@
 plugins {
-    id "com.github.johnrengelman.shadow"
+	id 'com.gradleup.shadow'
 }
 
 architectury {
@@ -9,10 +9,9 @@ architectury {
 
 configurations {
     common {
-        canBeResolved = true
-        canBeConsumed = false
+	    canBeResolved = true
+	    canBeConsumed = false
     }
-    //shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentFabric.extendsFrom common
@@ -25,6 +24,13 @@ configurations {
     }
 }
 
+repositories {
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
+}
+
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
@@ -34,26 +40,31 @@ dependencies {
     // Architectury API. This is optional, and you can comment it out if you don't need it.
     modImplementation "me.shedaniel:architectury-fabric:$rootProject.architectury_api_version"
 
+    // Mod Menu. This isn't required and is for testing convenience.
+    modImplementation("com.terraformersmc:modmenu:$rootProject.mod_menu_version")
+
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 }
 
 processResources {
     filesMatching('fabric.mod.json') {
-        expand  minecraft_version_range: minecraft_version_ranged,
-                fabric_version_range: fabric_loader_version_range,
-                fabric_api_version: fabric_api_version,
-                architectury_version_range: architectury_api_version_ranged,
-                java: java_version,
-                mod_id: mod_id,
-                mod_name: mod_name,
-                mod_license: license,
-                mod_version: mod_version,
-                mod_authors: mod_authors,
-                mod_credits: mod_credits,
-                mod_description: mod_description,
-                mod_homepage: mod_homepage,
-                mod_sources: mod_sources
+        expand  architectury_version_range: architectury_api_version_range_json,
+		        fabric_version_range: fabric_loader_version_range,
+		        fabric_api_version: fabric_api_version,
+		        java: java_version,
+		        minecraft_version_range: minecraft_version_range_json,
+		        mod_id: mod_id,
+		        mod_name: mod_name,
+		        authors: mod_authors,
+		        credits: mod_credits,
+		        description: mod_description,
+		        icon: icon_json,
+		        license: license,
+		        version: mod_version,
+		        homepage: homepage,
+		        issues: issues,
+		        sources: sources
     }
 }
 
@@ -63,5 +74,5 @@ shadowJar {
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
+    inputFile.set shadowJar.archiveFile
 }

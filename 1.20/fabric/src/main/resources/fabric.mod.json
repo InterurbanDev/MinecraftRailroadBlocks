@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "${mod_id}",
   "version": "${version}",
-
   "name": "${mod_name}",
   "description": "${description}",
   "authors": [
@@ -13,22 +12,26 @@
     "issues": "${issues}",
     "sources": "${sources}"
   },
-
   "license": "${license}",
   "icon": "${icon}",
-
   "environment": "*",
   "entrypoints": {
     "main": [
       "dev.interurban.fabric.RailroadBlocksFabric"
     ]
   },
-
   "depends": {
     "fabricloader": "${fabric_version_range}",
     "fabric-api": "*",
     "minecraft": "${minecraft_version_range}",
     "java": ">=${java}",
     "architectury": "${architectury_version_range}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/KpZUWpvzn6"
+      }
+    }
   }
 }

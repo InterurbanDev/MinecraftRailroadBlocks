@@ -1,5 +1,5 @@
 plugins {
-    id "com.github.johnrengelman.shadow"
+	id 'com.gradleup.shadow'
 }
 
 architectury {
@@ -12,7 +12,6 @@ configurations {
         canBeResolved = true
         canBeConsumed = false
     }
-    //shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentFabric.extendsFrom common
@@ -25,6 +24,13 @@ configurations {
     }
 }
 
+repositories {
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
+}
+
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
@@ -33,6 +39,9 @@ dependencies {
 
     // Architectury API. This is optional, and you can comment it out if you don't need it.
     modImplementation "dev.architectury:architectury-fabric:$rootProject.architectury_api_version"
+
+    // Mod Menu. This isn't required and is for testing convenience.
+    modImplementation("com.terraformersmc:modmenu:$rootProject.mod_menu_version")
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
@@ -65,5 +74,5 @@ shadowJar {
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
+    inputFile.set shadowJar.archiveFile
 }

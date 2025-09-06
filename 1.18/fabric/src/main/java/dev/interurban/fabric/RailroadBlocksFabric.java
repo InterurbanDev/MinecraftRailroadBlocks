@@ -1,7 +1,8 @@
 package dev.interurban.fabric;
 
-import dev.interurban.RailroadBlocks;
 import net.fabricmc.api.ModInitializer;
+
+import dev.interurban.RailroadBlocks;
 
 /**
  * Main class for the RailroadBlocks mod. Initializes the mod and adds all associated blocks and items to Minecraft.

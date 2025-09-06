@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.johnrengelman.shadow'
+	id 'com.gradleup.shadow'
 }
 
 loom {
@@ -18,7 +18,6 @@ configurations {
         canBeResolved = true
         canBeConsumed = false
     }
-
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentForge.extendsFrom common
@@ -44,21 +43,23 @@ dependencies {
 
 processResources {
     filesMatching("META-INF/mods.toml") {
-        expand  minecraft_version: minecraft_version,
-                minecraft_version_range: minecraft_version_ranged,
-                forge_version: forge_version,
-                forge_version_range: forge_version_range,
-                architectury_version_range: architectury_api_version_range,
-                mod_id: mod_id,
-                mod_name: mod_name,
-                mod_license: license,
-                mod_version: mod_version,
-                mod_authors: mod_authors,
-                mod_credits: mod_credits,
-                mod_description: mod_description,
-                mod_issue_tracker: mod_issues,
-                mod_homepage: mod_homepage,
-                mod_update: mod_update
+        expand  architectury_version_range: architectury_api_version_range_toml,
+		        java: java_version,
+		        minecraft_version: minecraft_version,
+		        minecraft_version_range: minecraft_version_range_toml,
+		        forge_version: forge_version,
+		        forge_version_range: forge_version_range,
+		        mod_id: mod_id,
+		        mod_name: mod_name,
+		        authors: mod_authors,
+		        credits: mod_credits,
+		        description: mod_description,
+		        icon: icon_toml,
+		        license: license,
+		        version: mod_version,
+		        issues: issues,
+		        homepage: homepage,
+		        update: update
     }
 }
 
@@ -68,5 +69,5 @@ shadowJar {
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
+    inputFile.set shadowJar.archiveFile
 }

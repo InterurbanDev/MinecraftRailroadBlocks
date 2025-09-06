@@ -1,25 +1,25 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
-        mavenCentral()
-        mavenLocal()
-
-        maven {
-            name = 'Architectury'
-            url "https://maven.architectury.dev/"
-        }
-        maven {
-            name = 'Fabric'
-            url = 'https://maven.fabricmc.net/'
-        }
-        maven {
-            name = 'Forge'
-            url = 'https://maven.minecraftforge.net/'
-        }
+	    // Locations where dependencies can be found and downloaded from.
+	    maven {
+		    name = 'Architectury'
+		    url "https://maven.architectury.dev/"
+	    }
+	    maven {
+		    name = 'Fabric'
+		    url = 'https://maven.fabricmc.net/'
+	    }
+	    maven {
+		    name = 'Forge'
+		    url = 'https://maven.minecraftforge.net/'
+	    }
+	    gradlePluginPortal()
     }
 }
 
-rootProject.name = 'railroadblocksaddon'
+rootProject.name = 'Railroad Blocks 1.21'
 
 // List of all active parts of the project
-include('common', 'fabric', 'neoforge')
+include 'common'
+include 'fabric'
+include 'neoforge'

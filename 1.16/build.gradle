@@ -1,8 +1,8 @@
 plugins {
-	id 'dev.architectury.loom' version '1.6-SNAPSHOT' apply false
+	id 'dev.architectury.loom' version '1.11-SNAPSHOT' apply false
 	id 'architectury-plugin' version '3.4-SNAPSHOT'
-	id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
-	id 'io.github.pacifistmc.forgix' version '1.2.9'
+	id 'com.gradleup.shadow' version '8.3.6' apply false
+	id 'io.github.pacifistmc.forgix' version '2.0.0-SNAPSHOT.5.1'
 }
 
 architectury {
@@ -12,27 +12,6 @@ architectury {
 allprojects {
 	group = rootProject.maven_group
 	version = rootProject.mod_version
-}
-
-forgix {
-	group = maven_group
-	mergedJarName = mod_id + "-merged"
-	outputDir = "build/libs"
-
-	fabric {
-		projectName = "fabric"
-		jarLocation = "build/libs/${mod_id}-${mod_version}.jar"
-	}
-
-	forge {
-		projectName = "forge"
-		jarLocation = "build/libs/${mod_id}-${mod_version}.jar"
-	}
-
-	quilt {
-		projectName = "quilt"
-		jarLocation = "build/libs/${mod_id}-${mod_version}.jar"
-	}
 }
 
 subprojects {
@@ -51,14 +30,25 @@ subprojects {
 		// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 		// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 		// for more information about repositories.
+
+		maven {
+			name = 'ParchmentMC'
+			url = 'https://maven.parchmentmc.org'
+		}
+	}
+
+	loom {
+		silentMojangMappingsLicense()
 	}
 
 	dependencies {
 		minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
-		// The following line declares the mojmap mappings, you may use other mappings as well
-		mappings loom.officialMojangMappings()
-		// The following line declares the yarn mappings you may select this one as well.
-		// mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
+
+		// Adds Parchment Documentation to make Minecraft Development Easier
+		mappings loom.layered() {
+			officialMojangMappings()
+			parchment("org.parchmentmc.data:parchment-$minecraft_version:$parchment_version@zip")
+		}
 	}
 
 	java {
