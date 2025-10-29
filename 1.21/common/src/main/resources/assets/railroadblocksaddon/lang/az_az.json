@@ -1,0 +1,25 @@
+{
+  "item.railroadblocksaddon.crossing_light_dual": "Dəmiryol Keçid İşıqları",
+  "item.railroadblocksaddon.flag_blue": "Mavi Bayraq",
+  "item.railroadblocksaddon.flag_green": "Yaşıl Bayraq",
+  "item.railroadblocksaddon.flag_red": "Qırmızı Bayraq",
+  "item.railroadblocksaddon.flag_yellow": "Sarı Bayraq",
+  "item.railroadblocksaddon.iron_crossbuck": "Dəmir Krossbuk",
+  "item.railroadblocksaddon.iron_pole": "Dəmir Post",
+  "item.railroadblocksaddon.rxr_advance_sign": "Dəmiryol Kəsişməsində Xəbərdarlıq Nişanı",
+  "item.railroadblocksaddon.whistle_sign": "Fit işarəsi",
+  "item.railroadblocksaddon.old_whistle_sign": "Köhnə fit işarəsi",
+  "item.railroadblocksaddon.wooden_crossbuck": "Taxta Krossbuk",
+  "item.railroadblocksaddon.wooden_pole": "Taxta Post",
+
+  "block.railroadblocksaddon.crossing_light_dual": "Dəmiryol Keçid İşıqları",
+  "block.railroadblocksaddon.iron_crossbuck": "Dəmir Krossbuk",
+  "block.railroadblocksaddon.iron_pole": "Iron Post",
+  "block.railroadblocksaddon.rxr_advance_sign": "Dəmiryol Kəsişməsində Xəbərdarlıq Nişanı",
+  "block.railroadblocksaddon.whistle_sign": "Fit İşarəsi",
+  "block.railroadblocksaddon.old_whistle_sign": "Köhnə fit işarəsi",
+  "block.railroadblocksaddon.wooden_crossbuck": "Taxta Krossbuk",
+  "block.railroadblocksaddon.wooden_pole": "Taxta Post",
+
+  "itemGroup.railroadblocksaddon.general": "Dəmiryol blokları"
+}
