@@ -45,6 +45,7 @@ This is version 0.6.4 of Railroad Blocks.
 ### Credits
 All models and textures were made in [BlockBench](https://www.blockbench.net/) by [InterurbanDev](https://github.com/InterurbanDev).
 
+Azerbaijan translation by [FunnyAnaryes](https://github.com/FunnyAnaryes).
 Simplified Chinese translation by [lonelyicer](https://github.com/lonelyicer).
 Turkish translation by [hhhhh-ckr](https://github.com/hhhhh-ckr).
 
