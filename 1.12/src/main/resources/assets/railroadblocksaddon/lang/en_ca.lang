@@ -1,24 +1,24 @@
 //Items
-item.crossing_light_dual.name=Level Crossing Lights
+item.crossing_light_dual.name=Railway Crossing Lights
 item.flag_blue.name=Blue Flag
 item.flag_green.name=Green Flag
 item.flag_red.name=Red Flag
 item.flag_yellow.name=Yellow Flag
 item..iron_crossbuck.name=Iron Crossbuck
 item.iron_pole.name=Iron Post
-item.rxr_advance_sign.name=Level Crossing Warning Sign
-item.whistle_sign.name=Whistle Board
-item.old_whistle_sign.name=Old Whistle Board
+item.rxr_advance_sign.name=Railway Crossing Advance Warning Sign
+item.whistle_sign.name=Whistle Post
+item.old_whistle_sign.name=Old Whistle Post
 item.wooden_crossbuck.name=Wooden Crossbuck
 item.wooden_pole.name=Wood Post
 
 //Blocks
-tile.crossing_light_dual.name=Level Crossing Lights
+tile.crossing_light_dual.name=Railway Crossing Lights
 tile.iron_crossbuck.name=Iron Crossbuck
 tile.iron_pole.name=Iron Post
-tile.rxr_advance_sign.name=Level Crossing Warning Sign
-tile.whistle_sign.name=Whistle Board
-tile.old_whistle_sign.name=Old Whistle Board
+tile.rxr_advance_sign.name=Railway Crossing Advance Warning Sign
+tile.whistle_sign.name=Whistle Post
+tile.old_whistle_sign.name=Old Whistle Post
 tile.wooden_crossbuck.name=Wooden Crossbuck
 tile.wooden_pole.name=Wood Post
 

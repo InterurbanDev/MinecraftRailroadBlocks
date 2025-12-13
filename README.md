@@ -19,9 +19,9 @@ Total Downloads per platform:
 * Railroad Crossing Lights (Decorative)
 * Iron Crossbuck
 * Iron Pole
-* Old Whistle Sign
+* Old Whistle Post
 * Railroad Crossing Advance Warning Sign
-* Whistle Sign
+* Whistle Post
 * Wooden Crossbuck
 * Wooden Pole
 
@@ -33,7 +33,9 @@ Total Downloads per platform:
 
 ## :globe_with_meridians: Supported Languages
 * :us: American English
+* :azerbaijan: Azerbaijan
 * :gb: British English
+* :canada: Canadian English
 * :cn: Simplified Chinese (81%)
 * :tr: Turkish
 
