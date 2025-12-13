@@ -17,7 +17,7 @@ public class RailroadBlocks
 {
     public static final String MODID = "railroadblocksaddon";
     public static final String NAME = "Railroad Blocks";
-    public static final String VERSION = "0.6.2";
+    public static final String VERSION = "0.6.5";
     public static final String CLIENT_PROXY_CLASS = "dev.interurban.RailroadBlocks.proxy.ClientProxy";
     public static final String COMMON_PROXY_CLASS = "dev.interurban.RailroadBlocks.proxy.CommonProxy";
 
