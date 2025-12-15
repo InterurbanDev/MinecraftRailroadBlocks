@@ -19,9 +19,9 @@ Total Downloads per platform:
 * Railroad Crossing Lights (Decorative)
 * Iron Crossbuck
 * Iron Pole
-* Old Whistle Sign
+* Old Whistle Post
 * Railroad Crossing Advance Warning Sign
-* Whistle Sign
+* Whistle Post
 * Wooden Crossbuck
 * Wooden Pole
 
@@ -33,16 +33,19 @@ Total Downloads per platform:
 
 ## :globe_with_meridians: Supported Languages
 * :us: American English
+* :azerbaijan: Azerbaijan
 * :gb: British English
+* :canada: Canadian English
 * :cn: Simplified Chinese (81%)
 * :tr: Turkish
 
 ## Version Information
-This is version 0.6.4 of Railroad Blocks.
+This is version 0.6.5 of Railroad Blocks.
 
 ### Credits
 All models and textures were made in [BlockBench](https://www.blockbench.net/) by [InterurbanDev](https://github.com/InterurbanDev).
 
+Azerbaijan translation by [FunnyAnaryes](https://github.com/FunnyAnaryes).
 Simplified Chinese translation by [lonelyicer](https://github.com/lonelyicer).
 Turkish translation by [hhhhh-ckr](https://github.com/hhhhh-ckr).
 

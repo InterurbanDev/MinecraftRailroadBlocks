@@ -1,0 +1,26 @@
+//Items
+item.crossing_light_dual.name=Dəmiryol Keçid İşıqları
+item.flag_blue.name=Mavi Bayraq
+item.flag_green.name=Yaşıl Bayraq
+item.flag_red.name=Qırmızı Bayraq
+item.flag_yellow.name=Sarı Bayraq
+item.iron_crossbuck.name=Dəmir Krossbuk
+item.iron_pole.name=Dəmir Post
+item.rxr_advance_sign.name=Dəmiryol Kəsişməsində Xəbərdarlıq Nişanı
+item.whistle_sign.name=Fit işarəsi
+item.old_whistle_sign.name=Köhnə fit işarəsi
+item.wooden_crossbuck.name=Taxta Krossbuk
+item.wooden_pole.name=Taxta Post
+
+//Blocks
+tile.crossing_light_dual.name=Dəmiryol Keçid İşıqları
+tile.iron_crossbuck.name=Dəmir Krossbuk
+tile.iron_pole.name=Dəmir Post
+tile.rxr_advance_sign.name=Dəmiryol Kəsişməsində Xəbərdarlıq Nişanı
+tile.whistle_sign.name=Fit İşarəsi
+tile.old_whistle_sign.name=Köhnə fit işarəsi
+tile.wooden_crossbuck.name=Taxta Krossbuk
+tile.wooden_pole.name=Taxta Post
+
+//Tabs
+itemGroup.railroadblockstab=Dəmiryol blokları

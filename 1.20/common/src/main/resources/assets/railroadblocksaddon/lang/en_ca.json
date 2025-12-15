@@ -1,25 +1,25 @@
 {
-  "item.railroadblocksaddon.crossing_light_dual": "Railroad Crossing Lights",
+  "item.railroadblocksaddon.crossing_light_dual": "Railway Crossing Lights",
   "item.railroadblocksaddon.flag_blue": "Blue Flag",
   "item.railroadblocksaddon.flag_green": "Green Flag",
   "item.railroadblocksaddon.flag_red": "Red Flag",
   "item.railroadblocksaddon.flag_yellow": "Yellow Flag",
   "item.railroadblocksaddon.iron_crossbuck": "Iron Crossbuck",
   "item.railroadblocksaddon.iron_pole": "Iron Post",
-  "item.railroadblocksaddon.rxr_advance_sign": "Railroad Crossing Advance Warning Sign",
+  "item.railroadblocksaddon.rxr_advance_sign": "Railway Crossing Advance Warning Sign",
   "item.railroadblocksaddon.whistle_sign": "Whistle Post",
   "item.railroadblocksaddon.old_whistle_sign": "Old Whistle Post",
   "item.railroadblocksaddon.wooden_crossbuck": "Wooden Crossbuck",
   "item.railroadblocksaddon.wooden_pole": "Wooden Post",
 
-  "block.railroadblocksaddon.crossing_light_dual": "Railroad Crossing Lights",
+  "block.railroadblocksaddon.crossing_light_dual": "Railway Crossing Lights",
   "block.railroadblocksaddon.iron_crossbuck": "Iron Crossbuck",
   "block.railroadblocksaddon.iron_pole": "Iron Post",
-  "block.railroadblocksaddon.rxr_advance_sign": "Railroad Crossing Advance Warning Sign",
+  "block.railroadblocksaddon.rxr_advance_sign": "Railway Crossing Advance Warning Sign",
   "block.railroadblocksaddon.whistle_sign": "Whistle Post",
   "block.railroadblocksaddon.old_whistle_sign": "Old Whistle Post",
   "block.railroadblocksaddon.wooden_crossbuck": "Wooden Crossbuck",
   "block.railroadblocksaddon.wooden_pole": "Wooden Post",
 
-  "itemGroup.railroadblocksaddon.general": "Railroad Blocks"
+  "itemGroup.railroadblocksaddon.general": "Railway Blocks"
 }
