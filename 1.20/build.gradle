@@ -25,9 +25,9 @@ subprojects {
 	}
 
     forgix {
-        // NeoForge is excluded, as NeoForge and Forge seem to conflict when both are included in Forgix.
         fabric()
         forge()
+		//neoforge() // NeoForge is excluded, as NeoForge and Forge seem to conflict when both are included in Forgix
     }
 
 	repositories {
