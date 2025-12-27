@@ -7,6 +7,12 @@ architectury {
     fabric()
 }
 
+fabricApi {
+    configureDataGeneration() {
+        client = true
+    }
+}
+
 configurations {
     common {
         canBeResolved = true

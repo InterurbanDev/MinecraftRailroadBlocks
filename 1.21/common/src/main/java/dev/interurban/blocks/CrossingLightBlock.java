@@ -81,7 +81,7 @@ public class CrossingLightBlock extends HorizontalDirectionalBlock implements Si
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState()
-                .setValue(HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(HORIZONTAL_FACING, context.getHorizontalDirection())
                 .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER);
     }
 
