@@ -1,8 +1,10 @@
 package dev.interurban.neoforge;
 
+import dev.interurban.RailroadBlocks;
+import dev.interurban.neoforge.datagen.DataGenerators;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
-import dev.interurban.RailroadBlocks;
 
 /**
  * Main class for the RailroadBlocks mod. Initializes the mod and adds all associated blocks and items to Minecraft.
@@ -12,9 +14,10 @@ public class RailroadBlocksNeoForge {
     /**
      * This function initializes the mod and registers all blocks and items to the game.
      */
-    public RailroadBlocksNeoForge() {
+    public RailroadBlocksNeoForge(IEventBus bus) {
         // Run our common setup.
         RailroadBlocks.init();
+        DataGenerators.register(bus);
         RailroadBlocks.LOGGER.info("Railroad Blocks successfully loaded.");
     }
 }

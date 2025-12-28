@@ -27,18 +27,15 @@ public class RailroadBlocksItemTagProvider extends FabricTagProvider.ItemTagProv
                 .add(ItemRegister.FLAG_BLUE.get())
                 .add(ItemRegister.FLAG_GREEN.get())
                 .add(ItemRegister.FLAG_RED.get())
-                .add(ItemRegister.FLAG_YELLOW.get())
-                .setReplace(true);
+                .add(ItemRegister.FLAG_YELLOW.get());
         getOrCreateTagBuilder(POLES)
                 .add(ItemRegister.POLE_IRON.get())
-                .add(ItemRegister.POLE_WOODEN.get())
-                .setReplace(true);
+                .add(ItemRegister.POLE_WOODEN.get());
         getOrCreateTagBuilder(SIGNS)
                 .add(ItemRegister.SIGN_CROSSBUCK_IRON.get())
                 .add(ItemRegister.SIGN_CROSSBUCK_WOODEN.get())
                 .add(ItemRegister.SIGN_RXR_ADVANCE.get())
                 .add(ItemRegister.SIGN_WHISTLE.get())
-                .add(ItemRegister.SIGN_WHISTLE_OLD.get())
-                .setReplace(true);
+                .add(ItemRegister.SIGN_WHISTLE_OLD.get());
     }
 }
