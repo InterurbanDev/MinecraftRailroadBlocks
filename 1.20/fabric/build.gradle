@@ -66,6 +66,7 @@ processResources {
                 icon: icon,
                 license: license,
                 version: mod_version,
+                discord: discord,
                 homepage: homepage,
                 issues: issues,
                 sources: sources

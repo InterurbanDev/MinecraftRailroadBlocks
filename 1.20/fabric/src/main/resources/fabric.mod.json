@@ -33,7 +33,7 @@
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.discord": "https://discord.gg/KpZUWpvzn6"
+        "modmenu.discord": "${discord}"
       }
     }
   }
