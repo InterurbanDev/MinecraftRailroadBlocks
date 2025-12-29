@@ -24,10 +24,30 @@ configurations {
     }
 }
 
+loom {
+    runs {
+        datagen {
+            data()
+            programArgs "--mod", project.mod_id
+            programArgs "--client"
+            programArgs "--server"
+            programArgs "--output", file("src/main/generated").absolutePath
+        }
+    }
+}
+
 repositories {
     maven {
         name = 'NeoForged'
         url = 'https://maven.neoforged.net/releases'
+    }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'src/main/generated'
+        }
     }
 }
 

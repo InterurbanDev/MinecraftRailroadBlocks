@@ -14,10 +14,10 @@ public class RailroadBlocksNeoForge {
     /**
      * This function initializes the mod and registers all blocks and items to the game.
      */
-    public RailroadBlocksNeoForge(IEventBus bus) {
+    public RailroadBlocksNeoForge(IEventBus modEventBus) {
         // Run our common setup.
         RailroadBlocks.init();
-        DataGenerators.register(bus);
+        DataGenerators.register(modEventBus);
         RailroadBlocks.LOGGER.info("Railroad Blocks successfully loaded.");
     }
 }

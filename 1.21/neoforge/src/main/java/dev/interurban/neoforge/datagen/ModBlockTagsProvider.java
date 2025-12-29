@@ -1,15 +1,18 @@
 package dev.interurban.neoforge.datagen;
 
 import dev.interurban.RailroadBlocks;
-import dev.interurban.registers.BlockRegister;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
+
+import static dev.interurban.datagen.BlockTagHandler.BLOCK_TAG_LIST;
+import static dev.interurban.datagen.BlockTagHandler.getBlocksToTag;
 
 public class ModBlockTagsProvider extends BlockTagsProvider {
     // Get parameters from GatherDataEvent.
@@ -20,15 +23,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     // Add your tag entries here.
     @Override
     protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-        // Create a tag builder for our tag. This could also be e.g. a vanilla or NeoForge tag.
-        tag(BlockTags.MINEABLE_WITH_AXE)
-                // Add entries. This is a vararg parameter.
-                // Non-intrinsic providers must provide ResourceKeys here instead of the actual objects.
-                .add(BlockRegister.CROSSING_LIGHT_DUAL.get())
-                .add(BlockRegister.SIGN_CROSSBUCK_IRON.get())
-                .add(BlockRegister.SIGN_CROSSBUCK_WOODEN.get())
-                .add(BlockRegister.SIGN_RXR_ADVANCE.get())
-                .add(BlockRegister.SIGN_WHISTLE.get())
-                .add(BlockRegister.SIGN_WHISTLE_OLD.get());
+        for (TagKey<Block> tag : BLOCK_TAG_LIST) {
+            for (Block block : getBlocksToTag(tag)) {
+                tag(tag).add(block);
+            }
+        }
     }
 }

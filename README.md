@@ -40,7 +40,7 @@ Total Downloads per platform:
 * :tr: Turkish
 
 ## Version Information
-This is version 0.6.6-alpha.1 of Railroad Blocks.
+This is version 0.6.6-alpha.2 of Railroad Blocks.
 
 ### Credits
 All models and textures were made in [BlockBench](https://www.blockbench.net/) by [InterurbanDev](https://github.com/InterurbanDev).

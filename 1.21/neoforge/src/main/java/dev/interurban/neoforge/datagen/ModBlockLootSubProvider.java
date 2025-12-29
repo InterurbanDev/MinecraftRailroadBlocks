@@ -1,6 +1,5 @@
 package dev.interurban.neoforge.datagen;
 
-import dev.interurban.registers.BlockRegister;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -8,6 +7,8 @@ import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
+
+import static dev.interurban.registers.BlockRegister.getBlockList;
 
 public class ModBlockLootSubProvider extends BlockLootSubProvider {
     // The constructor can be private if this class is an inner class of your loot table provider.
@@ -25,21 +26,15 @@ public class ModBlockLootSubProvider extends BlockLootSubProvider {
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
         // The contents of our DeferredRegister.
-        return BlockRegister.getBlockList();
+        return getBlockList();
     }
 
     // Actually add our loot tables.
     @Override
     protected void generate() {
-        // Equivalent to calling add(MyBlocks.EXAMPLE_BLOCK.get(), createSingleItemTable(MyBlocks.EXAMPLE_BLOCK.get()));
-        dropSelf(BlockRegister.CROSSING_LIGHT_DUAL.get());
-        dropSelf(BlockRegister.POLE_IRON.get());
-        dropSelf(BlockRegister.POLE_WOODEN.get());
-        dropSelf(BlockRegister.SIGN_CROSSBUCK_IRON.get());
-        dropSelf(BlockRegister.SIGN_CROSSBUCK_WOODEN.get());
-        dropSelf(BlockRegister.SIGN_RXR_ADVANCE.get());
-        dropSelf(BlockRegister.SIGN_WHISTLE.get());
-        dropSelf(BlockRegister.SIGN_WHISTLE_OLD.get());
+        for (Block block: getBlockList()) {
+            dropSelf(block);
+        }
     }
 }
 

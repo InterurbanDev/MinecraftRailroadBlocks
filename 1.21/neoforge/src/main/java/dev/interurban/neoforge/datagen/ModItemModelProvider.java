@@ -1,11 +1,14 @@
 package dev.interurban.neoforge.datagen;
 
 import dev.interurban.RailroadBlocks;
-import dev.interurban.registers.BlockRegister;
-import dev.interurban.registers.ItemRegister;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+
+import static dev.interurban.datagen.ModelHandler.handheldItemList;
+import static dev.interurban.registers.BlockRegister.getBlockList;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -14,17 +17,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleBlockItem(BlockRegister.CROSSING_LIGHT_DUAL.get());
-        handheldItem(ItemRegister.FLAG_BLUE.get());
-        handheldItem(ItemRegister.FLAG_GREEN.get());
-        handheldItem(ItemRegister.FLAG_RED.get());
-        handheldItem(ItemRegister.FLAG_YELLOW.get());
-        simpleBlockItem(BlockRegister.POLE_IRON.get());
-        simpleBlockItem(BlockRegister.POLE_WOODEN.get());
-        simpleBlockItem(BlockRegister.SIGN_CROSSBUCK_IRON.get());
-        simpleBlockItem(BlockRegister.SIGN_CROSSBUCK_WOODEN.get());
-        simpleBlockItem(BlockRegister.SIGN_RXR_ADVANCE.get());
-        simpleBlockItem(BlockRegister.SIGN_WHISTLE.get());
-        simpleBlockItem(BlockRegister.SIGN_WHISTLE_OLD.get());
+        for (Block block : getBlockList()) {
+            simpleBlockItem(block);
+        }
+        for (Item item : handheldItemList) {
+            handheldItem(item);
+        }
     }
 }

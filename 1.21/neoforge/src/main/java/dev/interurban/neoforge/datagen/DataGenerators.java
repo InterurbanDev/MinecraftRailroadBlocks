@@ -1,5 +1,6 @@
 package dev.interurban.neoforge.datagen;
 
+import dev.interurban.datagen.RecipeHandler;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -63,7 +64,7 @@ public class DataGenerators {
 
         generator.addProvider(
                 event.includeServer(),
-                new ModRecipeProvider(output, lookupProvider)
+                new RecipeHandler(output, lookupProvider)
         );
 
         generator.addProvider(
@@ -81,14 +82,15 @@ public class DataGenerators {
                 )
         );
 
+        // Waits for data generation to finish, then automatically terminates.
         try {
-            generator.run();  // blocks until all JSON is written
+            generator.run();
         } catch (IOException e) {
-            e.printStackTrace();
             LOGGER.error("Data Generation Failed!");
             throw new RuntimeException("Data Generation Failed!", e);
         }
-        LOGGER.info("RData Generation Complete!");
+
+        LOGGER.info("Data Generation Complete!");
         System.exit(0);
     }
 }

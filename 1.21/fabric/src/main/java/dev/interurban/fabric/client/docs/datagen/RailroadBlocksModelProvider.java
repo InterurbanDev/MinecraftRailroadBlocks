@@ -1,14 +1,16 @@
 package dev.interurban.fabric.client.docs.datagen;
 
-import dev.interurban.registers.BlockRegister;
-import dev.interurban.registers.ItemRegister;
+import dev.architectury.registry.registries.RegistrySupplier;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 
+import static dev.interurban.datagen.ModelHandler.*;
 
 public class RailroadBlocksModelProvider extends FabricModelProvider {
     public RailroadBlocksModelProvider(FabricDataOutput output) {
@@ -17,26 +19,23 @@ public class RailroadBlocksModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
-        blockStateModelGenerator.createNonTemplateHorizontalBlock(BlockRegister.CROSSING_LIGHT_DUAL.get());
-        blockStateModelGenerator.createNonTemplateModelBlock(BlockRegister.POLE_IRON.get());
-        blockStateModelGenerator.createNonTemplateModelBlock(BlockRegister.POLE_WOODEN.get());
-        blockStateModelGenerator.createNonTemplateHorizontalBlock(BlockRegister.SIGN_CROSSBUCK_IRON.get());
-        blockStateModelGenerator.createNonTemplateHorizontalBlock(BlockRegister.SIGN_CROSSBUCK_WOODEN.get());
-        blockStateModelGenerator.createNonTemplateHorizontalBlock(BlockRegister.SIGN_RXR_ADVANCE.get());
-        blockStateModelGenerator.createNonTemplateHorizontalBlock(BlockRegister.SIGN_WHISTLE.get());
-        blockStateModelGenerator.createNonTemplateHorizontalBlock(BlockRegister.SIGN_WHISTLE_OLD.get());
+        for (RegistrySupplier<? extends Block> block : horizontalBlockList) {
+            blockStateModelGenerator.createNonTemplateHorizontalBlock(block.get());
+        }
+        for (RegistrySupplier<? extends Block> block : nonCubeBlockList) {
+            blockStateModelGenerator.createNonTemplateModelBlock(block.get());
+        }
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
-        itemModelGenerator.generateFlatItem(ItemRegister.FLAG_BLUE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(ItemRegister.FLAG_GREEN.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(ItemRegister.FLAG_RED.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(ItemRegister.FLAG_YELLOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        for (Item item : handheldItemList) {
+            itemModelGenerator.generateFlatItem(item, ModelTemplates.FLAT_HANDHELD_ITEM);
+        }
     }
 
     @Override
     public @NotNull String getName() {
-        return "ExampleModModelProvider";
+        return "RailroadBlocksModelProvider";
     }
 }

@@ -1,5 +1,6 @@
 package dev.interurban.neoforge;
 
+import dev.interurban.neoforge.datagen.DataGenerators;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
@@ -16,6 +17,7 @@ public class RailroadBlocksNeoForge {
     public RailroadBlocksNeoForge(IEventBus modEventBus) {
 		// Run our common setup.
 		RailroadBlocks.init();
+        DataGenerators.register(modEventBus);
         RailroadBlocks.LOGGER.info("Railroad Blocks successfully loaded.");
     }
 }

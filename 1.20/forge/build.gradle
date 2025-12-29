@@ -2,12 +2,6 @@ plugins {
 	id 'com.gradleup.shadow'
 }
 
-loom {
-    forge {
-        //mixinConfig "railroadblocksaddon.mixins.json"
-    }
-}
-
 architectury {
     platformSetupLoomIde()
     forge()
@@ -41,6 +35,18 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
 }
 
+loom {
+    runs {
+        datagen {
+            data()
+            programArgs "--mod", project.mod_id
+            programArgs "--client"
+            programArgs "--server"
+            programArgs "--output", file("src/main/generated").absolutePath
+        }
+    }
+}
+
 processResources {
     filesMatching('META-INF/mods.toml') {
         expand  architectury_version_range: architectury_api_version_range_toml,
@@ -60,6 +66,14 @@ processResources {
                 issues: issues,
                 homepage: homepage,
                 update: update
+    }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'src/main/generated'
+        }
     }
 }
 
