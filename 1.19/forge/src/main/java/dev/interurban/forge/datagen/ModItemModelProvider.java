@@ -2,7 +2,7 @@ package dev.interurban.forge.datagen;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import dev.interurban.RailroadBlocks;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -13,8 +13,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import static dev.interurban.datagen.ModelHandler.*;
 
 public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, RailroadBlocks.MOD_ID, existingFileHelper);
+    public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+        super(generator, RailroadBlocks.MOD_ID, existingFileHelper);
     }
 
     @Override
