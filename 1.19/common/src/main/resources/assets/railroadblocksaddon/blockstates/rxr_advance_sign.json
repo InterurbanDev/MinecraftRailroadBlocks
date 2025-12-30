@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "railroadblocksaddon:block/rxr_advance_sign", "y": 180 },
-    "facing=south": { "model": "railroadblocksaddon:block/rxr_advance_sign" },
-    "facing=west":  { "model": "railroadblocksaddon:block/rxr_advance_sign", "y": 90 },
-    "facing=east":  { "model": "railroadblocksaddon:block/rxr_advance_sign", "y": 270 }
-  }
-}

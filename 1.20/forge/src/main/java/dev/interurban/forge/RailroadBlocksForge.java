@@ -21,7 +21,7 @@ public final class RailroadBlocksForge {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		// Submit our event bus to let Architectury API register our content on the right time.
         EventBuses.registerModEventBus(RailroadBlocks.MOD_ID, modEventBus);
-        RailroadBlocks.LOGGER.info("Got Here!");
+
 		// Run our common setup.
 		RailroadBlocks.init();
         DataGenerators.register(modEventBus);

@@ -34,10 +34,8 @@ public class OldSignBlock extends SignBlock {
     public @NotNull VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
         Direction direction = state.getValue(FACING);
         return switch (direction) {
-            case NORTH -> Shapes.box(0.25, 0., 0.3125, 0.75, 0.9375, 0.6875); //4, 0, 5, 12, 15, 11
-            case SOUTH -> Shapes.box(0.25, 0.0, 0.3125, 0.75, 0.9375, 0.6875); //4, 0, 5, 12, 15, 11
-            case EAST -> Shapes.box(0.3125, 0.0, 0.25, 0.6875, 0.9375, 0.75); //5, 0, 4, 11, 15, 12
-            case WEST -> Shapes.box(0.3125, 0.0, 0.25, 0.6875, 0.9375, 0.75); //5, 0, 4, 11 15, 12
+            case NORTH, SOUTH -> Shapes.box(0.25, 0.0, 0.3125, 0.75, 0.9375, 0.6875); //4, 0, 5, 12, 15, 11
+            case EAST, WEST -> Shapes.box(0.3125, 0.0, 0.25, 0.6875, 0.9375, 0.75); //5, 0, 4, 11, 15, 12
             default -> Shapes.block();
         };
     }

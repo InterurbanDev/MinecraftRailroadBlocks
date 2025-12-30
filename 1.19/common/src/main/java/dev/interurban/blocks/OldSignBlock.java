@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class is designed to be a smaller variant of the SignBlock class.
@@ -30,13 +31,11 @@ public class OldSignBlock extends SignBlock {
      * @return Block outline shape
      */
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+    public @NotNull VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
         Direction direction = state.getValue(FACING);
         return switch (direction) {
-            case NORTH -> Shapes.box(0.25, 0., 0.3125, 0.75, 0.9375, 0.6875); //4, 0, 5, 12, 15, 11
-            case SOUTH -> Shapes.box(0.25, 0.0, 0.3125, 0.75, 0.9375, 0.6875); //4, 0, 5, 12, 15, 11
-            case EAST -> Shapes.box(0.3125, 0.0, 0.25, 0.6875, 0.9375, 0.75); //5, 0, 4, 11, 15, 12
-            case WEST -> Shapes.box(0.3125, 0.0, 0.25, 0.6875, 0.9375, 0.75); //5, 0, 4, 11 15, 12
+            case NORTH, SOUTH -> Shapes.box(0.25, 0.0, 0.3125, 0.75, 0.9375, 0.6875); //4, 0, 5, 12, 15, 11
+            case EAST, WEST -> Shapes.box(0.3125, 0.0, 0.25, 0.6875, 0.9375, 0.75); //5, 0, 4, 11, 15, 12
             default -> Shapes.block();
         };
     }

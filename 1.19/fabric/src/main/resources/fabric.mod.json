@@ -18,6 +18,9 @@
   "entrypoints": {
     "main": [
       "dev.interurban.fabric.RailroadBlocksFabric"
+    ],
+    "fabric-datagen": [
+      "dev.interurban.fabric.client.docs.datagen.RailroadBlocksDataGenerator"
     ]
   },
   "depends": {
