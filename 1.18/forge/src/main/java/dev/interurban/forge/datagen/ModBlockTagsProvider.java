@@ -22,32 +22,34 @@
  * SOFTWARE.
  */
 
-package dev.interurban.forge;
+package dev.interurban.forge.datagen;
 
-import dev.architectury.platform.forge.EventBuses;
 import dev.interurban.RailroadBlocks;
-import dev.interurban.forge.datagen.DataGenerators;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.Nullable;
 
-/**
- * Main class for the RailroadBlocks mod. Initializes the mod and adds all associated blocks and items to Minecraft.
- */
-@Mod(RailroadBlocks.MOD_ID)
-public final class RailroadBlocksForge {
+import static dev.interurban.datagen.BlockTagHandler.BLOCK_TAG_LIST;
+import static dev.interurban.datagen.BlockTagHandler.getBlocksToTag;
 
-    /**
-     * This function initializes the mod and registers all blocks and items to the game.
-     */
-    public RailroadBlocksForge() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		// Submit our event bus to let Architectury API register our content on the right time.
-        EventBuses.registerModEventBus(RailroadBlocks.MOD_ID, modEventBus);
+public class ModBlockTagsProvider extends BlockTagsProvider {
+    public ModBlockTagsProvider(DataGenerator generator, @Nullable ExistingFileHelper existingFileHelper) {
+        super(generator, RailroadBlocks.MOD_ID, existingFileHelper);
+    }
 
-		// Run our common setup.
-		RailroadBlocks.init();
-        DataGenerators.register(modEventBus);
-        RailroadBlocks.LOGGER.info("Railroad Blocks successfully loaded.");
+    // Get parameters from GatherDataEvent.
+
+
+    // Add your tag entries here.
+    @Override
+    protected void addTags() {
+        for (TagKey<Block> tag : BLOCK_TAG_LIST) {
+            for (Block block : getBlocksToTag(tag)) {
+                tag(tag).add(block);
+            }
+        }
     }
 }

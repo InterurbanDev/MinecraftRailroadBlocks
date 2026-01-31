@@ -22,32 +22,30 @@
  * SOFTWARE.
  */
 
-package dev.interurban.forge;
+package dev.interurban.forge.datagen;
 
-import dev.architectury.platform.forge.EventBuses;
-import dev.interurban.RailroadBlocks;
-import dev.interurban.forge.datagen.DataGenerators;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
-/**
- * Main class for the RailroadBlocks mod. Initializes the mod and adds all associated blocks and items to Minecraft.
- */
-@Mod(RailroadBlocks.MOD_ID)
-public final class RailroadBlocksForge {
+import static dev.interurban.registers.BlockRegister.getBlockList;
 
-    /**
-     * This function initializes the mod and registers all blocks and items to the game.
-     */
-    public RailroadBlocksForge() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		// Submit our event bus to let Architectury API register our content on the right time.
-        EventBuses.registerModEventBus(RailroadBlocks.MOD_ID, modEventBus);
+public class ModBlockLootTable extends BlockLoot {
 
-		// Run our common setup.
-		RailroadBlocks.init();
-        DataGenerators.register(modEventBus);
-        RailroadBlocks.LOGGER.info("Railroad Blocks successfully loaded.");
+    @Override
+    protected void addTables() {
+        for (Block block : getBlockList()) {
+            dropSelf(block);
+        }
+    }
+
+    // The contents of this Iterable are used for validation.
+    // We return an Iterable over our block registry's values here.
+    @Override
+    protected @NotNull Iterable<Block> getKnownBlocks() {
+        // The contents of our DeferredRegister.
+        return getBlockList();
     }
 }
+
+

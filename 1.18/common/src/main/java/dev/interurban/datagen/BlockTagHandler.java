@@ -22,32 +22,42 @@
  * SOFTWARE.
  */
 
-package dev.interurban.forge;
+package dev.interurban.datagen;
 
-import dev.architectury.platform.forge.EventBuses;
-import dev.interurban.RailroadBlocks;
-import dev.interurban.forge.datagen.DataGenerators;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
+
+import java.util.List;
+
+import static dev.interurban.registers.BlockRegister.*;
 
 /**
- * Main class for the RailroadBlocks mod. Initializes the mod and adds all associated blocks and items to Minecraft.
+ * Defines all block tags and their respective blocks
  */
-@Mod(RailroadBlocks.MOD_ID)
-public final class RailroadBlocksForge {
+public class BlockTagHandler {
+
+    // List of all block tags created or used
+    public static final List<TagKey<Block>> BLOCK_TAG_LIST = List.of(BlockTags.MINEABLE_WITH_AXE);
 
     /**
-     * This function initializes the mod and registers all blocks and items to the game.
+     * Returns a list of blocks to be tagged with the given tag
+     *
+     * @param tag which blocks will be tagged with
+     * @return list of blocks to tag with given tag
      */
-    public RailroadBlocksForge() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		// Submit our event bus to let Architectury API register our content on the right time.
-        EventBuses.registerModEventBus(RailroadBlocks.MOD_ID, modEventBus);
-
-		// Run our common setup.
-		RailroadBlocks.init();
-        DataGenerators.register(modEventBus);
-        RailroadBlocks.LOGGER.info("Railroad Blocks successfully loaded.");
+    public static List<Block> getBlocksToTag(TagKey<Block> tag) {
+        // List of blocks to tag with given tag
+        if (tag == BlockTags.MINEABLE_WITH_AXE) return List.of(
+                CROSSING_LIGHT_DUAL.get(),
+                POLE_IRON.get(),
+                POLE_WOODEN.get(),
+                SIGN_CROSSBUCK_IRON.get(),
+                SIGN_CROSSBUCK_WOODEN.get(),
+                SIGN_RXR_ADVANCE.get(),
+                SIGN_WHISTLE.get(),
+                SIGN_WHISTLE_OLD.get()
+        );
+        return List.of();
     }
 }

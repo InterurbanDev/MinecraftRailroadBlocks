@@ -22,32 +22,28 @@
  * SOFTWARE.
  */
 
-package dev.interurban.forge;
+package dev.interurban.fabric.client.docs.datagen;
 
-import dev.architectury.platform.forge.EventBuses;
-import dev.interurban.RailroadBlocks;
-import dev.interurban.forge.datagen.DataGenerators;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 
-/**
- * Main class for the RailroadBlocks mod. Initializes the mod and adds all associated blocks and items to Minecraft.
- */
-@Mod(RailroadBlocks.MOD_ID)
-public final class RailroadBlocksForge {
+import static dev.interurban.datagen.ItemTagHandler.ITEM_TAG_LIST;
+import static dev.interurban.datagen.ItemTagHandler.getItemsToTag;
 
-    /**
-     * This function initializes the mod and registers all blocks and items to the game.
-     */
-    public RailroadBlocksForge() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		// Submit our event bus to let Architectury API register our content on the right time.
-        EventBuses.registerModEventBus(RailroadBlocks.MOD_ID, modEventBus);
+public class RailroadBlocksItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
-		// Run our common setup.
-		RailroadBlocks.init();
-        DataGenerators.register(modEventBus);
-        RailroadBlocks.LOGGER.info("Railroad Blocks successfully loaded.");
+    public RailroadBlocksItemTagProvider(FabricDataGenerator dataGenerator) {
+        super(dataGenerator);
+    }
+
+    @Override
+    protected void generateTags() {
+        for (TagKey<Item> tag : ITEM_TAG_LIST) {
+            for (Item item : getItemsToTag(tag)) {
+                getOrCreateTagBuilder(tag).add(item);
+            }
+        }
     }
 }
