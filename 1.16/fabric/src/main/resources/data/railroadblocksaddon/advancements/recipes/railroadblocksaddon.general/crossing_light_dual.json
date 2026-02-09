@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "railroadblocksaddon:crossing_light_dual"
+    ]
+  },
+  "criteria": {
+    "crossing_light_dual": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "railroadblocksaddon:crossing_light_dual"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "railroadblocksaddon:crossing_light_dual"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crossing_light_dual",
+      "has_the_recipe"
+    ]
+  ]
+}

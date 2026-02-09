@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "lit=true": { "model":  "railroadblocksaddon:block/test_block_alt" },
-    "lit=false": { "model":  "railroadblocksaddon:block/test_block" }
-  }
-}

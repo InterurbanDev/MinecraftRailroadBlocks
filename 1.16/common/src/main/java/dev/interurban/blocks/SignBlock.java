@@ -1,6 +1,5 @@
 package dev.interurban.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -62,13 +61,13 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
         Direction direction = state.getValue(FACING);
         if (direction == Direction.NORTH) {
-            return Shapes.box(0.0625, 0.0, 0.375, 0.9375, 0.9375, 0.5625); //1, 0, 6, 15, 15, 9
+            return Shapes.box(0.0625, 0.0, 0.4375, 0.9375, 1, 0.625); //1, 0, 7, 15, 16, 10
         } else if (direction == Direction.SOUTH) {
-            return Shapes.box(0.0625, 0.0, 0.4375, 0.9375, 0.9375, 0.625); //1, 0, 7, 15, 15, 10
+            return Shapes.box(0.0625, 0.0, 0.375, 0.9375, 1, 0.5625); //1, 0, 6, 15, 16, 9
         } else if (direction == Direction.EAST) {
-            return Shapes.box(0.4375, 0.0, 0.0625, 0.625, 0.9375, 0.9375); //7, 0, 1, 10, 15, 15
+            return Shapes.box(0.375, 0.0, 0.0625, 0.5625, 1, 0.9375); //6, 0, 1, 9, 16, 15
         } else if (direction == Direction.WEST) {
-            return Shapes.box(0.375, 0.0, 0.0625, 0.5625, 0.9375, 0.9375); //6, 0, 1, 9, 15, 15
+            return Shapes.box(0.4375, 0.0, 0.0625, 0.625, 1, 0.9375); //7, 0, 1, 10, 16, 15
         } else {
             return Shapes.block();
         }
@@ -82,7 +81,7 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState()
-                .setValue(HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(HORIZONTAL_FACING, context.getHorizontalDirection())
                 .setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER);
     }
 

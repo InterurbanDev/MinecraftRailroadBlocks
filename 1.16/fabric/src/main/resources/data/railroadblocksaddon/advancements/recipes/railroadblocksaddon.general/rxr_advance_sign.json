@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "railroadblocksaddon:rxr_advance_sign"
+    ]
+  },
+  "criteria": {
+    "rxr_advance_sign": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:signs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "railroadblocksaddon:rxr_advance_sign"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "rxr_advance_sign",
+      "has_the_recipe"
+    ]
+  ]
+}

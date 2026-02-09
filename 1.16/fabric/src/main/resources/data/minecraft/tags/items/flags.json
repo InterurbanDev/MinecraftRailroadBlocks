@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "railroadblocksaddon:flag_blue",
+    "railroadblocksaddon:flag_green",
+    "railroadblocksaddon:flag_red",
+    "railroadblocksaddon:flag_yellow"
+  ]
+}

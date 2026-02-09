@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "railroadblocksaddon:whistle_sign"
+    ]
+  },
+  "criteria": {
+    "whistle_sign": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:signs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "railroadblocksaddon:whistle_sign"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "whistle_sign",
+      "has_the_recipe"
+    ]
+  ]
+}

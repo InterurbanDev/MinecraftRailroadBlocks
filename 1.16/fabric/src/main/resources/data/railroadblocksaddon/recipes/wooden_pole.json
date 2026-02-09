@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "poles",
+  "pattern": [
+    "S",
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "railroadblocksaddon:wooden_pole",
+    "count": 3
+  }
+}

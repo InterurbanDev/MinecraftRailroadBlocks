@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "railroadblocksaddon:iron_pole"
+    ]
+  },
+  "criteria": {
+    "iron_pole": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:poles"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "railroadblocksaddon:iron_pole"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "iron_pole",
+      "has_the_recipe"
+    ]
+  ]
+}

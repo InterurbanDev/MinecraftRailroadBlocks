@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "railroadblocksaddon:flag_yellow"
+    ]
+  },
+  "criteria": {
+    "flag_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:flags"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "railroadblocksaddon:flag_yellow"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flag_yellow",
+      "has_the_recipe"
+    ]
+  ]
+}
