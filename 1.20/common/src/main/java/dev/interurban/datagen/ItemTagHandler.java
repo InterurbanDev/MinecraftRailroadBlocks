@@ -17,11 +17,12 @@ public class ItemTagHandler {
 
     // New items tags
     public static final TagKey<Item> FLAGS = TagKey.create(Registries.ITEM, ResourceLocation.tryBuild(RailroadBlocks.MOD_ID, "flags"));
+    public static final TagKey<Item> LIGHTS = TagKey.create(Registries.ITEM, ResourceLocation.tryBuild(RailroadBlocks.MOD_ID, "lights"));
     public static final TagKey<Item> POLES = TagKey.create(Registries.ITEM, ResourceLocation.tryBuild(RailroadBlocks.MOD_ID, "poles"));
     public static final TagKey<Item> SIGNS = TagKey.create(Registries.ITEM, ResourceLocation.tryBuild(RailroadBlocks.MOD_ID, "signs"));
 
     // List of all item tags created or used
-    public static final List<TagKey<Item>> ITEM_TAG_LIST = List.of(FLAGS, POLES, SIGNS);
+    public static final List<TagKey<Item>> ITEM_TAG_LIST = List.of(FLAGS, LIGHTS, POLES, SIGNS);
 
     /**
      * Returns a list of items to be tagged with the given tag
@@ -35,6 +36,11 @@ public class ItemTagHandler {
                 FLAG_GREEN.get(),
                 FLAG_RED.get(),
                 FLAG_YELLOW.get()
+        );
+        // List of items to tag with lights
+        if (tag == LIGHTS) return List.of(
+                CROSSING_LIGHT.get(),
+                CROSSING_LIGHT_DUAL.get()
         );
         // List of items to tag with poles
         if (tag == POLES) return List.of(

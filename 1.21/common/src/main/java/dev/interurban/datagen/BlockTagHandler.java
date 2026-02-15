@@ -24,6 +24,7 @@ public class BlockTagHandler {
     public static List<Block> getBlocksToTag(TagKey<Block> tag) {
         // List of blocks to tag with given tag
         if (tag == BlockTags.MINEABLE_WITH_AXE) return List.of(
+                CROSSING_LIGHT.get(),
                 CROSSING_LIGHT_DUAL.get(),
                 POLE_IRON.get(),
                 POLE_WOODEN.get(),

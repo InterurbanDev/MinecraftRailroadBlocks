@@ -27,8 +27,14 @@ public class BlockRegister {
     private static final List<RegistrySupplier<? extends Block>> BLOCK_LIST = new ArrayList<>();
 
     // Block List
-    public static final RegistrySupplier<CrossingLightBlock> CROSSING_LIGHT_DUAL = register("crossing_light_dual", () ->
+    public static final RegistrySupplier<CrossingLightBlock> CROSSING_LIGHT = register("crossing_light", () ->
             new CrossingLightBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .sound(SoundType.METAL)
+                    .strength(2f)
+            ));
+
+    public static final RegistrySupplier<DualCrossingLightBlock> CROSSING_LIGHT_DUAL = register("crossing_light_dual", () ->
+            new DualCrossingLightBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .sound(SoundType.METAL)
                     .strength(2f)
             ));

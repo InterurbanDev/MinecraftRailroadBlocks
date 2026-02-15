@@ -1,5 +1,6 @@
 {
-  "item.railroadblocksaddon.crossing_light_dual": "Railway Crossing Lights",
+  "item.railroadblocksaddon.crossing_light": "Railway Crossing Lights",
+  "item.railroadblocksaddon.crossing_light_dual": "Dual Railway Crossing Lights",
   "item.railroadblocksaddon.flag_blue": "Blue Flag",
   "item.railroadblocksaddon.flag_green": "Green Flag",
   "item.railroadblocksaddon.flag_red": "Red Flag",
@@ -11,8 +12,8 @@
   "item.railroadblocksaddon.old_whistle_sign": "Old Whistle Post",
   "item.railroadblocksaddon.wooden_crossbuck": "Wooden Crossbuck",
   "item.railroadblocksaddon.wooden_pole": "Wooden Post",
-
-  "block.railroadblocksaddon.crossing_light_dual": "Railway Crossing Lights",
+  "block.railroadblocksaddon.crossing_light": "Railway Crossing Lights",
+  "block.railroadblocksaddon.crossing_light_dual": "Dual Railway Crossing Lights",
   "block.railroadblocksaddon.iron_crossbuck": "Iron Crossbuck",
   "block.railroadblocksaddon.iron_pole": "Iron Post",
   "block.railroadblocksaddon.rxr_advance_sign": "Railway Crossing Advance Warning Sign",

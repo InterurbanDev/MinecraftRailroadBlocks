@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "item": "railroadblocksaddon:crossing_light_dual"
+            "tag": "minecraft:lights"
           }
         ]
       }

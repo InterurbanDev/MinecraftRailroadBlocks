@@ -28,12 +28,22 @@ public class RecipeHandler extends RecipeProvider {
      */
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> writer) {
+        shaped(RecipeCategory.TRANSPORTATION, CROSSING_LIGHT.get(), 1)
+                .pattern("I ")
+                .pattern("IR")
+                .pattern("I ")
+                .define('I', Items.IRON_INGOT)
+                .define('R', Items.REDSTONE_LAMP)
+                .group("lights")
+                .unlockedBy(getHasName(CROSSING_LIGHT.get()), has(LIGHTS))
+                .save(writer);
         shaped(RecipeCategory.TRANSPORTATION, CROSSING_LIGHT_DUAL.get(), 1)
                 .pattern(" I ")
                 .pattern("RIR")
                 .pattern(" I ")
                 .define('I', Items.IRON_INGOT)
                 .define('R', Items.REDSTONE_LAMP)
+                .group("lights")
                 .unlockedBy(getHasName(CROSSING_LIGHT_DUAL.get()), has(CROSSING_LIGHT_DUAL.get()))
                 .save(writer);
         shaped(RecipeCategory.TOOLS, FLAG_BLUE.get(), 3)

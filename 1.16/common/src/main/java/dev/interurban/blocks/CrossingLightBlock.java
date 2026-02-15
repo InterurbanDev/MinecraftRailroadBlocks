@@ -49,24 +49,23 @@ public class CrossingLightBlock extends HorizontalDirectionalBlock implements Si
     }
 
     /**
-     * Controls the outline of blocks using this class.
+     * I don't know what this does exactly. It's probably important.
      * @param state Current block's state
-     * @param worldIn BlockGetter
-     * @param pos Current position
-     * @param context CollisionContext
-     * @return Block outline shape
+     * @param direction Direction
+     * @param neighborState Neighboring block's state
+     * @param world WorldAccess
+     * @param position Current position
+     * @param neighborPos Neighboring block's position
+     * @return
      */
     @SuppressWarnings("deprecation")
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
-        Direction direction = state.getValue(FACING);
-        if (direction == Direction.NORTH || direction == Direction.SOUTH) {
-            return Shapes.box(0, 0.0, 0.1875, 1, 1, 0.8125); //0, 0, 3, 16, 16, 13
-        } else if (direction == Direction.EAST || direction == Direction.WEST) {
-            return Shapes.box(0.1875, 0.0, 0, 0.8125, 1, 1); //3, 0, 0, 13, 16, 16
-		} else {
-            return Shapes.block();
+    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos position, BlockPos neighborPos) {
+        if (state.getValue(WATERLOGGED)) {
+            world.getLiquidTicks().scheduleTick(position, Fluids.WATER, Fluids.WATER.getTickDelay(world));
         }
+
+        return super.updateShape(state, direction, neighborState, world, position, neighborPos);
     }
 
     /**
@@ -86,29 +85,34 @@ public class CrossingLightBlock extends HorizontalDirectionalBlock implements Si
      * @param state Current block's state
      * @return Returns the current WATERLOGGED state, presumably.
      */
-    @SuppressWarnings("deprecation") //Why is getFluidState() deprecated? Is there a better alternative?
+    @SuppressWarnings("deprecation")
     @Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state); //Displays water when waterlogged.
     }
 
     /**
-     * I don't know what this does exactly. It's probably important.
+     * Controls the outline of blocks using this class.
      * @param state Current block's state
-     * @param direction Direction
-     * @param neighborState Neighboring block's state
-     * @param world WorldAccess
-     * @param position Current position
-     * @param neighborPos Neighboring block's position
-     * @return
+     * @param worldIn BlockGetter
+     * @param pos Current position
+     * @param context CollisionContext
+     * @return Block outline shape
      */
-    @SuppressWarnings("deprecation") //Why is updateShape deprecated? Is there a better alternative?
+    @SuppressWarnings("deprecation")
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos position, BlockPos neighborPos){
-        if (state.getValue(WATERLOGGED)) {
-            world.getLiquidTicks().scheduleTick(position,Fluids.WATER, Fluids.WATER.getTickDelay(world));
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+        Direction direction = state.getValue(FACING);
+        if (direction == Direction.NORTH) {
+            return Shapes.box(0, 0.0, 0.4375, 1, 1, 0.8125); // 0, 0, 7, 16, 16, 13
+        } else if (direction == Direction.SOUTH) {
+            return Shapes.box(0.0, 0.0, 0.1875, 1, 1, 0.5625); // 0, 0, 3, 16, 16, 9
+        } else if (direction == Direction.EAST) {
+            return Shapes.box(0.1875, 0.0, 0, 0.5625, 1, 1); // 3, 0, 0, 9, 16, 16
+        } else if (direction == Direction.WEST) {
+            return Shapes.box(0.4375, 0.0, 0, 0.8125, 1, 1); // 7, 0, 0, 13, 16, 16
+        } else {
+            return Shapes.block();
         }
-
-        return super.updateShape(state, direction, neighborState, world, position, neighborPos);
     }
 }

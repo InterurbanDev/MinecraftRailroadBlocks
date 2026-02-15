@@ -1,4 +1,5 @@
 //Items
+item.crossing_light.name=Demir Yolu Geçidi Işıkları
 item.crossing_light_dual.name=Demir Yolu Geçidi Işıkları
 item.flag_blue.name=Mavi Bayrak
 item.flag_green.name=Yeşil Bayrak
@@ -13,6 +14,7 @@ item.wooden_crossbuck.name=Tahta Demir Yolu Geçidi Levhası
 item.wooden_pole.name=Tahta Direk
 
 //Blocks
+tile.crossing_light.name=Demir Yolu Geçidi Işıkları
 tile.crossing_light_dual.name=Demir Yolu Geçidi Işıkları
 tile.iron_crossbuck.name=Demir Yolu Geçidi Levhası
 tile.iron_pole.name=Demir Direk

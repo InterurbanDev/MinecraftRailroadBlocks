@@ -1,17 +1,20 @@
 package dev.interurban.RailroadBlocks.init;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import dev.interurban.RailroadBlocks.objects.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BlockInit {
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 
-	public static final Block CROSSING_LIGHT_DUAL = new CrossingLightBlock(
+	public static final Block CROSSING_LIGHT = new CrossingLightBlock(
+			"crossing_light", Material.IRON, 2.0f, 4.8f, SoundType.METAL
+	);
+	public static final Block CROSSING_LIGHT_DUAL = new DualCrossingLightBlock(
 			"crossing_light_dual", Material.IRON, 2.0f, 4.8f, SoundType.METAL
 	);
 	public static final Block POLE_IRON = new PoleBlock(

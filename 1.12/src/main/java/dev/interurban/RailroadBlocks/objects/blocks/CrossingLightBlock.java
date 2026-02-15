@@ -4,7 +4,6 @@ package dev.interurban.RailroadBlocks.objects.blocks;
 import dev.interurban.RailroadBlocks.util.interfaces.IHasModel;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -52,12 +51,22 @@ public class CrossingLightBlock extends BlockBase implements IHasModel {
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return ((EnumFacing)state.getValue(FACING)).getIndex();
+        return state.getValue(FACING).getIndex();
     }
 
     @Override
-    protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[] {FACING});
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+        if (state.getValue(FACING) == EnumFacing.NORTH) {
+            return new AxisAlignedBB(0, 0.0, 0.4375, 1, 1, 0.8125); // 0, 0, 7, 16, 16, 13
+        } else if (state.getValue(FACING) == EnumFacing.SOUTH) {
+            return new AxisAlignedBB(0.0, 0.0, 0.1875, 1, 1, 0.5625); // 0, 0, 3, 16, 16, 9
+        } else if (state.getValue(FACING) == EnumFacing.EAST) {
+            return new AxisAlignedBB(0.1875, 0.0, 0, 0.5625, 1, 1); // 3, 0, 0, 9, 16, 16
+        } else if (state.getValue(FACING) == EnumFacing.WEST) {
+            return new AxisAlignedBB(0.4375, 0.0, 0, 0.8125, 1, 1); // 7, 0, 0, 13, 16, 16
+        } else {
+            return new AxisAlignedBB(1,1,1,1,1,1);
+        }
     }
 
     @Override
@@ -87,14 +96,8 @@ public class CrossingLightBlock extends BlockBase implements IHasModel {
     }
 
     @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        if (((EnumFacing)state.getValue(FACING)) == EnumFacing.NORTH || ((EnumFacing)state.getValue(FACING)) == EnumFacing.SOUTH) {
-            return new AxisAlignedBB(0, 0, 0.1875, 1, 1, 0.8125); //0, 0, 3, 16, 16, 13
-        } else if (((EnumFacing)state.getValue(FACING)) == EnumFacing.EAST || ((EnumFacing)state.getValue(FACING)) == EnumFacing.WEST) {
-            return new AxisAlignedBB(0.1875, 0, 0, 0.8125, 1, 1); //3, 0, 0, 13, 16, 16
-        } else {
-            return new AxisAlignedBB(1,1,1,1,1,1);
-        }
+    protected BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, FACING);
     }
 
     @Override

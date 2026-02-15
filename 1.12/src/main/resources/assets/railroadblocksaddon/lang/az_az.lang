@@ -1,4 +1,5 @@
 //Items
+item.crossing_light.name=Dəmiryol Keçid İşıqları
 item.crossing_light_dual.name=Dəmiryol Keçid İşıqları
 item.flag_blue.name=Mavi Bayraq
 item.flag_green.name=Yaşıl Bayraq
@@ -13,6 +14,7 @@ item.wooden_crossbuck.name=Taxta Krossbuk
 item.wooden_pole.name=Taxta Post
 
 //Blocks
+tile.crossing_light.name=Dəmiryol Keçid İşıqları
 tile.crossing_light_dual.name=Dəmiryol Keçid İşıqları
 tile.iron_crossbuck.name=Dəmir Krossbuk
 tile.iron_pole.name=Dəmir Post

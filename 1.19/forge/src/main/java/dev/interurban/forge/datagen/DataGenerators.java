@@ -59,7 +59,7 @@ public class DataGenerators {
 
         generator.addProvider(
                 event.includeServer(),
-                new ModLootTableProvider(generator)
+                new ModRecipeProvider(generator)
         );
 
         // Waits for data generation to finish, then automatically terminates.

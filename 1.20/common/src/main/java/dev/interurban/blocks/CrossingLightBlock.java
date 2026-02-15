@@ -62,8 +62,10 @@ public class CrossingLightBlock extends HorizontalDirectionalBlock implements Si
     public @NotNull VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
         Direction direction = state.getValue(FACING);
 		return switch (direction) {
-			case NORTH, SOUTH -> Shapes.box(0, 0.0, 0.1875, 1, 1, 0.8125); //0, 0, 3, 16, 16, 13
-			case EAST, WEST -> Shapes.box(0.1875, 0.0, 0, 0.8125, 1, 1); //3, 0, 0, 13, 16, 16
+            case NORTH -> Shapes.box(0, 0.0, 0.4375, 1, 1, 0.8125); // 0, 0, 7, 16, 16, 13
+            case SOUTH -> Shapes.box(0.0, 0.0, 0.1875, 1, 1, 0.5625); // 0, 0, 3, 16, 16, 9
+            case EAST -> Shapes.box(0.1875, 0.0, 0, 0.5625, 1, 1); // 3, 0, 0, 9, 16, 16
+            case WEST -> Shapes.box(0.4375, 0.0, 0, 0.8125, 1, 1); // 7, 0, 0, 13, 16, 16
 			default -> Shapes.block();
 		};
     }

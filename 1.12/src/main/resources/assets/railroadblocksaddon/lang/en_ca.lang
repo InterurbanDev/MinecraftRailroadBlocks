@@ -1,5 +1,6 @@
 //Items
-item.crossing_light_dual.name=Railway Crossing Lights
+item.crossing_light.name=Railway Crossing Lights
+item.crossing_light_dual.name=Dual Railway Crossing Lights
 item.flag_blue.name=Blue Flag
 item.flag_green.name=Green Flag
 item.flag_red.name=Red Flag
@@ -13,7 +14,8 @@ item.wooden_crossbuck.name=Wooden Crossbuck
 item.wooden_pole.name=Wood Post
 
 //Blocks
-tile.crossing_light_dual.name=Railway Crossing Lights
+tile.crossing_light.name=Railway Crossing Lights
+tile.crossing_light_dual.name=Dual Railway Crossing Lights
 tile.iron_crossbuck.name=Iron Crossbuck
 tile.iron_pole.name=Iron Post
 tile.rxr_advance_sign.name=Railway Crossing Advance Warning Sign

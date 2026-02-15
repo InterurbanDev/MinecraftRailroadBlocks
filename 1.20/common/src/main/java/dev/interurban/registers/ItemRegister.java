@@ -16,6 +16,11 @@ public class ItemRegister {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(MOD_ID, Registries.ITEM);
 
+    public static RegistrySupplier<BlockItem> CROSSING_LIGHT = ITEMS.register("crossing_light", () ->
+            new BlockItem(BlockRegister.CROSSING_LIGHT.get(), new Item.Properties()
+                    .arch$tab(RAILROAD_BLOCKS_TAB)
+            ));
+
     public static RegistrySupplier<BlockItem> CROSSING_LIGHT_DUAL = ITEMS.register("crossing_light_dual", () ->
             new BlockItem(BlockRegister.CROSSING_LIGHT_DUAL.get(), new Item.Properties()
                     .arch$tab(RAILROAD_BLOCKS_TAB)

@@ -1,4 +1,5 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "railroadblocksaddon:block/iron_pole",
@@ -22,8 +23,16 @@
 		},
 		{
 			"name": "shroud",
-			"from": [10, 10, 11],
-			"to": [15, 11, 13],
+			"from": [
+				11,
+				10,
+				11
+			],
+			"to": [
+				14,
+				10,
+				13
+			],
 			"rotation": {"angle": 0, "axis": "y", "origin": [13, 11, 11]},
 			"faces": {
 				"north": {"uv": [7, 0, 12, 1], "texture": "#1"},
@@ -36,7 +45,11 @@
 		},
 		{
 			"name": "shroud",
-			"from": [10, 8, 11],
+			"from": [
+				11,
+				8,
+				11
+			],
 			"to": [11, 10, 13],
 			"rotation": {"angle": 0, "axis": "y", "origin": [9, 8, 11]},
 			"faces": {
@@ -51,7 +64,11 @@
 		{
 			"name": "shroud",
 			"from": [14, 8, 11],
-			"to": [15, 10, 13],
+			"to": [
+				14,
+				10,
+				13
+			],
 			"rotation": {"angle": 0, "axis": "y", "origin": [13, 8, 11]},
 			"faces": {
 				"north": {"uv": [7, 0, 8, 2], "texture": "#1"},
@@ -92,7 +109,11 @@
 		},
 		{
 			"name": "shroud",
-			"from": [1, 8, 11],
+			"from": [
+				2,
+				8,
+				11
+			],
 			"to": [2, 10, 13],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0, 8, 11]},
 			"faces": {
@@ -106,8 +127,16 @@
 		},
 		{
 			"name": "shroud",
-			"from": [1, 10, 11],
-			"to": [6, 11, 13],
+			"from": [
+				2,
+				10,
+				11
+			],
+			"to": [
+				5,
+				10,
+				13
+			],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 11, 11]},
 			"faces": {
 				"north": {"uv": [7, 0, 12, 1], "texture": "#1"},
@@ -121,7 +150,11 @@
 		{
 			"name": "shroud",
 			"from": [5, 8, 11],
-			"to": [6, 10, 13],
+			"to": [
+				5,
+				10,
+				13
+			],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 8, 11]},
 			"faces": {
 				"north": {"uv": [7, 0, 8, 2], "texture": "#1"},
@@ -148,8 +181,16 @@
 		},
 		{
 			"name": "shroud",
-			"from": [10, 10, 3],
-			"to": [15, 11, 5],
+			"from": [
+				11,
+				10,
+				3
+			],
+			"to": [
+				14,
+				10,
+				5
+			],
 			"rotation": {"angle": 0, "axis": "y", "origin": [12, 11, 5]},
 			"faces": {
 				"north": {"uv": [7, 0, 12, 1], "texture": "#1"},
@@ -162,7 +203,11 @@
 		},
 		{
 			"name": "shroud",
-			"from": [10, 8, 3],
+			"from": [
+				11,
+				8,
+				3
+			],
 			"to": [11, 10, 5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [12, 8, 5]},
 			"faces": {
@@ -177,7 +222,11 @@
 		{
 			"name": "shroud",
 			"from": [14, 8, 3],
-			"to": [15, 10, 5],
+			"to": [
+				14,
+				10,
+				5
+			],
 			"rotation": {"angle": 0, "axis": "y", "origin": [16, 8, 5]},
 			"faces": {
 				"north": {"uv": [7, 0, 8, 2], "texture": "#1"},
@@ -218,7 +267,11 @@
 		},
 		{
 			"name": "shroud",
-			"from": [1, 8, 3],
+			"from": [
+				2,
+				8,
+				3
+			],
 			"to": [2, 10, 5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [3, 8, 5]},
 			"faces": {
@@ -232,8 +285,16 @@
 		},
 		{
 			"name": "shroud",
-			"from": [1, 10, 3],
-			"to": [6, 11, 5],
+			"from": [
+				2,
+				10,
+				3
+			],
+			"to": [
+				5,
+				10,
+				5
+			],
 			"rotation": {"angle": 0, "axis": "y", "origin": [3, 11, 5]},
 			"faces": {
 				"north": {"uv": [7, 0, 12, 1], "texture": "#1"},
@@ -247,7 +308,11 @@
 		{
 			"name": "shroud",
 			"from": [5, 8, 3],
-			"to": [6, 10, 5],
+			"to": [
+				5,
+				10,
+				5
+			],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 8, 5]},
 			"faces": {
 				"north": {"uv": [7, 0, 8, 2], "texture": "#1"},
@@ -273,6 +338,97 @@
 			}
 		}
 	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [
+				75,
+				-45,
+				0
+			],
+			"translation": [
+				0,
+				2.5,
+				0
+			],
+			"scale": [
+				0.375,
+				0.375,
+				0.375
+			]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [
+				75,
+				-45,
+				0
+			],
+			"translation": [
+				0,
+				2.5,
+				0
+			],
+			"scale": [
+				0.375,
+				0.375,
+				0.375
+			]
+		},
+		"firstperson_righthand": {
+			"rotation": [
+				0,
+				-45,
+				0
+			],
+			"scale": [
+				0.4,
+				0.4,
+				0.4
+			]
+		},
+		"firstperson_lefthand": {
+			"rotation": [
+				0,
+				-45,
+				0
+			],
+			"scale": [
+				0.4,
+				0.4,
+				0.4
+			]
+		},
+		"ground": {
+			"translation": [
+				0,
+				3,
+				0
+			],
+			"scale": [
+				0.25,
+				0.25,
+				0.25
+			]
+		},
+		"gui": {
+			"rotation": [
+				30,
+				45,
+				0
+			]
+		},
+		"fixed": {
+			"translation": [
+				0,
+				0,
+				0.25
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			]
+		}
+	},
 	"groups": [
 		0,
 		{

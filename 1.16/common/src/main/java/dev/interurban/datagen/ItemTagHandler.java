@@ -19,11 +19,12 @@ public class ItemTagHandler {
 
     // New items tags
     public static final Tag.Named<Item> FLAGS = StaticTags.create(new ResourceLocation(RailroadBlocks.MOD_ID, "flags"), TagContainer::getItems).bind("flags");
+    public static final Tag.Named<Item> LIGHTS = StaticTags.create(new ResourceLocation(RailroadBlocks.MOD_ID, "lights"), TagContainer::getItems).bind("lights");
     public static final Tag.Named<Item> POLES = StaticTags.create(new ResourceLocation(RailroadBlocks.MOD_ID, "poles"), TagContainer::getItems).bind("poles");
     public static final Tag.Named<Item> SIGNS = StaticTags.create(new ResourceLocation(RailroadBlocks.MOD_ID, "signs"), TagContainer::getItems).bind("signs");
 
     // List of all item tags created or used
-    public static final List<Tag.Named<Item>> ITEM_TAG_LIST = ImmutableList.of(FLAGS, POLES, SIGNS);
+    public static final List<Tag.Named<Item>> ITEM_TAG_LIST = ImmutableList.of(FLAGS, LIGHTS, POLES, SIGNS);
 
 
     /**
@@ -39,6 +40,11 @@ public class ItemTagHandler {
                 FLAG_GREEN.get(),
                 FLAG_RED.get(),
                 FLAG_YELLOW.get()
+        );
+        // List of items to tag with poles
+        if (tag == LIGHTS) return ImmutableList.of(
+                CROSSING_LIGHT.get(),
+                CROSSING_LIGHT_DUAL.get()
         );
         // List of items to tag with poles
         if (tag == POLES) return ImmutableList.of(

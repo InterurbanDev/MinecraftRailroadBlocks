@@ -22,6 +22,7 @@ public class ModelHandler {
 
     // List of all horizontally rotatable blocks
     public static final List<RegistrySupplier<? extends Block>> horizontalBlockList = List.of(
+            BlockRegister.CROSSING_LIGHT,
             BlockRegister.CROSSING_LIGHT_DUAL,
             BlockRegister.SIGN_CROSSBUCK_IRON,
             BlockRegister.SIGN_CROSSBUCK_WOODEN,
