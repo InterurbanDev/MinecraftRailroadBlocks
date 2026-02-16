@@ -16,9 +16,8 @@ public final class RailroadBlocksForge {
     /**
      * This function initializes the mod and registers all blocks and items to the game.
      */
-    @SuppressWarnings("removal")
     public RailroadBlocksForge() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        @SuppressWarnings("removal") IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		// Submit our event bus to let Architectury API register our content on the right time.
 		EventBuses.registerModEventBus(RailroadBlocks.MOD_ID, modEventBus);
 

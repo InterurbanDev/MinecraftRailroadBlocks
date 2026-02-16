@@ -10,7 +10,6 @@ import static dev.interurban.RailroadBlocks.LOGGER;
 public class RailroadBlocksDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-        //DataGenerator.PathProvider path = fabricDataGenerator.;
         fabricDataGenerator.addProvider(RailroadBlocksBlockLootTableProvider::new);
         fabricDataGenerator.addProvider(RailroadBlocksBlockTagProvider::new);
         fabricDataGenerator.addProvider(RailroadBlocksItemTagProvider::new);

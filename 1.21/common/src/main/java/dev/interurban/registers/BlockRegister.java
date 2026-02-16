@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 import static dev.interurban.RailroadBlocks.MOD_ID;
 
@@ -21,22 +22,7 @@ public class BlockRegister {
     // Creates a deferred register which each block will be stored into until it is time to register the blocks.
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(MOD_ID, Registries.BLOCK);
 
-    // The following is to enable NeoForge to access the list of all blocks.
-    private static final List<RegistrySupplier<Block>> BLOCK_LIST = new ArrayList<>();
-
-    private static <T extends Block> RegistrySupplier<T> register(
-            String name, Supplier<T> supplier
-    ) {
-        RegistrySupplier<T> entry = BLOCKS.register(name, supplier);
-        BLOCK_LIST.add((RegistrySupplier<Block>) entry);
-        return entry;
-    }
-
-    public static Iterable<Block> getBlockList() {
-        return BLOCK_LIST.stream()
-                .map(RegistrySupplier::get)
-                .toList();
-    }
+    private static final List<RegistrySupplier<? extends Block>> BLOCK_LIST = new ArrayList<>();
 
     // Blocks
     public static final RegistrySupplier<CrossingLightBlock> CROSSING_LIGHT = register("crossing_light", () ->
@@ -92,4 +78,17 @@ public class BlockRegister {
                     .sound(SoundType.STONE)
                     .strength(2f)
             ));
+
+    // The following is to enable NeoForge to access the list of all blocks.
+    private static <T extends Block> RegistrySupplier<T> register(String name, Supplier<T> supplier) {
+        RegistrySupplier<T> block = BLOCKS.register(name, supplier);
+        BLOCK_LIST.add(block);
+        return block;
+    }
+
+    public static Iterable<Block> getBlockList() {
+        return BLOCK_LIST.stream()
+                .map(RegistrySupplier::get)
+                .collect(Collectors.toList());
+    }
 }

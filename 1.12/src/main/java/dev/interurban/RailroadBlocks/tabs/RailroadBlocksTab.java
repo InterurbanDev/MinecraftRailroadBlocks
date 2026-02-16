@@ -4,6 +4,7 @@ import dev.interurban.RailroadBlocks.init.BlockInit;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
+@SuppressWarnings("NullableProblems")
 public class RailroadBlocksTab extends CreativeTabs {
 	public RailroadBlocksTab(String label) {
 		super("railroadblockstab");

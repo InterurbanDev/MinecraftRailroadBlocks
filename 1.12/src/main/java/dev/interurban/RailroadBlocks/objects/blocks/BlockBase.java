@@ -4,10 +4,11 @@ import dev.interurban.RailroadBlocks.RailroadBlocks;
 import dev.interurban.RailroadBlocks.init.BlockInit;
 import dev.interurban.RailroadBlocks.init.ItemInit;
 import dev.interurban.RailroadBlocks.util.interfaces.IHasModel;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
+
+import java.util.Objects;
 
 public class BlockBase extends Block implements IHasModel {
 	public BlockBase(String name, Material material) {
@@ -17,7 +18,7 @@ public class BlockBase extends Block implements IHasModel {
 		setCreativeTab(RailroadBlocks.RAILROAD_BLOCKS_TAB);
 
 		BlockInit.BLOCKS.add(this);
-		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(Objects.requireNonNull(this.getRegistryName())));
 	}
 
 	@Override

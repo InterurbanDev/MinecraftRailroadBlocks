@@ -15,6 +15,7 @@ import net.minecraft.world.World;
 /**
  * This class is designed for the mod's pole blocks.
  */
+@SuppressWarnings({"deprecation", "NullableProblems"})
 public class PoleBlock extends BlockBase implements IHasModel {
 
     public static final AxisAlignedBB SHAPE = new AxisAlignedBB(0.4375, 0, 0.4375, 0.5625, 1, 0.5625);
@@ -25,7 +26,6 @@ public class PoleBlock extends BlockBase implements IHasModel {
         setResistance(resistance);
         //setLightLevel(0.0f);
         setLightOpacity(0);
-        //setDefaultSlipperiness(0.0f);
         //setHarvestLevel("axe", 0);
         setSoundType(soundType);
     }

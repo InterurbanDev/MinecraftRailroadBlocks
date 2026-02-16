@@ -86,17 +86,6 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
     }
 
     /**
-     * Gets the current WATERLOGGED state, presumably.
-     * @param state Current block's state
-     * @return Returns the current WATERLOGGED state, presumably.
-     */
-    @SuppressWarnings("deprecation") //Why is getFluidState() deprecated? Is there a better alternative?
-    @Override
-    public FluidState getFluidState(BlockState state) {
-        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state); //Displays water when waterlogged.
-    }
-
-    /**
      * I don't know what this does exactly. It's probably important.
      * @param state Current block's state
      * @param direction Direction
@@ -104,9 +93,9 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
      * @param world WorldAccess
      * @param position Current position
      * @param neighborPos Neighboring block's position
-     * @return
+     * @return shape
      */
-    @SuppressWarnings("deprecation") //Why is updateShape deprecated? Is there a better alternative?
+    @SuppressWarnings("deprecation")
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos position, BlockPos neighborPos){
         if (state.getValue(WATERLOGGED)) {
@@ -114,5 +103,17 @@ public class SignBlock extends HorizontalDirectionalBlock implements SimpleWater
         }
 
         return super.updateShape(state, direction, neighborState, world, position, neighborPos);
+    }
+
+    /**
+     * Gets the current WATERLOGGED state, presumably.
+     *
+     * @param state Current block's state
+     * @return Returns the current WATERLOGGED state, presumably.
+     */
+    @SuppressWarnings("deprecation")
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state); //Displays water when waterlogged.
     }
 }

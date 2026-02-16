@@ -2,7 +2,8 @@
   "format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"textures": {
-      "1": "railroadblocksaddon:blocks/wood_pole"
+      "1": "railroadblocksaddon:blocks/wood_pole",
+      "particle": "railroadblocksaddon:blocks/wood_pole"
 	},
 	"elements": [
 		{
@@ -63,7 +64,7 @@
                 ],
                 "texture": "#1"
               }
-			}
+            }
         }
     ],
   "display": {
@@ -150,6 +151,6 @@
         0.5,
         0.5
       ]
-		}
+    }
   }
 }

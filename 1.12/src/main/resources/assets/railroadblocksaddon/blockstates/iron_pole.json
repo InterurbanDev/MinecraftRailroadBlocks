@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model":  "railroadblocksaddon:iron_pole" }
+    "normal": {
+      "model": "railroadblocksaddon:iron_pole"
+    }
   }
 }

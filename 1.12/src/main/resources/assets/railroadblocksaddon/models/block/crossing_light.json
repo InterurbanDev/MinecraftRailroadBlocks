@@ -4,7 +4,7 @@
   "textures": {
     "0": "railroadblocksaddon:blocks/iron_pole",
     "1": "railroadblocksaddon:blocks/crossing_light",
-    "particle": "railroadblocksaddon:blocks/iron_pole"
+    "particle": "railroadblocksaddon:blocks/crossing_light"
   },
   "elements": [
     {

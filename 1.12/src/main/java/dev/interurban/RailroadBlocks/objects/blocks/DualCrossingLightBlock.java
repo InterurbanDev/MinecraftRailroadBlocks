@@ -12,6 +12,7 @@ import net.minecraft.world.IBlockAccess;
 /**
  * This class is designed for use with blocks which have a sign facing in one direction.
  */
+@SuppressWarnings("NullableProblems")
 public class DualCrossingLightBlock extends CrossingLightBlock {
 
     public DualCrossingLightBlock(String name, Material material, float hardness, float resistance, SoundType soundType) {

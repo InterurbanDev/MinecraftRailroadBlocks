@@ -20,6 +20,7 @@ import net.minecraft.world.World;
 /**
  * This class is designed for use with blocks which have a sign facing in one direction.
  */
+@SuppressWarnings({"NullableProblems", "deprecation"})
 public class CrossingLightBlock extends BlockBase implements IHasModel {
 
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
@@ -33,7 +34,6 @@ public class CrossingLightBlock extends BlockBase implements IHasModel {
         setResistance(resistance);
         //setLightLevel(0.0f);
         setLightOpacity(1);
-        //setDefaultSlipperiness(0.0f);
         //setHarvestLevel("axe", 0);
         setSoundType(soundType);
     }
@@ -72,7 +72,7 @@ public class CrossingLightBlock extends BlockBase implements IHasModel {
     @Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
-        return getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
+        return getDefaultState().withProperty(FACING, placer.getHorizontalFacing());
     }
 
     @Override

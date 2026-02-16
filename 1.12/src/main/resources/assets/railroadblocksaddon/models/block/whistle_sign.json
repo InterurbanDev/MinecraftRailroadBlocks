@@ -6,7 +6,7 @@
 		"0": "railroadblocksaddon:blocks/iron_pole",
 		"1": "railroadblocksaddon:blocks/iron_plate",
 		"2": "railroadblocksaddon:blocks/whistle",
-		"particle": "railroadblocksaddon:blocks/iron_pole"
+      "particle": "railroadblocksaddon:blocks/iron_plate"
 	},
 	"elements": [
 		{

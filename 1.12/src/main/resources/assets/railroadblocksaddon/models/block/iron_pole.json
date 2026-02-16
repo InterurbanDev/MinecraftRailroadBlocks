@@ -2,7 +2,8 @@
   "format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"textures": {
-      "2": "railroadblocksaddon:blocks/iron_pole"
+      "2": "railroadblocksaddon:blocks/iron_pole",
+      "particle": "railroadblocksaddon:blocks/iron_pole"
 	},
 	"elements": [
 		{

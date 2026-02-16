@@ -12,6 +12,7 @@ import static dev.interurban.registers.CreativeTabRegister.RAILROAD_BLOCKS_TAB;
 /**
  * A list of all mod items and stores them for registry with Minecraft.
  */
+@SuppressWarnings("UnstableApiUsage")
 public class ItemRegister {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(MOD_ID, Registries.ITEM);
