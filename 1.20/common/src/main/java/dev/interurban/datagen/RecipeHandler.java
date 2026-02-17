@@ -1,9 +1,10 @@
 package dev.interurban.datagen;
 
-import net.minecraft.data.PackOutput;
+import net.minecraft.advancements.critereon.*;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
 import java.util.function.Consumer;
@@ -16,18 +17,14 @@ import static net.minecraft.data.recipes.ShapelessRecipeBuilder.shapeless;
 /**
  * Provider of recipes (compatible with Fabric and NeoForge)
  */
-public class RecipeHandler extends RecipeProvider {
-
-    public RecipeHandler(PackOutput output) {
-        super(output);
-    }
+public class RecipeHandler {
 
     /**
      * Defines all recipes for mod blocks and items
-     * @param writer recipes
+     *
+     * @param consumer recipes
      */
-    @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> writer) {
+    public static void getCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         shaped(RecipeCategory.TRANSPORTATION, CROSSING_LIGHT.get(), 1)
                 .pattern("I ")
                 .pattern("IR")
@@ -35,8 +32,8 @@ public class RecipeHandler extends RecipeProvider {
                 .define('I', Items.IRON_INGOT)
                 .define('R', Items.REDSTONE_LAMP)
                 .group("lights")
-                .unlockedBy(getHasName(CROSSING_LIGHT.get()), has(LIGHTS))
-                .save(writer);
+                .unlockedBy(CROSSING_LIGHT_DUAL.getId().getPath(), tagTriggerBuilder(LIGHTS))
+                .save(consumer);
         shaped(RecipeCategory.TRANSPORTATION, CROSSING_LIGHT_DUAL.get(), 1)
                 .pattern(" I ")
                 .pattern("RIR")
@@ -44,64 +41,64 @@ public class RecipeHandler extends RecipeProvider {
                 .define('I', Items.IRON_INGOT)
                 .define('R', Items.REDSTONE_LAMP)
                 .group("lights")
-                .unlockedBy(getHasName(CROSSING_LIGHT_DUAL.get()), has(CROSSING_LIGHT_DUAL.get()))
-                .save(writer);
+                .unlockedBy(CROSSING_LIGHT_DUAL.getId().getPath(), tagTriggerBuilder(LIGHTS))
+                .save(consumer);
         shaped(RecipeCategory.TOOLS, FLAG_BLUE.get(), 3)
                 .pattern("SW")
                 .pattern("S ")
                 .define('S', Items.STICK)
                 .define('W', Items.BLUE_WOOL)
                 .group("flags") // Groups are shown in one slot in the recipe book
-                .unlockedBy(getHasName(FLAG_BLUE.get()), has(FLAGS))
-                .save(writer);
+                .unlockedBy(FLAG_BLUE.getId().getPath(), tagTriggerBuilder(FLAGS))
+                .save(consumer);
         shaped(RecipeCategory.TOOLS, FLAG_GREEN.get(), 3)
                 .pattern("SW")
                 .pattern("S ")
                 .define('S', Items.STICK)
                 .define('W', Items.GREEN_WOOL)
                 .group("flags") // Groups are shown in one slot in the recipe book
-                .unlockedBy(getHasName(FLAG_GREEN.get()), has(FLAGS))
-                .save(writer);
+                .unlockedBy(FLAG_GREEN.getId().getPath(), tagTriggerBuilder(FLAGS))
+                .save(consumer);
         shaped(RecipeCategory.TOOLS, FLAG_RED.get(), 3)
                 .pattern("SW")
                 .pattern("S ")
                 .define('S', Items.STICK)
                 .define('W', Items.RED_WOOL)
                 .group("flags") // Groups are shown in one slot in the recipe book
-                .unlockedBy(getHasName(FLAG_RED.get()), has(FLAGS))
-                .save(writer);
+                .unlockedBy(FLAG_RED.getId().getPath(), tagTriggerBuilder(FLAGS))
+                .save(consumer);
         shaped(RecipeCategory.TOOLS, FLAG_YELLOW.get(), 3)
                 .pattern("SW")
                 .pattern("S ")
                 .define('S', Items.STICK)
                 .define('W', Items.YELLOW_WOOL)
                 .group("flags") // Groups are shown in one slot in the recipe book
-                .unlockedBy(getHasName(FLAG_YELLOW.get()), has(FLAGS))
-                .save(writer);
+                .unlockedBy(FLAG_YELLOW.getId().getPath(), tagTriggerBuilder(FLAGS))
+                .save(consumer);
         shaped(RecipeCategory.TRANSPORTATION, POLE_IRON.get(), 3)
                 .pattern("I")
                 .pattern("I")
                 .pattern("I")
                 .define('I', Items.IRON_INGOT)
                 .group("poles") // Groups are shown in one slot in the recipe book
-                .unlockedBy(getHasName(POLE_IRON.get()), has(POLES))
-                .save(writer);
+                .unlockedBy(POLE_IRON.getId().getPath(), tagTriggerBuilder(POLES))
+                .save(consumer);
         shaped(RecipeCategory.TRANSPORTATION, POLE_WOODEN.get(), 3)
                 .pattern("S")
                 .pattern("S")
                 .pattern("S")
                 .define('S', Items.STICK)
                 .group("poles") // Groups are shown in one slot in the recipe book
-                .unlockedBy(getHasName(POLE_WOODEN.get()), has(POLES))
-                .save(writer);
+                .unlockedBy(POLE_WOODEN.getId().getPath(), tagTriggerBuilder(POLES))
+                .save(consumer);
         shaped(RecipeCategory.TRANSPORTATION, SIGN_CROSSBUCK_IRON.get(), 3)
                 .pattern("I I")
                 .pattern(" I ")
                 .pattern("III")
                 .define('I', Items.IRON_INGOT)
                 .group("crossbucks") // Groups are shown in one slot in the recipe book
-                .unlockedBy(getHasName(SIGN_CROSSBUCK_IRON.get()), has(SIGNS))
-                .save(writer);
+                .unlockedBy(SIGN_CROSSBUCK_IRON.getId().getPath(), tagTriggerBuilder(SIGNS))
+                .save(consumer);
         shaped(RecipeCategory.TRANSPORTATION, SIGN_CROSSBUCK_WOODEN.get(), 3)
                 .pattern("I I")
                 .pattern(" I ")
@@ -109,26 +106,36 @@ public class RecipeHandler extends RecipeProvider {
                 .define('I', Items.IRON_INGOT)
                 .define('S', Items.STICK)
                 .group("crossbucks") // Groups are shown in one slot in the recipe book
-                .unlockedBy(getHasName(SIGN_CROSSBUCK_WOODEN.get()), has(SIGNS))
-                .save(writer);
+                .unlockedBy(SIGN_CROSSBUCK_WOODEN.getId().getPath(), tagTriggerBuilder(SIGNS))
+                .save(consumer);
         shaped(RecipeCategory.TRANSPORTATION, SIGN_RXR_ADVANCE.get(), 3)
                 .pattern(" I ")
                 .pattern("IYI")
                 .pattern(" I ")
                 .define('I', Items.IRON_INGOT)
                 .define('Y', Items.YELLOW_DYE)
-                .unlockedBy(getHasName(SIGN_RXR_ADVANCE.get()), has(SIGNS))
-                .save(writer);
+                .unlockedBy(SIGN_RXR_ADVANCE.getId().getPath(), tagTriggerBuilder(SIGNS))
+                .save(consumer);
         shapeless(RecipeCategory.TRANSPORTATION, SIGN_WHISTLE.get(), 3)
                 .requires(Items.WHITE_DYE)
                 .requires(Items.IRON_INGOT)
-                .unlockedBy(getHasName(SIGN_WHISTLE.get()), has(SIGNS))
-                .save(writer);
+                .unlockedBy(SIGN_WHISTLE.getId().getPath(), tagTriggerBuilder(SIGNS))
+                .save(consumer);
         shapeless(RecipeCategory.TRANSPORTATION, SIGN_WHISTLE_OLD.get(), 2)
                 .requires(Items.BLACK_DYE)
                 .requires(Items.LIGHT_GRAY_CONCRETE)
-                .unlockedBy(getHasName(SIGN_WHISTLE_OLD.get()), has(SIGNS))
-                .save(writer);
+                .unlockedBy(SIGN_WHISTLE_OLD.getId().getPath(), tagTriggerBuilder(SIGNS))
+                .save(consumer);
+    }
+
+    private static AbstractCriterionTriggerInstance tagTriggerBuilder(TagKey<Item> tag) {
+        return new InventoryChangeTrigger.TriggerInstance(
+                ContextAwarePredicate.ANY,
+                MinMaxBounds.Ints.ANY,
+                MinMaxBounds.Ints.ANY,
+                MinMaxBounds.Ints.ANY,
+                new ItemPredicate[]{ItemPredicate.Builder.item().of(tag).build()}
+        );
     }
 }
 

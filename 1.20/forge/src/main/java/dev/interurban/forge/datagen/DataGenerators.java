@@ -1,6 +1,5 @@
 package dev.interurban.forge.datagen;
 
-import dev.interurban.datagen.RecipeHandler;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -64,7 +63,7 @@ public class DataGenerators {
 
         generator.addProvider(
                 event.includeServer(),
-                new RecipeHandler(output)
+                new ModRecipeProvider(output)
         );
 
         generator.addProvider(

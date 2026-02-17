@@ -86,6 +86,10 @@ public class BlockRegister {
         return block;
     }
 
+    public static List<RegistrySupplier<? extends Block>> getBlockRegistries() {
+        return BLOCK_LIST;
+    }
+
     public static Iterable<Block> getBlockList() {
         return BLOCK_LIST.stream()
                 .map(RegistrySupplier::get)

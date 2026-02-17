@@ -1,6 +1,5 @@
 package dev.interurban.fabric.client.docs.datagen;
 
-import dev.interurban.datagen.RecipeHandler;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -16,7 +15,7 @@ public class RailroadBlocksDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(RailroadBlocksBlockTagProvider::new);
         pack.addProvider(RailroadBlocksItemTagProvider::new);
         pack.addProvider(RailroadBlocksModelProvider::new);
-        pack.addProvider((FabricDataGenerator.Pack.Factory<RecipeHandler>) RecipeHandler::new);
+        pack.addProvider(RailroadBlocksRecipeProvider::new);
 
         // Waits for data generation to finish, then automatically terminates.
         try {

@@ -40,7 +40,8 @@ public class CrossingLightBlock extends HorizontalDirectionalBlock implements Si
                 .setValue(HORIZONTAL_FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false));
     }
-    
+
+    @SuppressWarnings({"DataFlowIssue", "NullableProblems"})
     @Override
     protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
         return null;

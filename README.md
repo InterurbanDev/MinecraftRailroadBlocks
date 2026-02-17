@@ -41,7 +41,7 @@ Total Downloads per platform:
 
 ## Version Information
 
-This is version 0.7.0-alpha of Railroad Blocks.
+This is version 0.7.0-alpha.1 of Railroad Blocks.
 
 ### Credits
 All models and textures were made in [BlockBench](https://www.blockbench.net/) by [InterurbanDev](https://github.com/InterurbanDev).

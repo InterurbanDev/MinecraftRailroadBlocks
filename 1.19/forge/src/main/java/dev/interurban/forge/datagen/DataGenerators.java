@@ -23,7 +23,7 @@ public class DataGenerators {
             LOGGER.info("Data Generation running in Server Environment!");
         }
 
-        // Data generators may require some of these as constructor parameters..
+        // Data generators may require some of these as constructor parameters.
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
@@ -59,8 +59,9 @@ public class DataGenerators {
 
         generator.addProvider(
                 event.includeServer(),
-                new ModRecipeProvider(generator)
+                new ModLootTableProvider(generator)
         );
+
 
         // Waits for data generation to finish, then automatically terminates.
         try {

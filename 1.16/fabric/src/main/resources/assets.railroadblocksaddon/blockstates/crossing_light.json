@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "railroadblocksaddon:block/crossing_light"
+    },
+    "facing=south": {
+      "model": "railroadblocksaddon:block/crossing_light",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "railroadblocksaddon:block/crossing_light",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "railroadblocksaddon:block/crossing_light",
+      "y": 90
+    }
+  }
+}
