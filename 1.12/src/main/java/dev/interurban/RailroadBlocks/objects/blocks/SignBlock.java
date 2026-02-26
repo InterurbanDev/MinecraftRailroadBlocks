@@ -30,7 +30,7 @@ public class SignBlock extends BlockBase implements IHasModel {
 		setResistance(resistance);
 		//setLightLevel(0.0f);
 		setLightOpacity(1);
-		//setHarvestLevel("axe", 0);
+		setHarvestLevel("axe", 0);
 		setSoundType(soundType);
 	}
 

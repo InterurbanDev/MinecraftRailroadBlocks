@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "railroadblocksaddon:sign_yard_limit"
+    ]
+  },
+  "criteria": {
+    "sign_yard_limit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:signs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "railroadblocksaddon:sign_yard_limit"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sign_yard_limit",
+      "has_the_recipe"
+    ]
+  ]
+}

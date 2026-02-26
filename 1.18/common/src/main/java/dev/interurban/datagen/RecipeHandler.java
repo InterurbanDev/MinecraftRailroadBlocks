@@ -116,7 +116,7 @@ public class RecipeHandler {
                 .unlockedBy(SIGN_RXR_ADVANCE.getId().getPath(), tagTriggerBuilder(SIGNS))
                 .save(consumer);
         shapeless(SIGN_WHISTLE.get(), 3)
-                .requires(Items.WHITE_DYE)
+                .requires(Items.BLACK_DYE)
                 .requires(Items.IRON_INGOT)
                 .unlockedBy(SIGN_WHISTLE.getId().getPath(), tagTriggerBuilder(SIGNS))
                 .save(consumer);
@@ -124,6 +124,11 @@ public class RecipeHandler {
                 .requires(Items.BLACK_DYE)
                 .requires(Items.LIGHT_GRAY_CONCRETE)
                 .unlockedBy(SIGN_WHISTLE_OLD.getId().getPath(), tagTriggerBuilder(SIGNS))
+                .save(consumer);
+        shapeless(SIGN_YARD_LIMIT.get(), 3)
+                .requires(Items.WHITE_DYE)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(SIGN_YARD_LIMIT.getId().getPath(), tagTriggerBuilder(SIGNS))
                 .save(consumer);
     }
 

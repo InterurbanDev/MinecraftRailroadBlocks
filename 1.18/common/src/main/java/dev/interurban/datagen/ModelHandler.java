@@ -28,7 +28,8 @@ public class ModelHandler {
             BlockRegister.SIGN_CROSSBUCK_WOODEN,
             BlockRegister.SIGN_RXR_ADVANCE,
             BlockRegister.SIGN_WHISTLE,
-            BlockRegister.SIGN_WHISTLE_OLD
+            BlockRegister.SIGN_WHISTLE_OLD,
+            BlockRegister.SIGN_YARD_LIMIT
     );
 
     // List of all normal (non-cube) blocks

@@ -79,6 +79,12 @@ public class BlockRegister {
                     .strength(2f)
             ));
 
+    public static final RegistrySupplier<SmallSignBlock> SIGN_YARD_LIMIT = register("sign_yard_limit", () ->
+            new SmallSignBlock(BlockBehaviour.Properties.of()
+                    .sound(SoundType.METAL)
+                    .strength(2f)
+            ));
+
     // The following is to enable Forge/NeoForge to access the list of all blocks.
     private static <T extends Block> RegistrySupplier<T> register(String name, Supplier<T> supplier) {
         RegistrySupplier<T> block = BLOCKS.register(name, supplier);

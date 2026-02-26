@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "railroadblocksaddon:block/sign_yard_limit"
+    },
+    "facing=south": {
+      "model": "railroadblocksaddon:block/sign_yard_limit",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "railroadblocksaddon:block/sign_yard_limit",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "railroadblocksaddon:block/sign_yard_limit",
+      "y": 90
+    }
+  }
+}

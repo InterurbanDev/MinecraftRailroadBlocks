@@ -32,7 +32,8 @@ public class BlockTagHandler {
                 SIGN_CROSSBUCK_WOODEN.get(),
                 SIGN_RXR_ADVANCE.get(),
                 SIGN_WHISTLE.get(),
-                SIGN_WHISTLE_OLD.get()
+                SIGN_WHISTLE_OLD.get(),
+                SIGN_YARD_LIMIT.get()
         );
         return List.of();
     }

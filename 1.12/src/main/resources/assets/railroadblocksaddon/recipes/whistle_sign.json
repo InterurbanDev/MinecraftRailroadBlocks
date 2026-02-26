@@ -1,18 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "W",
-    "I"
-  ],
-  "key": {
-    "I": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:iron_ingot"
     },
-    "W": {
+    {
       "item": "minecraft:dye",
-      "data": 15
+      "data": 0
     }
-  },
+  ],
   "result": {
     "item": "railroadblocksaddon:whistle_sign",
     "count": 3

@@ -31,44 +31,58 @@ public class BlockRegister {
                     .sound(SoundType.METAL)
                     .strength(2f)
             ));
+
     public static final RegistrySupplier<DualCrossingLightBlock> CROSSING_LIGHT_DUAL = register("crossing_light_dual", () ->
             new DualCrossingLightBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .sound(SoundType.METAL)
                     .strength(2f)
             ));
+
     public static final RegistrySupplier<PoleBlock> POLE_IRON = register("iron_pole", () ->
             new PoleBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .sound(SoundType.METAL)
                     .strength(2f)
             ));
+
     public static final RegistrySupplier<PoleBlock> POLE_WOODEN = register("wooden_pole", () ->
             new PoleBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .sound(SoundType.WOOD)
                     .strength(1f)
             ));
+
     public static final RegistrySupplier<SignBlock> SIGN_CROSSBUCK_IRON = register("iron_crossbuck", () ->
             new SignBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .sound(SoundType.METAL)
                     .strength(2f)
             ));
+
     public static final RegistrySupplier<SignBlock> SIGN_CROSSBUCK_WOODEN = register("wooden_crossbuck", () ->
             new SignBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .sound(SoundType.WOOD)
                     .strength(1f)
             ));
+
     public static final RegistrySupplier<SignBlock> SIGN_RXR_ADVANCE = register("rxr_advance_sign", () ->
             new SignBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .sound(SoundType.METAL)
                     .strength(2f)
             ));
+
     public static final RegistrySupplier<SmallSignBlock> SIGN_WHISTLE = register("whistle_sign", () ->
             new SmallSignBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .sound(SoundType.METAL)
                     .strength(2f)
             ));
+
     public static final RegistrySupplier<OldSignBlock> SIGN_WHISTLE_OLD = register("old_whistle_sign", () ->
             new OldSignBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .sound(SoundType.STONE)
+                    .strength(2f)
+            ));
+
+    public static final RegistrySupplier<SmallSignBlock> SIGN_YARD_LIMIT = register("sign_yard_limit", () ->
+            new SmallSignBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .sound(SoundType.METAL)
                     .strength(2f)
             ));
 

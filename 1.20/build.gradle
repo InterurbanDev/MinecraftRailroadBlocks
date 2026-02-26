@@ -24,12 +24,6 @@ subprojects {
 		archivesName = "$rootProject.mod_id-$project.name"
 	}
 
-    forgix {
-        fabric()
-        forge()
-		//neoforge() // NeoForge is excluded, as NeoForge and Forge seem to conflict when both are included in Forgix
-    }
-
 	repositories {
 		// Add repositories to retrieve artifacts from in here.
 		// You should only use this when depending on other mods because

@@ -80,4 +80,9 @@ public class ItemRegister {
             new BlockItem(BlockRegister.SIGN_WHISTLE_OLD.get(), new Item.Properties()
                     .tab(RAILROAD_BLOCKS_TAB)
             ));
+
+    public static RegistrySupplier<BlockItem> SIGN_YARD_LIMIT = ITEMS.register("sign_yard_limit", () ->
+            new BlockItem(BlockRegister.SIGN_YARD_LIMIT.get(), new Item.Properties()
+                    .tab(RAILROAD_BLOCKS_TAB)
+            ));
 }

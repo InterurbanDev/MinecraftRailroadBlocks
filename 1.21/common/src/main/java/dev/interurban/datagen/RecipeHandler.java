@@ -121,7 +121,7 @@ public class RecipeHandler extends RecipeProvider {
                 .unlockedBy(getHasName(SIGN_RXR_ADVANCE.get()), has(SIGNS))
                 .save(output);
         shapeless(RecipeCategory.TRANSPORTATION, SIGN_WHISTLE.get(), 3)
-                .requires(Items.WHITE_DYE)
+                .requires(Items.BLACK_DYE)
                 .requires(Items.IRON_INGOT)
                 .unlockedBy(getHasName(SIGN_WHISTLE.get()), has(SIGNS))
                 .save(output);
@@ -129,6 +129,11 @@ public class RecipeHandler extends RecipeProvider {
                 .requires(Items.BLACK_DYE)
                 .requires(Items.LIGHT_GRAY_CONCRETE)
                 .unlockedBy(getHasName(SIGN_WHISTLE_OLD.get()), has(SIGNS))
+                .save(output);
+        shapeless(RecipeCategory.TRANSPORTATION, SIGN_YARD_LIMIT.get(), 3)
+                .requires(Items.WHITE_DYE)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy(getHasName(SIGN_YARD_LIMIT.get()), has(SIGNS))
                 .save(output);
     }
 }

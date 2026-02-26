@@ -14,28 +14,40 @@ public class BlockInit {
 	public static final Block CROSSING_LIGHT = new CrossingLightBlock(
 			"crossing_light", Material.IRON, 2.0f, 4.8f, SoundType.METAL
 	);
+
 	public static final Block CROSSING_LIGHT_DUAL = new DualCrossingLightBlock(
 			"crossing_light_dual", Material.IRON, 2.0f, 4.8f, SoundType.METAL
 	);
+
 	public static final Block POLE_IRON = new PoleBlock(
 			"iron_pole", Material.IRON, 2.0f, 4.8f, SoundType.METAL
 	);
+
 	public static final Block POLE_WOOD = new PoleBlock(
 			"wooden_pole", Material.WOOD, 1.0f, 3.0f, SoundType.WOOD
 	);
+
 	public static final Block SIGN_CROSSBUCK_IRON = new SignBlock(
 			"iron_crossbuck", Material.IRON, 2.0f, 4.8f, SoundType.METAL
 	);
+
 	public static final Block SIGN_CROSSBUCK_WOODEN = new SignBlock(
 			"wooden_crossbuck", Material.IRON, 2.0f, 3.0f, SoundType.METAL
 	);
+
 	public static final Block SIGN_RXR_ADVANCE = new SignBlock(
 			"rxr_advance_sign", Material.IRON, 1.0f, 4.8f, SoundType.METAL
 	);
+
 	public static final Block SIGN_WHISTLE = new SmallSignBlock(
 			"whistle_sign", Material.IRON, 2.0f, 4.8f, SoundType.METAL
 	);
+
 	public static final Block SIGN_WHISTLE_OLD = new OldSignBlock(
 			"old_whistle_sign", Material.ROCK, 2.0f, 1.8f, SoundType.STONE
+	);
+
+	public static final Block SIGN_YARD_LIMIT = new SmallSignBlock(
+			"sign_yard_limit", Material.IRON, 2.0f, 4.8f, SoundType.METAL
 	);
 }

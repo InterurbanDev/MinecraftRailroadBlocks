@@ -25,8 +25,8 @@ public class PoleBlock extends BlockBase implements IHasModel {
         setHardness(hardness);
         setResistance(resistance);
         //setLightLevel(0.0f);
-        setLightOpacity(0);
-        //setHarvestLevel("axe", 0);
+        setLightOpacity(1);
+        setHarvestLevel("axe", 0);
         setSoundType(soundType);
     }
 
