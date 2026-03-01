@@ -53,13 +53,13 @@ public class SignBlock extends BlockBase implements IHasModel {
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 		if (state.getValue(FACING) == EnumFacing.NORTH) {
-			return new AxisAlignedBB(0.0625, 0.0, 0.375, 0.9375, 1, 0.5625); //1, 0, 6, 15, 16, 9
-		} else if (state.getValue(FACING) == EnumFacing.SOUTH) {
 			return new AxisAlignedBB(0.0625, 0.0, 0.4375, 0.9375, 1, 0.625); //1, 0, 7, 15, 16, 10
+		} else if (state.getValue(FACING) == EnumFacing.SOUTH) {
+			return new AxisAlignedBB(0.0625, 0.0, 0.375, 0.9375, 1, 0.5625); //1, 0, 6, 15, 16, 9
 		} else if (state.getValue(FACING) == EnumFacing.EAST) {
-			return new AxisAlignedBB(0.4375, 0.0, 0.0625, 0.625, 1, 0.9375); //7, 0, 1, 10, 16, 15
-		} else if (state.getValue(FACING) == EnumFacing.WEST) {
 			return new AxisAlignedBB(0.375, 0.0, 0.0625, 0.5625, 1, 0.9375); //6, 0, 1, 9, 16, 15
+		} else if (state.getValue(FACING) == EnumFacing.WEST) {
+			return new AxisAlignedBB(0.4375, 0.0, 0.0625, 0.625, 1, 0.9375); //7, 0, 1, 10, 16, 15
 		} else {
 			return new AxisAlignedBB(1, 1, 1, 1, 1, 1);
 		}
