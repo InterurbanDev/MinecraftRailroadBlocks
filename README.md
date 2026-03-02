@@ -17,6 +17,7 @@ Total Downloads per platform:
 
 ## :green_square: Blocks
 * Railroad Crossing Lights (Decorative)
+* Dual Railroad Crossing Lights (Decorative)
 * Iron Crossbuck
 * Iron Pole
 * Old Whistle Post
@@ -24,6 +25,7 @@ Total Downloads per platform:
 * Whistle Post
 * Wooden Crossbuck
 * Wooden Pole
+* Yard Limit Sign
 
 ## :hammer: Items
 * Green Flag
@@ -33,11 +35,11 @@ Total Downloads per platform:
 
 ## :globe_with_meridians: Supported Languages
 * :us: American English
-* :azerbaijan: Azerbaijan
+* :azerbaijan: Azerbaijan (92%)
 * :gb: British English
 * :canada: Canadian English
-* :cn: Simplified Chinese (81%)
-* :tr: Turkish
+* :cn: Simplified Chinese (71%)
+* :tr: Turkish (92%)
 
 ## Version Information
 
