@@ -76,6 +76,9 @@ jobs:
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
       # Attempts to build project
+      - name: Download Assets
+        run: ./gradlew downloadAssets
+
       - name: Run Forge Datagen
         run: ./gradlew forge:runDatagen
 
@@ -113,6 +116,9 @@ jobs:
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
       # Attempts to build project
+      - name: Download Assets
+        run: ./gradlew downloadAssets
+
       - name: Run Fabric Datagen
         run: ./gradlew fabric:runDatagen
 
@@ -156,6 +162,9 @@ jobs:
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
       # Attempts to build project
+      - name: Download Assets
+        run: ./gradlew downloadAssets
+
       - name: Run Fabric Datagen
         run: ./gradlew fabric:runDatagen
 
@@ -199,6 +208,9 @@ jobs:
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
       # Attempts to build project
+      - name: Download Assets
+        run: ./gradlew downloadAssets
+
       - name: Run Fabric Datagen
         run: ./gradlew fabric:runDatagen
 
@@ -242,6 +254,9 @@ jobs:
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
       # Attempts to build project
+      - name: Download Assets
+        run: ./gradlew downloadAssets
+
       - name: Run Fabric Datagen
         run: ./gradlew fabric:runDatagen
 
