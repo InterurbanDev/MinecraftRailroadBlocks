@@ -1,10 +1,10 @@
 ---
 name: Bug Report
 about: Create a report to help us improve the mod
-title: ''
+title: '[Bug]: '
 labels: bug
-assignees: ''
-
+assignees:
+type: bug
 ---
 
 # Describe the bug
@@ -29,7 +29,7 @@ If applicable, lease attach or copy the log file from your game to help identify
 
 ### Version Information
 - Minecraft Version: [e.g. 1.21.1]
-- Mod Version: [e.g. 0.6.0]
+- Mod Version: [e.g. 0.7.0]
 - Mod Loader: [e.g. Fabric, Forge, NeoForge, Quilt]
 - Mod Loader Version: [e.g. 1.0.0]
 

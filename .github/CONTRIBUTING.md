@@ -1,5 +1,6 @@
 # Contribution Guidelines
-Thank you for considering contributing to this project. Everyone is welcome to suggest or make changes to this project,
+
+Thank you for considering contributing to this project! Everyone is welcome to suggest or make changes to this project,
 however there are a few guidelines for making changes to this mod. This file outlines these guidelines.
 
 ## Table of Contents
@@ -32,7 +33,7 @@ the [Q&A](https://github.com/InterurbanDev/MinecraftRailroadBlocks/discussions/c
 
 ## Feature Request
 Feature requests are welcome, however, not all feature requests can be added to the mod. Please keep in mind that this
-mod is primarily developed by a solo developer, and I may lack the skills necessary for more advanced features. However,
+mod is primarily developed by a solo developer, and it may not be possible to add certain features. However,
 you are still more than welcome to provide your suggestions. You may also post suggestions in the
 [ideas](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/discussions/categories/ideas) discussion section
 instead of making a feature request. This is better if you only have a rough idea or are uncertain if the idea is
@@ -41,16 +42,19 @@ reasonable.
   [FAQ](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/wiki/Other-Information#frequently-asked-questions-faq)
   on the wiki, as the FAQ lists some common requests which will not be considered.
 - Avoid duplicate issues when possible. Make sure to search for your problem before posting. If you do find an issue for
-  your problem, you can use a reaction to indicate that you also have this problem or provide additional information.
+  your problem, you can use a reaction to indicate that you also have this problem or comment to provide additional
+  information.
 - Please provide precise detail about what you want added and how it will work in the mod. If you're unsure, the
   [ideas](https://github.com/SamTheGamer39/MinecraftRailroadBlocks/discussions/categories/ideas) discussion may be a
   better place for your request.
 
 # Pull Requests
-Your pull request should increase a basic description of the proposed changes and any necessary links. It should also be
+
+Your pull request should include a basic description of the proposed changes and any necessary links. It should also be
 well-documented. When you submit a pull request, you are indicating that all the code was written by yourself, or you've
 obtained permission to add it to this project. Uploading any copyrighted materials which you do not have the rights to
-is illegal and a violation of these guidelines.
+is illegal and a
+violation of these guidelines. You also agree to the [Developer's Certificate of Origin](#certificate-of-origin).
 
 > *All contributions will be licensed under the [MIT License](/LICENSE) and must be compatible with it.*
 
@@ -63,6 +67,7 @@ Code contributions should generally comply with the following standards:
 - No personal information is in your code (except for your name or username for attribution).
 - Please try to maintain a consistent style throughout your code, when reasonable.
 - JavaDoc and Comments are used to explain how your code functions and are used when appropriate.
+- Linear git history is recommended.
 - [Resolve any merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github).
 
 ## Commit Messages
@@ -73,8 +78,9 @@ Code contributions should generally comply with the following standards:
 - Avoid making multiple unrelated changes in one commit
 
 ## Translations
-Translations must be done by you. Use of Google Translate or other services to provide translations is not allowed, as
-they are often incorrect. You should be familiar with the language you are translating the mod for.
+
+Translations must be done by you. The use of Google Translate, generative AI, or other services to provide translations
+is not allowed, as they are often incorrect. You should be familiar with the language you are translating the mod for.
 
 # Certificate of Origin
 [*Developer's Certificate of Origin 1.1*](https://developercertificate.org/)

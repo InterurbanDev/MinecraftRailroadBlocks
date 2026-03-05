@@ -1,10 +1,9 @@
 ---
 name: Feature Request
 about: Suggest an idea for this mod
-title: ''
+title: '[Feature]: '
 labels: enhancement
-assignees: ''
-
+assignees:
 ---
 
 # Describe the feature
