@@ -3,15 +3,14 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-
 name: Check Gradle Dependencies
 
 # Which actions trigger workflow
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
 
 # All builds to test
 jobs:
@@ -21,6 +20,11 @@ jobs:
     permissions:
       contents: write
 
+        # Sets working directory to the 1.12 Project
+        #defaults:
+      #run:
+      #working-directory: ./1.12
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 24
@@ -29,7 +33,15 @@ jobs:
           java-version: '24'
           distribution: 'temurin'
 
+      - name: Change Directory
+        run: cd ./1.12
+
+      - name: Check Directory
+        run: pwd
+
       # Generates and submits a dependency graph, enabling Dependabot Alerts for all project dependencies.
       # See: https://github.com/gradle/actions/blob/main/dependency-submission/README.md
       - name: Generate and submit dependency graph
         uses: gradle/actions/dependency-submission@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+        with:
+          gradle-version: '9.3.1'

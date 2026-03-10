@@ -39,14 +39,30 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
 
+      # Gradle Setup will crash if wrapper not executable
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x ./gradlew
+
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
+      # Cleans working directory if not already
+      # Breaks build tasks for some reason
+      #- name: Clean
+      #  run: ./gradlew clean
+
       # Attempts to build project
       - name: Build
         run: ./gradlew build
+
+      # Uploads .jar file to GitHub for publishing
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jars-1_12
+          path: 1.12/build/libs/*.jar
 
   build-1_16:
     name: Build 1.16
@@ -70,10 +86,18 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      # Gradle Setup will crash if wrapper not executable
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x ./gradlew
+
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
+      # Cleans working directory if not already
+      - name: Clean
+        run: ./gradlew clean
 
       # Attempts to build project
       - name: Download Assets
@@ -87,6 +111,16 @@ jobs:
 
       - name: Build Forge
         run: ./gradlew forge:build
+
+      - name: Merge Jars
+        run: ./gradlew mergeJars
+
+      # Uploads .jar file to GitHub for publishing
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jars-1_16
+          path: 1.16/build/forgix/*.jar
 
   build-1_18:
     name: Build 1.18
@@ -110,10 +144,18 @@ jobs:
           java-version: '24'
           distribution: 'temurin'
 
+      # Gradle Setup will crash if wrapper not executable
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x ./gradlew
+
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
+      # Cleans working directory if not already
+      - name: Clean
+        run: ./gradlew clean
 
       # Attempts to build project
       - name: Download Assets
@@ -133,6 +175,13 @@ jobs:
 
       - name: Merge Jars
         run: ./gradlew mergeJars
+
+      # Uploads .jar file to GitHub for publishing
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jars-1_18
+          path: 1.18/build/forgix/*.jar
 
   build-1_19:
     name: Build 1.19
@@ -156,10 +205,18 @@ jobs:
           java-version: '24'
           distribution: 'temurin'
 
+      # Gradle Setup will crash if wrapper not executable
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x ./gradlew
+
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
+      # Cleans working directory if not already
+      - name: Clean
+        run: ./gradlew clean
 
       # Attempts to build project
       - name: Download Assets
@@ -179,6 +236,13 @@ jobs:
 
       - name: Merge Jars
         run: ./gradlew mergeJars
+
+      # Uploads .jar file to GitHub for publishing
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jars-1_19
+          path: 1.19/build/forgix/*.jar
 
   build-1_20:
     name: Build 1.20
@@ -202,10 +266,18 @@ jobs:
           java-version: '24'
           distribution: 'temurin'
 
+      # Gradle Setup will crash if wrapper not executable
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x ./gradlew
+
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
+      # Cleans working directory if not already
+      - name: Clean
+        run: ./gradlew clean
 
       # Attempts to build project
       - name: Download Assets
@@ -225,6 +297,13 @@ jobs:
 
       - name: Merge Jars
         run: ./gradlew mergeJars
+
+      # Uploads .jar file to GitHub for publishing
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jars-1_20
+          path: 1.20/build/forgix/*.jar
 
   build-1_21:
     name: Build 1.21
@@ -248,10 +327,18 @@ jobs:
           java-version: '24'
           distribution: 'temurin'
 
+      # Gradle Setup will crash if wrapper not executable
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x ./gradlew
+
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
+      # Cleans working directory if not already
+      - name: Clean
+        run: ./gradlew clean
 
       # Attempts to build project
       - name: Download Assets
@@ -271,3 +358,10 @@ jobs:
 
       - name: Merge Jars
         run: ./gradlew mergeJars
+
+      # Uploads .jar file to GitHub for publishing
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jars-1_21
+          path: 1.21/build/forgix/*.jar
