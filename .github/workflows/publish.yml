@@ -1,0 +1,87 @@
+name: Publish All Projects
+
+# Which actions trigger workflow
+on:
+  workflow_run:
+    workflows: [ "Build All Projects" ]
+    types:
+      - completed
+    branches: [ "main", "dev" ]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish
+
+    # On workflow_run, only proceed if the build succeeded (skip for manual runs)
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    # Which operating system to test on
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download 1.12 jars
+        uses: actions/download-artifact@v8
+        with:
+          #name: jars-1_12
+          path: 1.12/build/libs/
+
+      - name: Download 1.16 jars
+        uses: actions/download-artifact@v8
+        with:
+          #name: jars-1_16
+          path: 1.16/build/forgix/
+
+      - name: Download 1.18 jars
+        uses: actions/download-artifact@v8
+        with:
+          #name: jars-1_18
+          path: 1.18/build/forgix/
+
+      - name: Download 1.19 jars
+        uses: actions/download-artifact@v8
+        with:
+          #name: jars-1_19
+          path: 1.19/build/forgix/
+
+      - name: Download 1.20 jars
+        uses: actions/download-artifact@v8
+        with:
+          #name: jars-1_20
+          path: 1.20/build/forgix/
+
+      - name: Download 1.21 jars
+        uses: actions/download-artifact@v8
+        with:
+          #name: jars-1_21
+          path: 1.21/build/forgix/
+
+      - uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          #modrinth-id:
+          #modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          # Only include this section if you wish to publish
+          # your assets on CurseForge.
+          #curseforge-id:
+          #curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          # Only include this section if you wish to publish
+          # your assets on GitHub.
+          github-token: ${{ secrets.HUB_TOKEN }}
+          github-draft: true
+
+          files: |
+            1.12/build/libs/!(*-@(dev|sources|javadoc)).jar
+            1.16/build/forgix/!(*-@(dev|sources|javadoc)).jar
+            1.18/build/forgix/!(*-@(dev|sources|javadoc)).jar
+            1.19/build/forgix/!(*-@(dev|sources|javadoc)).jar
+            1.20/build/forgix/!(*-@(dev|sources|javadoc)).jar
+            1.21/build/forgix/!(*-@(dev|sources|javadoc)).jar

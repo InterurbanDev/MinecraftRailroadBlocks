@@ -59,10 +59,11 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jars-1_12
           path: 1.12/build/libs/*.jar
+          overwrite: true
 
   build-1_16:
     name: Build 1.16
@@ -117,10 +118,11 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jars-1_16
           path: 1.16/build/forgix/*.jar
+          overwrite: true
 
   build-1_18:
     name: Build 1.18
@@ -178,10 +180,11 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jars-1_18
           path: 1.18/build/forgix/*.jar
+          overwrite: true
 
   build-1_19:
     name: Build 1.19
@@ -239,10 +242,11 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jars-1_19
           path: 1.19/build/forgix/*.jar
+          overwrite: true
 
   build-1_20:
     name: Build 1.20
@@ -300,10 +304,11 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jars-1_20
           path: 1.20/build/forgix/*.jar
+          overwrite: true
 
   build-1_21:
     name: Build 1.21
@@ -361,7 +366,8 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jars-1_21
           path: 1.21/build/forgix/*.jar
+          overwrite: true
