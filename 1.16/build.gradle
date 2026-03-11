@@ -1,5 +1,5 @@
 plugins {
-	id 'dev.architectury.loom' version '1.10-SNAPSHOT' apply false
+	id 'dev.architectury.loom' version '1.11-SNAPSHOT' apply false
 	id 'architectury-plugin' version '3.4-SNAPSHOT'
 	id 'com.gradleup.shadow' version '8.3.6' apply false
 	id 'io.github.pacifistmc.forgix' version '2.0.0-SNAPSHOT.5.1'
@@ -17,7 +17,6 @@ allprojects {
 subprojects {
 	apply plugin: 'dev.architectury.loom'
 	apply plugin: 'architectury-plugin'
-	apply plugin: 'maven-publish'
 
 	base {
 		// Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
@@ -59,6 +58,11 @@ subprojects {
 
 		sourceCompatibility = JavaVersion.VERSION_1_8
 		targetCompatibility = JavaVersion.VERSION_1_8
+
+		// Fixes Forge Datagen crashing due to new Java versions
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(17)
+		}
 	}
 
 	tasks.withType(JavaCompile).configureEach {

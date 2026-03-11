@@ -3,18 +3,23 @@ name: Publish All Projects
 # Which actions trigger workflow
 on:
   workflow_run:
-    workflows: [ "Build All Projects" ]
+    workflows: [ 'Build All Projects' ]
     types:
       - completed
-    branches: [ "main", "dev" ]
+    branches: [ 'main' ]
   workflow_dispatch:
 
 jobs:
+  build:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    uses: ./.github/workflows/build.yml
+
   publish:
     name: Publish
+    needs: build
 
-    # On workflow_run, only proceed if the build succeeded (skip for manual runs)
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    # Runs only on pushes to the main branch after build successfully completes or on manual dispatch.
+    if: ${{ always() && (github.event_name == 'workflow_dispatch' || (github.event.workflow_run.event == 'push' && github.event.workflow_run.conclusion == 'success')) }}
 
     # Which operating system to test on
     runs-on: ubuntu-latest
@@ -31,48 +36,42 @@ jobs:
         with:
           name: jars-1_12
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event.workflow_run.id }}
-          #path: ./1.12/build/libs/
+          run-id: ${{ github.event.workflow_run.id || github.run_id }}
 
       - name: Download 1.16 jars
         uses: actions/download-artifact@v8
         with:
           name: jars-1_16
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event.workflow_run.id }}
-          #path: ./1.16/build/forgix/
+          run-id: ${{ github.event.workflow_run.id || github.run_id }}
 
       - name: Download 1.18 jars
         uses: actions/download-artifact@v8
         with:
           name: jars-1_18
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event.workflow_run.id }}
-          #path: ./1.18/build/forgix/
+          run-id: ${{ github.event.workflow_run.id || github.run_id }}
 
       - name: Download 1.19 jars
         uses: actions/download-artifact@v8
         with:
           name: jars-1_19
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event.workflow_run.id }}
-          #path: ./1.19/build/forgix/
+          run-id: ${{ github.event.workflow_run.id || github.run_id }}
 
       - name: Download 1.20 jars
         uses: actions/download-artifact@v8
         with:
           name: jars-1_20
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event.workflow_run.id }}
-          #path: ./1.20/build/forgix/
+          run-id: ${{ github.event.workflow_run.id || github.run_id }}
 
       - name: Download 1.21 jars
         uses: actions/download-artifact@v8
         with:
           name: jars-1_21
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event.workflow_run.id }}
-          #path: ./1.21/build/forgix/
+          run-id: ${{ github.event.workflow_run.id || github.run_id }}
 
       - name: Locate file
         run: ls
@@ -81,17 +80,18 @@ jobs:
         with:
           # Only include this section if you wish to publish
           # your assets on Modrinth.
-          #modrinth-id:
-          #modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          modrinth-id: sTmgisaB
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           # Only include this section if you wish to publish
           # your assets on CurseForge.
-          #curseforge-id:
-          #curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          curseforge-id: 684961
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
           # Only include this section if you wish to publish
           # your assets on GitHub.
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          github-draft: true
 
           files: ./!(*-@(dev|sources|javadoc)).jar
+
+          changelog-file: ./CHANGELOG.md

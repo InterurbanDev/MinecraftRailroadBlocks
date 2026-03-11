@@ -10,9 +10,10 @@ name: Build All Projects
 # Which actions trigger workflow
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches: [ 'main', 'dev' ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ 'main' ]
+  workflow_call:
   workflow_dispatch:
 
 # All builds to test
@@ -81,10 +82,10 @@ jobs:
     # Workflow stages
     steps:
       - uses: actions/checkout@v4
-      - name: Set up JDK 17
+      - name: Set up JDK 24
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '24'
           distribution: 'temurin'
 
       # Gradle Setup will crash if wrapper not executable
