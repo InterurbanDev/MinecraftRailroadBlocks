@@ -19,6 +19,7 @@ jobs:
     # Which operating system to test on
     runs-on: ubuntu-latest
     permissions:
+      actions: read
       contents: write
 
     steps:
@@ -28,38 +29,53 @@ jobs:
       - name: Download 1.12 jars
         uses: actions/download-artifact@v8
         with:
-          #name: jars-1_12
-          path: 1.12/build/libs/
+          name: jars-1_12
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+          #path: ./1.12/build/libs/
 
       - name: Download 1.16 jars
         uses: actions/download-artifact@v8
         with:
-          #name: jars-1_16
-          path: 1.16/build/forgix/
+          name: jars-1_16
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+          #path: ./1.16/build/forgix/
 
       - name: Download 1.18 jars
         uses: actions/download-artifact@v8
         with:
-          #name: jars-1_18
-          path: 1.18/build/forgix/
+          name: jars-1_18
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+          #path: ./1.18/build/forgix/
 
       - name: Download 1.19 jars
         uses: actions/download-artifact@v8
         with:
-          #name: jars-1_19
-          path: 1.19/build/forgix/
+          name: jars-1_19
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+          #path: ./1.19/build/forgix/
 
       - name: Download 1.20 jars
         uses: actions/download-artifact@v8
         with:
-          #name: jars-1_20
-          path: 1.20/build/forgix/
+          name: jars-1_20
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+          #path: ./1.20/build/forgix/
 
       - name: Download 1.21 jars
         uses: actions/download-artifact@v8
         with:
-          #name: jars-1_21
-          path: 1.21/build/forgix/
+          name: jars-1_21
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+          #path: ./1.21/build/forgix/
+
+      - name: Locate file
+        run: ls
 
       - uses: Kir-Antipov/mc-publish@v3.3
         with:
@@ -75,13 +91,7 @@ jobs:
 
           # Only include this section if you wish to publish
           # your assets on GitHub.
-          github-token: ${{ secrets.HUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           github-draft: true
 
-          files: |
-            1.12/build/libs/!(*-@(dev|sources|javadoc)).jar
-            1.16/build/forgix/!(*-@(dev|sources|javadoc)).jar
-            1.18/build/forgix/!(*-@(dev|sources|javadoc)).jar
-            1.19/build/forgix/!(*-@(dev|sources|javadoc)).jar
-            1.20/build/forgix/!(*-@(dev|sources|javadoc)).jar
-            1.21/build/forgix/!(*-@(dev|sources|javadoc)).jar
+          files: ./!(*-@(dev|sources|javadoc)).jar

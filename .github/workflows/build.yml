@@ -59,7 +59,7 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: jars-1_12
           path: 1.12/build/libs/*.jar
@@ -118,7 +118,7 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: jars-1_16
           path: 1.16/build/forgix/*.jar
@@ -180,7 +180,7 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: jars-1_18
           path: 1.18/build/forgix/*.jar
@@ -242,7 +242,7 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: jars-1_19
           path: 1.19/build/forgix/*.jar
@@ -304,7 +304,7 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: jars-1_20
           path: 1.20/build/forgix/*.jar
@@ -366,7 +366,7 @@ jobs:
 
       # Uploads .jar file to GitHub for publishing
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: jars-1_21
           path: 1.21/build/forgix/*.jar
