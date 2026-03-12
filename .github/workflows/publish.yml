@@ -15,7 +15,7 @@ jobs:
     uses: ./.github/workflows/build.yml
 
   publish:
-    name: Publish
+    name: publish
     needs: build
 
     # Runs only on pushes to the main branch after build successfully completes or on manual dispatch.
@@ -26,17 +26,20 @@ jobs:
     permissions:
       actions: read
       contents: write
+      deployments: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # DOWNLOAD JOBS
       - name: Download 1.12 jars
         uses: actions/download-artifact@v8
         with:
           name: jars-1_12
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id || github.run_id }}
+          path: 1.12/build/libs
 
       - name: Download 1.16 jars
         uses: actions/download-artifact@v8
@@ -44,6 +47,7 @@ jobs:
           name: jars-1_16
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id || github.run_id }}
+          path: 1.16/build/forgix
 
       - name: Download 1.18 jars
         uses: actions/download-artifact@v8
@@ -51,6 +55,7 @@ jobs:
           name: jars-1_18
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id || github.run_id }}
+          path: 1.18/build/forgix
 
       - name: Download 1.19 jars
         uses: actions/download-artifact@v8
@@ -58,6 +63,7 @@ jobs:
           name: jars-1_19
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id || github.run_id }}
+          path: 1.19/build/forgix
 
       - name: Download 1.20 jars
         uses: actions/download-artifact@v8
@@ -65,6 +71,7 @@ jobs:
           name: jars-1_20
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id || github.run_id }}
+          path: 1.20/build/forgix
 
       - name: Download 1.21 jars
         uses: actions/download-artifact@v8
@@ -72,11 +79,172 @@ jobs:
           name: jars-1_21
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id || github.run_id }}
+          path: 1.21/build/forgix
 
-      - name: Locate file
-        run: ls
+      # GET GRADLE PROPERTIES
+      - uses: madhead/read-java-properties@latest
+        id: v1_12-properties
+        with:
+          file: 1.12/gradle.properties
+          all: true
 
-      - uses: Kir-Antipov/mc-publish@v3.3
+      - uses: madhead/read-java-properties@latest
+        id: v1_16-properties
+        with:
+          file: 1.16/gradle.properties
+          all: true
+
+      - uses: madhead/read-java-properties@latest
+        id: v1_18-properties
+        with:
+          file: 1.18/gradle.properties
+          all: true
+
+      - uses: madhead/read-java-properties@latest
+        id: v1_19-properties
+        with:
+          file: 1.19/gradle.properties
+          all: true
+
+      - uses: madhead/read-java-properties@latest
+        id: v1_20-properties
+        with:
+          file: 1.20/gradle.properties
+          all: true
+
+      - uses: madhead/read-java-properties@latest
+        id: v1_21-properties
+        with:
+          file: 1.21/gradle.properties
+          all: true
+
+      # PUBLISH JOBS
+      - name: Publish 1.12
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          modrinth-id: sTmgisaB
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          # Only include this section if you wish to publish
+          # your assets on CurseForge.
+          curseforge-id: 684961
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          files: 1.12/build/libs/!(*-@(dev|sources|javadoc)).jar
+
+          changelog-file: CHANGELOG.*
+          game-versions: 1.12.x
+          java: ${{ steps.v1_12-properties.outputs.java_version }}
+          loaders: forge
+          name: ${{ steps.v1_12-properties.outputs.mod_name }} ${{ steps.v1_12-properties.outputs.mod_version }}
+          version: ${{ steps.v1_12-properties.outputs.mod_version }}
+
+      - name: Publish 1.16
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          modrinth-id: sTmgisaB
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          # Only include this section if you wish to publish
+          # your assets on CurseForge.
+          curseforge-id: 684961
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          files: 1.16/build/forgix/!(*-@(dev|sources|javadoc)).jar
+
+          changelog-file: CHANGELOG.*
+          game-versions: 1.16.x
+          java: ${{ steps.v1_16-properties.outputs.java_version }}
+          loaders: |
+            fabric
+            forge
+            quilt
+          name: ${{ steps.v1_16-properties.outputs.mod_name }} ${{ steps.v1_16-properties.outputs.mod_version }}
+          version: ${{ steps.v1_16-properties.outputs.mod_version }}
+
+      - name: Publish 1.18
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          modrinth-id: sTmgisaB
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          # Only include this section if you wish to publish
+          # your assets on CurseForge.
+          curseforge-id: 684961
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          files: 1.18/build/forgix/!(*-@(dev|sources|javadoc)).jar
+
+          changelog-file: CHANGELOG.*
+          game-versions: 1.18.x
+          java: ${{ steps.v1_18-properties.outputs.java_version }}
+          loaders: |
+            fabric
+            forge
+            quilt
+          name: ${{ steps.v1_18-properties.outputs.mod_name }} ${{ steps.v1_18-properties.outputs.mod_version }}
+          version: ${{ steps.v1_18-properties.outputs.mod_version }}
+
+      - name: Publish 1.19
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          modrinth-id: sTmgisaB
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          # Only include this section if you wish to publish
+          # your assets on CurseForge.
+          curseforge-id: 684961
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          files: 1.19/build/forgix/!(*-@(dev|sources|javadoc)).jar
+
+          changelog-file: CHANGELOG.*
+          game-versions: |
+            >=1.19 <=1.19.2
+          java: ${{ steps.v1_19-properties.outputs.java_version }}
+          loaders: |
+            fabric
+            forge
+            quilt
+          name: ${{ steps.v1_19-properties.outputs.mod_name }} ${{ steps.v1_19-properties.outputs.mod_version }}
+          version: ${{ steps.v1_19-properties.outputs.mod_version }}
+
+      - name: Publish 1.20
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          modrinth-id: sTmgisaB
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          # Only include this section if you wish to publish
+          # your assets on CurseForge.
+          curseforge-id: 684961
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          files: 1.20/build/forgix/!(*-@(dev|sources|javadoc)).jar
+
+          changelog-file: CHANGELOG.*
+          game-versions: |
+            >=1.20 <=1.20.4
+          java: ${{ steps.v1_20-properties.outputs.java_version }}
+          loaders: |
+            fabric
+            forge
+            quilt
+          name: ${{ steps.v1_20-properties.outputs.mod_name }} ${{ steps.v1_20-properties.outputs.mod_version }}
+          version: ${{ steps.v1_20-properties.outputs.mod_version }}
+
+      - name: Publish 1.21
+        uses: Kir-Antipov/mc-publish@v3.3
         with:
           # Only include this section if you wish to publish
           # your assets on Modrinth.
@@ -92,6 +260,32 @@ jobs:
           # your assets on GitHub.
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-          files: ./!(*-@(dev|sources|javadoc)).jar
+          files: 1.21/build/forgix/!(*-@(dev|sources|javadoc)).jar
 
-          changelog-file: ./CHANGELOG.md
+          changelog-file: CHANGELOG.*
+          game-versions: |
+            >=1.21 <=1.21.1
+          java: ${{ steps.v1_21-properties.outputs.java_version }}
+          loaders: |
+            fabric
+            neoforge
+            quilt
+          name: ${{ steps.v1_21-properties.outputs.mod_name }} ${{ steps.v1_21-properties.outputs.mod_version }}
+          version: ${{ steps.v1_21-properties.outputs.mod_version }}
+
+      - name: Publish GitHub
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on GitHub.
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+          files: |
+            1.12/build/libs/!(*-@(dev|sources|javadoc)).jar
+            1.16/build/forgix/!(*-@(dev|sources|javadoc)).jar
+            1.18/build/forgix/!(*-@(dev|sources|javadoc)).jar
+            1.19/build/forgix/!(*-@(dev|sources|javadoc)).jar
+            1.20/build/forgix/!(*-@(dev|sources|javadoc)).jar
+            1.21/build/forgix/!(*-@(dev|sources|javadoc)).jar
+
+          changelog-file: CHANGELOG.*
