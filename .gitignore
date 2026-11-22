@@ -8,6 +8,9 @@ build/
 # Minecraft
 run/
 
+# environment
+.env
+
 # other
 generated/
 Merged/
